@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>360&deg; Image Gallery</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+    <!--<script src="https://rawgit.com/gasolin/aframe-href-component/master/dist/aframe-href-component.min.js"></script>-->
+    <script>
+        
+        //var sceneEl = document.querySelector('a-scene');
+        
+        //switches to a different document
+        AFRAME.registerComponent('scene-changer', {
+            init: function() {
+                this.el.addEventListener('click', function(evt) {
+                    window.location = "otherPage.html"
+                });
+                console.log("registered");
+            }
+        });
+
+        //displays an info box
+        AFRAME.registerComponent('info-displayer', {
+            init: function() {
+                this.el.addEventListener('click', function(evt) {
+                    planeEl = document.querySelector("#jungleKaempePlane");
+                    planeEl.setAttribute("visible", !planeEl.getAttribute("visible"));
+                });
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+    <a-scene the-jungle>
+
+        <a-assets>
+            <img id="city" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
+            <img id="jungleKaempe" src="jungleKaempe.png">
+        </a-assets>
+
+        <a-sky id="image-360" radius="10" src="#city"></a-sky>
+
+        <!-- Camera + cursor. -->
+        <a-entity camera look-controls>
+            <a-cursor id="cursor"></a-cursor>
+        </a-entity>
+
+        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="1 2 -4" scene-changer></a-box>
+        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="1 1 -4" info-displayer></a-box>
+        <a-plane src="#jungleKaempe" height="10" width="10" position="0 0 -5" visible=false id="jungleKaempePlane"></a-plane>
+    </a-scene>
+</body>
+
+</html>
