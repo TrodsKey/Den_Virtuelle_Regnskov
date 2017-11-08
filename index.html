@@ -10,30 +10,28 @@
     <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
-    <!--<script src="https://rawgit.com/gasolin/aframe-href-component/master/dist/aframe-href-component.min.js"></script>-->
+    <script src="components/a-frame-functions.js"></script>
     <script>
-        
-        //var sceneEl = document.querySelector('a-scene');
-        
-        //switches to a different document
-        AFRAME.registerComponent('scene-changer', {
-            init: function() {
-                this.el.addEventListener('click', function(evt) {
-                    window.location = "otherPage.html"
-                });
-                console.log("registered");
-            }
-        });
 
-        //displays an info box
-        AFRAME.registerComponent('info-displayer', {
+        AFRAME.registerComponent('the-jungle', {
             init: function() {
-                this.el.addEventListener('click', function(evt) {
+
+                //registers a hide/show box for the jungle giants panel
+                /*jungleGiantBoxEl = document.querySelector("#jungleGiantBox");
+                jungleGiantBoxEl.addEventListener('click', function(evt) {
                     planeEl = document.querySelector("#jungleKaempePlane");
                     planeEl.setAttribute("visible", !planeEl.getAttribute("visible"));
-                });
+                });*/
+
+                createSceneChanger("#sceneChanger1", "otherPage.html");
+                
+                createItemDisplayer("#jungleGiantBox", "#jungleGiantPlane");
+                
+                createHoverColor("#jungleGiantBox", "blue");
+                createHoverColor("#sceneChanger1", "blue");
+                
             }
-        });
+        })
 
     </script>
 </head>
@@ -53,9 +51,9 @@
             <a-cursor id="cursor"></a-cursor>
         </a-entity>
 
-        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="1 2 -4" scene-changer></a-box>
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="1 1 -4" info-displayer></a-box>
-        <a-plane src="#jungleKaempe" height="10" width="10" position="0 0 -5" visible=false id="jungleKaempePlane"></a-plane>
+        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="1 2 -4" id="sceneChanger1"></a-box>
+        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="1 1 -4" id="jungleGiantBox"></a-box>
+        <a-plane src="#jungleKaempe" height="10" width="10" position="0 0 -5" visible=false id="jungleGiantPlane"></a-plane>
     </a-scene>
 </body>
 
