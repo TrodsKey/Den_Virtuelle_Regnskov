@@ -2,53 +2,68 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>360&deg; Image Gallery</title>
-    <meta name="description" content="360&deg; Image Gallery - A-Frame">
-    <!--<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+	<meta charset="utf-8">
+	<title>360&deg; Image Gallery</title>
+	<meta name="description" content="360&deg; Image Gallery - A-Frame">
+	<!--<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>-->
- <script src="components/aframe-master.min.js"></script>   
+	<script src="components/aframe-master.min.js"></script>
 	<script src="components/a-frame-functions.js"></script>
-    <script>
+	<script src="components/aframe-video-controls.min.js"></script>
+	<script>
+		AFRAME.registerComponent('the-jungle', {
+			init: function() {
 
-        AFRAME.registerComponent('the-jungle', {
-            init: function() {
+				document.querySelector("#Capibara-controls").setAttribute("visible", false);
+				
+				createSceneChanger("#sceneChanger1", "Understory.html");
 
-                createSceneChanger("#sceneChanger1", "otherPage.html");
-                
-                createItemDisplayer("#jungleGiantBox", "#jungleGiantPlane");
-                
-                createHoverColor("#jungleGiantBox", "blue");
-                createHoverColor("#sceneChanger1", "blue");
-                
-            }
-        })
+				createItemDisplayer("#jungleGiantBox", "#Capibara-video");
+				createItemDisplayer("#jungleGiantBox", "#Capibara-controls")
 
-    </script>
+				createHoverColor("#jungleGiantBox", "blue");
+
+				createHoverColor("#sceneChanger1", "blue");
+			}
+		})
+	</script>
 </head>
 
 <body>
-    <a-scene the-jungle>
+	<a-scene the-jungle>
 
-        <a-assets>
-            <img id="city" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
-            <img id="jungleKaempe" src="jungleKaempe.png">
-        </a-assets>
+		<a-videosphere rotation="0 180 0" src="#video" play-on-window-click play-on-vrdisplayactivate-or-enter-vr>
+		</a-videosphere>
+		<a-entity video-controls="src:#video" id="Capibara-controls"></a-entity>
 
-        <a-sky id="image-360" radius="10" src="#city"></a-sky>
+		<a-text font="kelsonsans" value="Understory" width="2" position="0 3.3 2.0" rotation="100 165 0"></a-text>
 
-        <!-- Camera + cursor. -->
-        <a-entity camera look-controls>
-            <a-cursor id="cursor"></a-cursor>
-        </a-entity>
 
-        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="1 2 -4" id="sceneChanger1"></a-box>
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="1 1 -4" id="jungleGiantBox"></a-box>
-        <a-plane src="#jungleKaempe" height="10" width="10" position="0 0 -5" visible=false id="jungleGiantPlane"></a-plane>
-    </a-scene>
+		<a-assets>
+
+			<video id="video" style="display:none" loop crossorigin="anonymous" playsinline webkit-playsinline>
+          <!-- MP4 video source. -->
+          <source type="video/mp4"
+               src="Capibara,%20Caiman%20&%20Jaguars.mp4" />
+        </video>
+			<img id="Undergrowth" crossorigin="anonymous" src="Undergrowth%205m.jpg">
+		</a-assets>
+
+		<a-sky id="image-360" radius="10" src="#Undergrowth"></a-sky>
+
+		<!-- Camera + cursor. -->
+		<a-entity camera look-controls>
+			<a-cursor id="cursor"></a-cursor>
+		</a-entity>
+
+
+		<a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-0.5 5.50 4" id="sceneChanger1"></a-box>
+		<a-box color="black" depth="0.5" height="0.5" width="0.5" position="-8 -2 -4" id="jungleGiantBox"></a-box>
+		<a-plane src="#video" height="10" width="10" position="0 0 -5" visible=false id="Capibara-video"></a-plane>
+	</a-scene>
 </body>
 
 </html>
