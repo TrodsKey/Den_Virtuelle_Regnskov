@@ -2,50 +2,64 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>360&deg; Image Gallery</title>
-    <meta name="description" content="360&deg; Image Gallery - A-Frame">
-    <!--<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+	<meta charset="utf-8">
+	<title>360&deg; Image Gallery</title>
+	<meta name="description" content="360&deg; Image Gallery - A-Frame">
+	<!--<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>-->
- <script src="components/aframe-master.min.js"></script>   
+	<script src="components/aframe-master.min.js"></script>
 	<script src="components/a-frame-functions.js"></script>
-    <script>
+	<script>
+		AFRAME.registerComponent('the-jungle', {
+			init: function() {
 
-        AFRAME.registerComponent('the-jungle', {
-            init: function() {
+				createSceneChanger("#sceneChanger1", "Canopy.html");
+				createHoverColor("#sceneChanger1", "blue");
 
-                createSceneChanger("#sceneChanger1", "Canopy.html");
-                
-                createHoverColor("#sceneChanger1", "blue");
-                
-            }
-        })
+				createHoverColor("#internationalBox", "blue");
+				createItemDisplayer("#internationalBox", "#internationalPlane");
 
-    </script>
+				createHoverColor("#macawBox", "blue");
+				createItemDisplayer("#macawBox", "#macawPlane");
+
+				createHoverColor("#toucanBox", "blue");
+				createItemDisplayer("#toucanBox", "#toucanPlane");
+
+			}
+		})
+
+	</script>
 </head>
 
 <body>
-    <a-scene the-jungle>
+	<a-scene the-jungle>
 
-        <a-text font="kelsonsans" value="Canopy" width="3" position="-1.5 -1.9 -2.0"
-              rotation="0 15 0"></a-text>
-        
-        <a-assets>
-            <img id="Emergent Layer" crossorigin="anonymous" src="Emergent%20Layer%2038m.jpg">
-        </a-assets>
+		<a-text font="kelsonsans" value="Canopy" width="3" position="-1.5 -1.9 -2.0" rotation="0 15 0"></a-text>
 
-        <a-sky id="image-360" radius="10" src="#Emergent Layer"></a-sky>
+		<a-assets>
+			<img id="Emergent Layer" crossorigin="anonymous" src="Emergent%20Layer%2038m.jpg">
+		</a-assets>
 
-        <!-- Camera + cursor. -->
-        <a-entity camera look-controls>
-            <a-cursor id="cursor"></a-cursor>
-        </a-entity>
+		<a-sky id="image-360" radius="10" src="#Emergent Layer"></a-sky>
 
-        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.5 -4.50 -4" id="sceneChanger1"></a-box>
-    </a-scene>
+		<!-- Camera + cursor. -->
+		<a-entity camera look-controls>
+			<a-cursor id="cursor"></a-cursor>
+		</a-entity>
+
+		<a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.5 -4.50 -4" id="sceneChanger1"></a-box>
+
+		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-8 -4 -4" id="internationalBox"></a-box>
+		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-8 -4 -2" id="macawBox"></a-box>
+		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-8 -2 -2" id="toucanBox"></a-box>
+
+		<a-plane src="Images/Internationale%20organisationer.png" height="10" width="10" position="0 0 -5" visible=false id="internationalPlane"></a-plane>
+		<a-plane src="Images/Scarlet%20Macaw.png" height="10" width="10" position="0 0 -5" visible=false id="macawPlane"></a-plane>
+		<a-plane src="Images/Toucan.png" height="10" width="10" position="0 0 -5" visible=false id="toucanPlane"></a-plane>
+	</a-scene>
 </body>
 
 </html>

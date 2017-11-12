@@ -18,12 +18,24 @@
             init: function() {
 
                 createSceneChanger("#sceneChanger1", "Understory.html");
-                
                 createSceneChanger("#sceneChanger2", "Emergent Layer.html");
-                
-                
                 createHoverColor("#sceneChanger2", "blue");
                 createHoverColor("#sceneChanger1", "blue");
+				
+				createHoverColor("#sceneChanger1", "blue");
+				createHoverColor("#sceneChanger2", "blue");
+
+				createHoverColor("#primatBox", "blue");
+				createItemDisplayer("#primatBox", "#primatPlane");
+
+				createHoverColor("#bistandBox", "blue");
+				createItemDisplayer("#bistandBox", "#bistandPlane");
+
+				createHoverColor("#tarantulaBox", "blue");
+				createItemDisplayer("#tarantulaBox", "#tarantulaPlane");
+				
+				createHoverColor("#aalBox", "blue");
+				createItemDisplayer("#aalBox", "#aalPlane");
                 
             }
         })
@@ -54,6 +66,16 @@
 
         <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.5 -9 -0.5" id="sceneChanger1"></a-box>
         <a-box color="yellow" depth="0.5" height="0.5" width="0.5" position="5 1 2.0" id="sceneChanger2"></a-box>
+		
+		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-8 -4 -4" id="primatBox"></a-box>
+		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-8 -4 -2" id="bistandBox"></a-box>
+		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-8 -2 -2" id="tarantulaBox"></a-box>
+		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-8 -2 -4" id="aalBox"></a-box>
+
+		<a-plane src="Images/primater.jpg" height="10" width="10" position="0 0 -5" visible=false id="primatPlane"></a-plane>
+		<a-plane src="Images/Udviklingsbistand.png" height="10" width="10" position="0 0 -5" visible=false id="bistandPlane"></a-plane>
+		<a-plane src="Images/Tarantula.png" height="10" width="10" position="0 0 -5" visible=false id="tarantulaPlane"></a-plane>
+		<a-plane src="Images/elektrisk%20%C3%A5l.png" height="10" width="10" position="0 0 -5" visible=false id="aalPlane"></a-plane>
     </a-scene>
 </body>
 
