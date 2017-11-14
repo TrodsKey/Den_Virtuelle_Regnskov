@@ -12,9 +12,12 @@
     <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>-->
 	<script src="components/aframe-master.min.js"></script>
 	<script src="components/a-frame-functions.js"></script>
+    <script src="components/aframe-video-controls.min.js"></script>
 	<script>
 		AFRAME.registerComponent('the-jungle', {
 			init: function() {
+                
+                document.querySelector("#video-controls").setAttribute("visible", false);
 
 				createSceneChanger("#sceneChanger1", "Canopy.html");
 				createHoverColor("#sceneChanger1", "blue");
@@ -27,6 +30,10 @@
 
 				createHoverColor("#toucanBox", "blue");
 				createItemDisplayer("#toucanBox", "#toucanPlane");
+                
+                createHoverColor("#FlightBox", "blue");
+				createItemDisplayer("#FlightBox", "#FlightPlane");
+                createItemDisplayer("#FlightBox", "#video-controls");
 
 			}
 		})
@@ -36,6 +43,19 @@
 
 <body>
 	<a-scene the-jungle>
+        
+        <a-videosphere rotation="0 180 0" src="#video" play-on-window-click play-on-vrdisplayactivate-or-enter-vr>
+		</a-videosphere>
+		<a-entity video-controls="src:#video" id="video-controls"></a-entity>
+        
+        <a-assets>
+
+			<video id="video" style="display:none" loop crossorigin="anonymous" playsinline webkit-playsinline>
+          <!-- MP4 video source. -->
+          <source type="video/mp4"
+               src="Flight.mp4" />
+        </video>
+		</a-assets>
 
 		<a-text font="kelsonsans" value="Canopy" width="3" position="-1.5 -1.9 -2.0" rotation="0 15 0"></a-text>
 
@@ -51,11 +71,13 @@
 		</a-entity>
 
 		<a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.5 -4.50 -4" id="sceneChanger1"></a-box>
-
+        
+        <a-box color="darkmagenta" depth="0.5" height="0.5" width="0.5" position="4 -2 -2" id="FlightBox"></a-box>
 		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-6.9 2.8 -0.7" id="internationalBox"></a-box>
 		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-5.8 -4 3" id="macawBox"></a-box>
 		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="2.9 -2.6 -4.9" id="toucanBox"></a-box>
 
+        <a-plane src="#video" height="10" width="10" position="0 0 -5" visible=false id="FlightPlane"></a-plane>
 		<a-plane src="Images/Internationale%20organisationer.png" height="10" width="10" position="0 0 -5" visible=false id="internationalPlane"></a-plane>
 		<a-plane src="Images/Scarlet%20Macaw.png" height="10" width="10" position="0 0 -5" visible=false id="macawPlane"></a-plane>
 		<a-plane src="Images/Toucan.png" height="10" width="10" position="0 0 -5" visible=false id="toucanPlane"></a-plane>

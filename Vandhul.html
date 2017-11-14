@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>360&deg; Image Gallery</title>
+	<meta name="description" content="360&deg; Image Gallery - A-Frame">
+	<!--<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>-->
+	<script src="components/aframe-master.min.js"></script>
+	<script src="components/a-frame-functions.js"></script>
+	<script src="components/aframe-video-controls.min.js"></script>
+	<script>
+		AFRAME.registerComponent('the-jungle', {
+			init: function() {
+
+				document.querySelector("#Capibara-controls").setAttribute("visible", false);
+
+				createSceneChanger("#sceneChanger1", "Index.html");
+
+				createItemDisplayer("#jungleGiantBox", "#Capibara-video");
+				createItemDisplayer("#jungleGiantBox", "#Capibara-controls");
+				createItemDisplayer("#sortCaimanBox", "#sortCaimanPlane");
+				createItemDisplayer("#anacondaBox", "#anacondaPlane");
+				createItemDisplayer("#faeldningBox", "#faeldningPlane");
+
+				createHoverColor("#jungleGiantBox", "blue");
+				createHoverColor("#sortCaimanBox", "blue");
+				createHoverColor("#sceneChanger1", "blue");
+				createHoverColor("#anacondaBox", "blue");
+				createHoverColor("#faeldningBox", "blue");
+			}
+		})
+
+	</script>
+</head>
+
+<body>
+	<a-scene the-jungle>
+
+		<a-videosphere rotation="0 180 0" src="#video" play-on-window-click play-on-vrdisplayactivate-or-enter-vr>
+		</a-videosphere>
+		<a-entity video-controls="src:#video" id="Capibara-controls"></a-entity>
+
+		
+
+
+		<a-assets>
+
+			<video id="video" style="display:none" loop crossorigin="anonymous" playsinline webkit-playsinline>
+          <!-- MP4 video source. -->
+          <source type="video/mp4"
+               src="Capibara,%20Caiman%20&%20Jaguars.mp4" />
+        </video>
+			<img id="Vandhul" crossorigin="anonymous" src="Vandhul.jpg">
+		</a-assets>
+
+		<a-sky id="image-360" radius="10" src="#Vandhul"></a-sky>
+
+		<!-- Camera + cursor. -->
+		<a-entity camera look-controls>
+			<a-cursor id="cursor"></a-cursor>
+		</a-entity>
+
+		<a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="5 0 4" id="sceneChanger1"><a-text font="kelsonsans" value="Undergrowth" width="2" position="0.218 0.494 0" rotation="0 180.02333923010465 0"></a-text></a-box>
+		<a-box color="darkmagenta" depth="0.5" height="0.5" width="0.5" position="4 -2 -2" id="jungleGiantBox"></a-box>
+		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-5.9 -2.2 5.3" id="sortCaimanBox"></a-box>
+		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="2.8 1.6 5.6" id="anacondaBox"></a-box>
+		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-8 1.6 -2." id="faeldningBox"></a-box>
+
+
+		<a-plane src="#video" height="10" width="10" position="0 0 -5" visible=false id="Capibara-video"></a-plane>
+		<a-plane src="Images/sort%20Caiman.png" height="10" width="10" position="0 0 -5" visible=false id="sortCaimanPlane"></a-plane>
+		<a-plane src="Images/Anaconda.png" height="10" width="10" position="0 0 -5.691" visible="false" id="anacondaPlane"></a-plane>
+		<a-plane src="Images/regnskoven%20f%C3%A6ldes.png" height="10" width="10" position="0 0 -5" visible=false id="faeldningPlane"></a-plane>
+	</a-scene>
+</body>
+
+</html>
