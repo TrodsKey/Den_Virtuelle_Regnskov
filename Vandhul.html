@@ -12,7 +12,7 @@
 	<script>
 		AFRAME.registerComponent('the-jungle', {
 			init: function() {
-
+ 
 				document.querySelector("#capibaraControls").setAttribute("visible", false);
 				var videoEl = document.querySelector('#video');
 				videoEl.currentTime = 0; // Seek to 122 seconds.
@@ -58,6 +58,9 @@
 		<a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
 			<a-cursor fuse="false" color="magenta"></a-cursor>
 		</a-entity>
+		
+		
+        <a-sky id="image-360" radius="10" src="#Vandhul"></a-sky>
 
 		<a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="5 0 4" id="sceneChanger1">
 			<a-text font="kelsonsans" value="Undergrowth" width="2" position="0.218 0.494 0" rotation="0 180.02333923010465 0"></a-text>
