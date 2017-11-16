@@ -25,12 +25,6 @@
                 createHoverColor("#internationalBox", "blue");
                 createItemDisplayer("#internationalBox", "#internationalPlane");
 
-                createHoverColor("#macawBox", "blue");
-                createItemDisplayer("#macawBox", "#macawPlane");
-
-                createHoverColor("#toucanBox", "blue");
-                createItemDisplayer("#toucanBox", "#toucanPlane");
-
                 createHoverColor("#flightBox", "blue");
                 createVideoDisplayer("#flightBox", "#flightPlane", "#flightControls");
             }
@@ -53,7 +47,7 @@
             </video>
         </a-assets>
 
-        <a-text font="kelsonsans" value="Canopy" width="3" position="-1.5 -1.9 -2.0" rotation="0 15 0"></a-text>
+        
 
         <a-assets>
             <img id="Emergent Layer" crossorigin="anonymous" src="Scenes/Emergent%20Layer%2038m.jpg">
@@ -66,17 +60,16 @@
             <a-cursor id="cursor"></a-cursor>
         </a-entity>
 
-        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.5 -4.50 -4" id="sceneChanger1"></a-box>
+        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.5 -4.50 -4" id="sceneChanger1"><a-text font="kelsonsans" value="Krone Lag" width="3" position="0.486 1.859 1.378" rotation="-37.3 33.919 0.516"></a-text></a-box>
 
         <a-box color="darkmagenta" depth="0.5" height="0.5" width="0.5" position="4 -2 -2" id="flightBox"></a-box>
         <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-6.9 2.8 -0.7" id="internationalBox"></a-box>
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-5.8 -4 3" id="macawBox"></a-box>
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="2.9 -2.6 -4.9" id="toucanBox"></a-box>
 
-        <a-plane src="#video" height="10" width="10" position="0 0 -5" visible=false id="flightPlane" class="displayer"></a-plane>
-        <a-plane src="Images/Internationale%20organisationer.png" height="10" width="10" position="0 0 -5" visible=false id="internationalPlane" class="displayer"></a-plane>
-        <a-plane src="Images/Scarlet%20Macaw.png" height="10" width="10" position="0 0 -5" visible=false id="macawPlane" class="displayer"></a-plane>
-        <a-plane src="Images/Toucan.png" height="10" width="10" position="0 0 -5" visible=false id="toucanPlane" class="displayer"></a-plane>
+        <a-plane class="displayer" src="#video" height="10" width="10" position="0 0 -5" visible=false id="flightPlane" class="displayer"></a-plane>
+        <a-plane class="displayer" src="Images/Internationale%20organisationer.png" height="10" width="10" position="0 0 -5" visible=false id="internationalPlane" class="displayer"></a-plane>
+        
+        <a-text font="kelsonsans" value="Kaemper" width="20" position="-1.735 0.03 -9.462"></a-text>
+
     </a-scene>
 </body>
 

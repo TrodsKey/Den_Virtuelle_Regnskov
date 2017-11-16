@@ -18,20 +18,20 @@
             init: function () {
                 document.querySelector("#capibaraControls").setAttribute("visible", false);
 
-                createSceneChanger("#sceneChanger1", "Understory.html");
+				createSceneChanger("#sceneChanger1", "Understory.html");
                 createSceneChanger("#sceneChanger2", "Vandhul.html");
 
-                createVideoDisplayer("#capibaraBox", "#capibaraVideo", "#capibaraControls");
-                createItemDisplayer("#sortCaimanBox", "#sortCaimanPlane");
-                createItemDisplayer("#anacondaBox", "#anacondaPlane");
-                createItemDisplayer("#faeldningBox", "#faeldningPlane");
+				createItemDisplayer("#faeldningBox", "#faeldningPlane");
 
-                createHoverColor("#capibaraBox", "blue");
-                createHoverColor("#sortCaimanBox", "blue");
-                createHoverColor("#sceneChanger1", "blue");
+				createHoverColor("#sceneChanger1", "blue");
                 createHoverColor("#sceneChanger2", "blue");
-                createHoverColor("#anacondaBox", "blue");
-                createHoverColor("#faeldningBox", "blue");
+				createHoverColor("#faeldningBox", "blue");
+                
+                createHoverColor("#tarantulaBox", "blue");
+				createItemDisplayer("#tarantulaBox", "#tarantulaPlane");
+                
+                createHoverColor("#jaguarBox", "blue");
+				createItemDisplayer("#jaguarBox", "#jaguarPlane");
             }
         })
     </script>
@@ -63,21 +63,19 @@
             <a-cursor id="cursor"></a-cursor>
         </a-entity>
 
-        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-0.5 5.50 4" id="sceneChanger1"></a-box>
-        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-3.152 -0.256 -4.238" id="sceneChanger2" material="">
-            <a-text font="kelsonsans" value="Vandhul" width="2" position="-0.216 0.494 0.079" rotation="0 45.206 0"></a-text>
-        </a-box>
-
-        <a-box color="darkmagenta" depth="0.5" height="0.5" width="0.5" position="4 -2 -2" id="capibaraBox"></a-box>
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-5.9 -2.2 5.3" id="sortCaimanBox"></a-box>
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="2.8 1.6 5.6" id="anacondaBox"></a-box>
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-8 1.6 -2." id="faeldningBox"></a-box>
-
-
-        <a-plane src="#video" height="10" width="10" position="0 0 -5" visible=false id="capibaraVideo" class="displayer"></a-plane>
-        <a-plane src="Images/sort%20Caiman.png" height="10" width="10" position="0 0 -5" visible=false id="sortCaimanPlane" class="displayer"></a-plane>
-        <a-plane src="Images/Anaconda.png" height="10" width="10" position="0 0 -5.691" visible="false" id="anacondaPlane" class="displayer"></a-plane>
-        <a-plane src="Images/regnskoven%20f%C3%A6ldes.png" height="10" width="10" position="0 0 -5" visible=false id="faeldningPlane" class="displayer"></a-plane>
+        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="3.787 3.725 -2.363" id="sceneChanger1" material=""><a-text font="kelsonsans" value="Underskov" width="2" position="-1.944 -1.397 0.938" rotation="36.26822843178111 -54.7747652145067 6.073352628386726"></a-text></a-box>
+        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-3.152 -0.256 -4.238" id="sceneChanger2" material=""><a-text font="kelsonsans" value="Vandhul" width="2" position="0.693 0.387 1.264" rotation="0 36.44011577032036 0"></a-text></a-box>
+            
+		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-5.929 1.6 -2" id="faeldningBox" material=""></a-box>
+        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="0.295 1.398 -4.759" id="tarantulaBox"></a-box>
+        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-3.513 -1.856 -1.162" id="jaguarBox" material=""></a-box>
+        
+		<a-plane class="displayer" src="Images/regnskoven%20f%C3%A6ldes.png" height="10" width="10" position="-4.689 0 3.834" visible="false" id="faeldningPlane" rotation="0 127.025 0"></a-plane>
+        <a-plane class="displayer" src="Images/Tarantula.png" height="10" width="10" position="5.652 0 -3.724" visible="false" id="tarantulaPlane" rotation="0 -54.4309905374282 0"></a-plane>
+        <a-plane class="displayer" src="Images/Jaguar.png" height="10" width="10" position="-5.068 0 3.222" visible="false" id="jaguarPlane" rotation="0 123.873 0"></a-plane>
+        
+        <a-text font="kelsonsans" value="Skovbund" width="20" position="-1.735 0.03 -9.462"></a-text>
+        
     </a-scene>
 </body>
 
