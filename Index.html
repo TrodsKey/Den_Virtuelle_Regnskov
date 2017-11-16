@@ -2,10 +2,10 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<title>360&deg; Image Gallery</title>
-	<meta name="description" content="360&deg; Image Gallery - A-Frame">
-	<!--<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <meta charset="utf-8">
+    <title>360&deg; Image Gallery</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <!--<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
@@ -36,30 +36,32 @@
 		})
 
 	</script>
+
 </head>
 
 <body>
-	<a-scene the-jungle>
+    <a-scene the-jungle>
+
 
 		<a-text font="kelsonsans" value="Understory" width="2" position="0 3.3 2.0" rotation="100 165 0"></a-text>
+        <a-assets>
 
-
-		<a-assets>
 
 			<img id="Undergrowth" crossorigin="anonymous" src="Undergrowth%205m.jpg">
 		</a-assets>
 
-		<a-sky id="image-360" radius="10" src="#Undergrowth"></a-sky>
+
+        <a-sky id="image-360" radius="10" src="#Undergrowth"></a-sky>
 
 		<!-- Camera + cursor. -->
 		<a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
 			<a-cursor fuse="false" color="magenta"></a-cursor>
 		</a-entity>
 
-		<a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-0.5 5.50 4" id="sceneChanger1"></a-box>
-		<a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-3.152 -0.256 -4.238" id="sceneChanger2" material="">
-			<a-text font="kelsonsans" value="Vandhul" width="2" position="-0.216 0.494 0.079" rotation="0 45.206 0"></a-text>
-		</a-box>
+        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-0.5 5.50 4" id="sceneChanger1"></a-box>
+        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-3.152 -0.256 -4.238" id="sceneChanger2" material="">
+            <a-text font="kelsonsans" value="Vandhul" width="2" position="-0.216 0.494 0.079" rotation="0 45.206 0"></a-text>
+        </a-box>
 
 
 		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-5.9 -2.2 5.3" id="sortCaimanBox"></a-box>

@@ -2,30 +2,32 @@
 <html>
 
 <head>
+
 	<meta charset="utf-8">
 	<title>360&deg; Image Gallery</title>
 	<meta name="description" content="360&deg; Image Gallery - A-Frame">
 	<script src="components/build.js"></script>
 	<script src="components/a-frame-functions.js"></script>
     <script src="components/aframe-video-controls.min.js"></script>
-	<script>
-		AFRAME.registerComponent('the-jungle', {
-			init: function() {
-                
+    <script>
+        AFRAME.registerComponent('the-jungle', {
+            init: function () {
+
                 document.querySelector("#flightControls").setAttribute("visible", false);
 				
 				var videoEl = document.querySelector('#video');
 				videoEl.currentTime = 0; // Seek to 122 seconds.
 				videoEl.pause();
 
-				createSceneChanger("#sceneChanger1", "Canopy.html");
-				createHoverColor("#sceneChanger1", "blue");
+                createSceneChanger("#sceneChanger1", "Canopy.html");
+                createHoverColor("#sceneChanger1", "blue");
 
-				createHoverColor("#internationalBox", "blue");
-				createItemDisplayer("#internationalBox", "#internationalPlane");
+                createHoverColor("#internationalBox", "blue");
+                createItemDisplayer("#internationalBox", "#internationalPlane");
 
-				createHoverColor("#macawBox", "blue");
-				createItemDisplayer("#macawBox", "#macawPlane");
+                createHoverColor("#macawBox", "blue");
+                createItemDisplayer("#macawBox", "#macawPlane");
+
 
 				createHoverColor("#toucanBox", "blue");
 				createItemDisplayer("#toucanBox", "#toucanPlane");
@@ -34,27 +36,33 @@
 				createVideoDisplayer("#flightBox","#flightVideo", "#flightControls");
 			}
 		})
-
-	</script>
+ 
+    </script>
 </head>
 
 <body>
+
 	<a-scene the-jungle>
         
         <a-video id="flightVideo" rotation="0 180 0" src="#video" height="10" width="10" position="0 0 -5" visible=false class="displayer">
 		</a-video>
 		<a-entity video-controls="src:#video" id="flightControls" class="displayer"></a-entity>
         
+
         <a-assets>
 
-			<video id="video" style="display:none" loop crossorigin="anonymous" playsinline webkit-playsinline>
-          <!-- MP4 video source. -->
-          <source type="video/mp4"
-               src="Flight.mp4" />
-        </video>
-		</a-assets>
+            <video id="video" style="display:none" loop crossorigin="anonymous" playsinline webkit-playsinline>
+                <!-- MP4 video source. -->
+                <source type="video/mp4" src="Videos/Rain%20Forest.mp4" />
+            </video>
+        </a-assets>
 
-		<a-text font="kelsonsans" value="Canopy" width="3" position="-1.5 -1.9 -2.0" rotation="0 15 0"></a-text>
+        <a-text font="kelsonsans" value="Canopy" width="3" position="-1.5 -1.9 -2.0" rotation="0 15 0"></a-text>
+
+        <a-assets>
+            <img id="Emergent Layer" crossorigin="anonymous" src="Scenes/Emergent%20Layer%2038m.jpg">
+        </a-assets>
+
 
 		<a-assets>
 			<img id="EmergentLayer" crossorigin="anonymous" src="Emergent%20Layer%2038m.jpg">
@@ -67,17 +75,17 @@
 			<a-cursor fuse="false" color="magenta"></a-cursor>
 		</a-entity>
 
-		<a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.5 -4.50 -4" id="sceneChanger1"></a-box>
-        
+
         <a-box color="darkmagenta" depth="0.5" height="0.5" width="0.5" position="4 -2 -2" id="flightBox"></a-box>
-		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-6.9 2.8 -0.7" id="internationalBox"></a-box>
-		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-5.8 -4 3" id="macawBox"></a-box>
-		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="2.9 -2.6 -4.9" id="toucanBox"></a-box>
+        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-6.9 2.8 -0.7" id="internationalBox"></a-box>
+        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-5.8 -4 3" id="macawBox"></a-box>
+        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="2.9 -2.6 -4.9" id="toucanBox"></a-box>
 
 		<a-plane src="Images/Internationale%20organisationer.png" height="10" width="10" position="0 0 -5" visible=false id="internationalPlane" class="displayer"></a-plane>
 		<a-plane src="Images/Scarlet%20Macaw.png" height="10" width="10" position="0 0 -5" visible=false id="macawPlane" class="displayer"></a-plane>
 		<a-plane src="Images/Toucan.png" height="10" width="10" position="0 0 -5" visible=false id="toucanPlane" class="displayer"></a-plane>
 	</a-scene>
+
 </body>
 
 </html>
