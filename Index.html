@@ -35,33 +35,27 @@
             }
         })
     </script>
+
 </head>
 
 <body>
     <a-scene the-jungle>
 
-        <a-videosphere rotation="0 180 0" src="#video" play-on-window-click play-on-vrdisplayactivate-or-enter-vr>
-        </a-videosphere>
-        <a-entity video-controls="src:#video" id="capibaraControls" class="displayer"></a-entity>
 
-        <a-text font="kelsonsans" value="Understory" width="2" position="0 3.3 2.0" rotation="100 165 0"></a-text>
-
-
+		<a-text font="kelsonsans" value="Understory" width="2" position="0 3.3 2.0" rotation="100 165 0"></a-text>
         <a-assets>
 
-            <video id="video" style="display:none" loop crossorigin="anonymous" playsinline webkit-playsinline>
-                <!-- MP4 video source. -->
-                <source type="video/mp4" src="Capibara,%20Caiman%20&%20Jaguars.mp4" />
-            </video>
-            <img id="Undergrowth" crossorigin="anonymous" src="Scenes/Undergrowth%205m.jpg">
-        </a-assets>
+
+			<img id="Undergrowth" crossorigin="anonymous" src="Scenes/Undergrowth%205m.jpg">
+		</a-assets>
 
         <a-sky id="image-360" radius="10" src="#Undergrowth"></a-sky>
 
-        <!-- Camera + cursor. -->
-        <a-entity camera look-controls>
-            <a-cursor id="cursor"></a-cursor>
-        </a-entity>
+		<!-- Camera + cursor. -->
+		<a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
+			<a-cursor fuse="false" color="magenta"></a-cursor>
+		</a-entity>
+
 
         <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="3.787 3.725 -2.363" id="sceneChanger1" material=""><a-text font="kelsonsans" value="Underskov" width="2" position="-1.944 -1.397 0.938" rotation="36.26822843178111 -54.7747652145067 6.073352628386726"></a-text></a-box>
         <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-3.152 -0.256 -4.238" id="sceneChanger2" material=""><a-text font="kelsonsans" value="Vandhul" width="2" position="0.693 0.387 1.264" rotation="0 36.44011577032036 0"></a-text></a-box>
@@ -77,6 +71,7 @@
         <a-text font="kelsonsans" value="Skovbund" width="20" position="-1.735 0.03 -9.462"></a-text>
         
     </a-scene>
+
 </body>
 
 </html>

@@ -40,17 +40,15 @@
             }
         })
     </script>
+
 </head>
 
 <body>
     <a-scene the-jungle>
 
-        <a-videosphere rotation="0 180 0" src="#video" play-on-window-click play-on-vrdisplayactivate-or-enter-vr>
-        </a-videosphere>
-        <a-entity video-controls="src:#video" id="capibaraControls" class="displayer"></a-entity>
-
-
-
+		<a-video id="capibaraVideo" rotation="0 180 0" src="#video" play-on-window-click play-on-vrdisplayactivate-or-enter-vr height="10" width="10" position="0 0 -5" visible=false class="displayer">
+		</a-video>
+		<a-entity video-controls="src:#video" id="capibaraControls" class="displayer"></a-entity>
 
         <a-assets>
 
@@ -87,6 +85,7 @@
         <a-text font="kelsonsans" value="Vandhul" width="20" position="-1.735 0.03 -9.462"></a-text>
         
     </a-scene>
+
 </body>
 
 </html>
