@@ -5,12 +5,7 @@
 	<meta charset="utf-8">
 	<title>360&deg; Image Gallery</title>
 	<meta name="description" content="360&deg; Image Gallery - A-Frame">
-	<!--<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>-->
-	<script src="components/aframe-master.min.js"></script>
+	<script src="components/build.js"></script>
 	<script src="components/a-frame-functions.js"></script>
     <script src="components/aframe-video-controls.min.js"></script>
 	<script>
@@ -18,6 +13,10 @@
 			init: function() {
                 
                 document.querySelector("#flightControls").setAttribute("visible", false);
+				
+				var videoEl = document.querySelector('#video');
+				videoEl.currentTime = 0; // Seek to 122 seconds.
+				videoEl.pause();
 
 				createSceneChanger("#sceneChanger1", "Canopy.html");
 				createHoverColor("#sceneChanger1", "blue");
@@ -32,7 +31,7 @@
 				createItemDisplayer("#toucanBox", "#toucanPlane");
                 
                 createHoverColor("#flightBox", "blue");
-				createVideoDisplayer("#flightBox","#flightPlane", "#flightControls");
+				createVideoDisplayer("#flightBox","#flightVideo", "#flightControls");
 			}
 		})
 
@@ -42,8 +41,8 @@
 <body>
 	<a-scene the-jungle>
         
-        <a-videosphere rotation="0 180 0" src="#video" play-on-window-click play-on-vrdisplayactivate-or-enter-vr>
-		</a-videosphere>
+        <a-video id="flightVideo" rotation="0 180 0" src="#video" height="10" width="10" position="0 0 -5" visible=false class="displayer">
+		</a-video>
 		<a-entity video-controls="src:#video" id="flightControls" class="displayer"></a-entity>
         
         <a-assets>
@@ -58,14 +57,14 @@
 		<a-text font="kelsonsans" value="Canopy" width="3" position="-1.5 -1.9 -2.0" rotation="0 15 0"></a-text>
 
 		<a-assets>
-			<img id="Emergent Layer" crossorigin="anonymous" src="Emergent%20Layer%2038m.jpg">
+			<img id="EmergentLayer" crossorigin="anonymous" src="Emergent%20Layer%2038m.jpg">
 		</a-assets>
 
-		<a-sky id="image-360" radius="10" src="#Emergent Layer"></a-sky>
+		<a-sky id="image-360" radius="10" src="#EmergentLayer"></a-sky>
 
 		<!-- Camera + cursor. -->
-		<a-entity camera look-controls>
-			<a-cursor id="cursor"></a-cursor>
+		<a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
+			<a-cursor fuse="false" color="magenta"></a-cursor>
 		</a-entity>
 
 		<a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.5 -4.50 -4" id="sceneChanger1"></a-box>
@@ -75,7 +74,6 @@
 		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-5.8 -4 3" id="macawBox"></a-box>
 		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="2.9 -2.6 -4.9" id="toucanBox"></a-box>
 
-        <a-plane src="#video" height="10" width="10" position="0 0 -5" visible=false id="flightPlane" class="displayer"></a-plane>
 		<a-plane src="Images/Internationale%20organisationer.png" height="10" width="10" position="0 0 -5" visible=false id="internationalPlane" class="displayer"></a-plane>
 		<a-plane src="Images/Scarlet%20Macaw.png" height="10" width="10" position="0 0 -5" visible=false id="macawPlane" class="displayer"></a-plane>
 		<a-plane src="Images/Toucan.png" height="10" width="10" position="0 0 -5" visible=false id="toucanPlane" class="displayer"></a-plane>

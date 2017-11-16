@@ -5,12 +5,7 @@
 	<meta charset="utf-8">
 	<title>360&deg; Image Gallery</title>
 	<meta name="description" content="360&deg; Image Gallery - A-Frame">
-	<!--<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>-->
-	<script src="components/aframe-master.min.js"></script>
+	<script src="components/build.js"></script>
 	<script src="components/a-frame-functions.js"></script>
 	<script>
 		AFRAME.registerComponent('the-jungle', {
@@ -30,7 +25,7 @@
 
 				createHoverColor("#trusselBox", "blue");
 				createItemDisplayer("#trusselBox", "#trusselPlane");
-				
+
 				createHoverColor("#piratFiskBox", "blue");
 				createItemDisplayer("#piratFiskBox", "#piratFiskPlane");
 			}
@@ -54,13 +49,13 @@
 		<a-sky id="image-360" radius="10" src="#Understory"></a-sky>
 
 		<!-- Camera + cursor. -->
-		<a-entity camera look-controls>
-			<a-cursor id="cursor"></a-cursor>
+		<a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
+			<a-cursor fuse="false" color="magenta"></a-cursor>
 		</a-entity>
 
 		<a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.5 -5.50 1" id="sceneChanger1"></a-box>
 		<a-box color="yellow" depth="0.5" height="0.5" width="0.5" position="-0.5 5.50 0" id="sceneChanger2"></a-box>
-		
+
 		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="5.3 4.9 -2.8" id="deforestationBox"></a-box>
 		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-8 -4 -2" id="jaguarBox"></a-box>
 		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-5.9 4.5 -0.2" id="trusselBox"></a-box>
