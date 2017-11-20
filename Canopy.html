@@ -2,78 +2,78 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<title>360&deg; Image Gallery</title>
-	<meta name="description" content="360&deg; Image Gallery - A-Frame">
-	<!--<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <meta charset="utf-8">
+    <title>360&deg; Image Gallery</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <!--<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>-->
-
-	<script src="components/build.js"></script>
+    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+<script src="components/aframe-master.min.js"></script>   
+-->
+	<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script> 
+  	<script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
 	<script src="components/a-frame-functions.js"></script>
-	<script>
-		AFRAME.registerComponent('the-jungle', {
-			init: function() {
+    <script>
 
-				createSceneChanger("#sceneChanger1", "Understory.html");
-				createSceneChanger("#sceneChanger2", "Emergent Layer.html");
-				createHoverColor("#sceneChanger2", "blue");
-				createHoverColor("#sceneChanger1", "blue");
+        AFRAME.registerComponent('the-jungle', {
+            init: function() {
 
-				createHoverColor("#sceneChanger1", "blue");
-				createHoverColor("#sceneChanger2", "blue");
-
+                createSceneChanger("#sceneChanger1", "Understory.html");
+                createSceneChanger("#sceneChanger2", "Emergent Layer.html");
+                createHoverColor("#sceneChanger2", "blue");
+                createHoverColor("#sceneChanger1", "blue");
+				
 				createHoverColor("#primatBox", "blue");
 				createItemDisplayer("#primatBox", "#primatPlane");
 
 				createHoverColor("#bistandBox", "blue");
 				createItemDisplayer("#bistandBox", "#bistandPlane");
+                
+                createHoverColor("#macawBox", "blue");
+				createItemDisplayer("#macawBox", "#macawPlane");
 
-				createHoverColor("#tarantulaBox", "blue");
-				createItemDisplayer("#tarantulaBox", "#tarantulaPlane");
+				createHoverColor("#toucanBox", "blue");
+				createItemDisplayer("#toucanBox", "#toucanPlane");
+            }
+        })
 
-				createHoverColor("#aalBox", "blue");
-				createItemDisplayer("#aalBox", "#aalPlane");
-
-			}
-		})
-
-	</script>
+    </script>
 </head>
-
 <body>
 	<a-scene the-jungle>
 
-		<a-text font="kelsonsans" value="Understory" width="3" position="-1.5 -4.55 0" rotation="-50 100 0"></a-text>
 
-		<a-text font="kelsonsans" value="Emergent Layer" width="5" position="6.3 1.8 2.0" rotation="0 250 0"></a-text>
 
-		<a-assets>
-			<img id="Canopy" crossorigin="anonymous" src="Scenes/Canopy%2029m.jpg">
-		</a-assets>
-
-		<a-sky id="image-360" radius="10" src="#Canopy"></a-sky>
-
-		<!-- Camera + cursor. -->
+        <a-assets>
+            <img id="Canopy" crossorigin="anonymous" src="Scenes/Canopy%2029m.jpg">
+        </a-assets>
+        
+        <a-sky id="image-360" radius="10" src="#Canopy"></a-sky>
+        
+       <!-- Camera + cursor. -->
 		<a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
 			<a-cursor fuse="false" color="magenta"></a-cursor>
 		</a-entity>
 
-		<a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.5 -9 -0.5" id="sceneChanger1"></a-box>
-		<a-box color="yellow" depth="0.5" height="0.5" width="0.5" position="5 1 2.0" id="sceneChanger2"></a-box>
-
+        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.665 -5.075 -1.505" id="sceneChanger1"><a-text font="kelsonsans" value="Underskov" width="3" position="0.336 1.806 0.551" rotation="-51.8526804593395 59.07194867798787 0"></a-text></a-box>
+        
+        <a-box color="yellow" depth="0.5" height="0.5" width="0.5" position="-0.822 3.833 -3.162" id="sceneChanger2" material=""><a-text font="kelsonsans" value="Kaemper" width="5" position="-0.45 0.452 0.483" rotation="52.54 0 0"></a-text></a-box>
+        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-5.8 -4 3" id="macawBox"></a-box>
+		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="1.644 -0.278 -5.573" id="toucanBox"></a-box>
+		
 		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-5.5 3.9 -3.9" id="primatBox"></a-box>
-		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="3.2 -7 -2" id="bistandBox"></a-box>
-		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-3.2 -4 -4.7" id="tarantulaBox"></a-box>
-		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="5 5 -1" id="aalBox"></a-box>
-
-		<a-plane src="Images/primater.jpg" height="10" width="10" position="0 0 -5" visible=false id="primatPlane" class="displayer"></a-plane>
-		<a-plane src="Images/Udviklingsbistand.png" height="10" width="10" position="0 0 -5" visible=false id="bistandPlane" class="displayer"></a-plane>
-		<a-plane src="Images/Tarantula.png" height="10" width="10" position="0 0 -5" visible=false id="tarantulaPlane" class="displayer"></a-plane>
-		<a-plane src="Images/elektrisk%20%C3%A5l.png" height="10" width="10" position="0 0 -5" visible=false id="aalPlane" class="displayer"></a-plane>
-	</a-scene>
+		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="2.121 -4.811 -1.269" id="bistandBox" material=""></a-box>
+		
+		<a-plane class="displayer" src="Images/primater.jpg" height="10" width="10" position="0 0 -6.535" visible="false" id="primatPlane"></a-plane>
+		<a-plane class="displayer" src="Images/Udviklingsbistand.png" height="10" width="10" position="5.863 0 -3.369" visible="false" id="bistandPlane" rotation="0 -61.536 0"></a-plane>
+        <a-plane class="displayer" src="Images/Scarlet%20Macaw.png" height="10" width="10" position="-3.618 1.181 4.809" visible=false id="macawPlane" rotation="0 145.589 0"></a-plane>
+		<a-plane class="displayer" src="Images/Toucan.png" height="10" width="10" position="-4.413 0 -4.39" visible="false" id="toucanPlane" rotation="0 45.664736271926614 0"></a-plane>
+        
+        <a-text font="kelsonsans" value="Kronelag" width="20" position="-1.735 0.03 -9.462"></a-text>
+        
+    </a-scene>
 
 </body>
 
