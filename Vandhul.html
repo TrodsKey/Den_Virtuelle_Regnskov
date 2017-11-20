@@ -62,9 +62,9 @@
         <a-sky id="image-360" radius="10" src="#Vandhul"></a-sky>
 
         <!-- Camera + cursor. -->
-        <a-entity camera look-controls>
-            <a-cursor id="cursor"></a-cursor>
-        </a-entity>
+        <a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
+            <a-cursor fuse="false" color="magenta"></a-cursor>
+</a-entity>
 
         
         <a-box color="darkmagenta" depth="0.5" height="0.5" width="0.5" position="4 -2 -2" id="capibaraBox"></a-box>
