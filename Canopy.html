@@ -49,9 +49,10 @@
         
         <a-sky id="image-360" radius="10" src="#Canopy"></a-sky>
         
-        <a-entity camera look-controls>
-            <a-cursor id="cursor"></a-cursor>
-        </a-entity>
+       <!-- Camera + cursor. -->
+		<a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
+			<a-cursor fuse="false" color="magenta"></a-cursor>
+		</a-entity>
 
         <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.665 -5.075 -1.505" id="sceneChanger1"><a-text font="kelsonsans" value="Underskov" width="3" position="0.336 1.806 0.551" rotation="-51.8526804593395 59.07194867798787 0"></a-text></a-box>
         
