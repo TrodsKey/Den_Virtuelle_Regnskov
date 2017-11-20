@@ -9,7 +9,10 @@
     <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>-->
+    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+              createHoverColor("#piratFiskBox", "blue");
+                changeimage("#", "#")
+-->
  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script> 
   	<script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>    <script src="components/a-frame-functions.js"></script>
     <script src="components/aframe-video-controls.min.js"></script>
@@ -20,23 +23,22 @@
                 document.querySelector("#capibaraControls").setAttribute("visible", false);
 
                 createVideoDisplayer("#capibaraBox", "#capibaraVideo", "#capibaraControls")
-                createHoverColor("#capibaraBox", "blue");
+                changeimage("#capibaraBox", "#capibaraBox_Hover")
                 
                 createSceneChanger("#sceneChanger1", "index.html");
                 createHoverColor("#sceneChanger1", "blue");
                 
 				createItemDisplayer("#sortCaimanBox", "#sortCaimanPlane");
-                createHoverColor("#sortCaimanBox", "blue");
+                changeimage("#sortCaimanBox", "#sortCaimanBox_Hover")
                 
                 createItemDisplayer("#anacondaBox", "#anacondaPlane");
-				createHoverColor("#anacondaBox", "blue");
+                changeimage("#anacondaBox", "#anacondaBox_Hover")
      
 				createItemDisplayer("#aalBox", "#aalPlane");
-                createHoverColor("#aalBox", "blue");
+                changeimage("#aalBox", "#aalBox_Hover")
                 
-                createHoverColor("#piratFiskBox", "blue");
 				createItemDisplayer("#piratFiskBox", "#piratFiskPlane");
-                
+                changeimage("#piratFiskBox", "#piratFiskBox_Hover")
             }
         })
     </script>
@@ -51,33 +53,69 @@
 		<a-entity video-controls="src:#video" id="capibaraControls" class="displayer"></a-entity>
 
         <a-assets>
-
             <video id="video" style="display:none" loop crossorigin="anonymous" playsinline webkit-playsinline>
                 <!-- MP4 video source. -->
                 <source type="video/mp4" src="Videos/Capibara,%20Caiman%20&%20Jaguars.mp4" />
             </video>
+            
             <img id="Vandhul" crossorigin="anonymous" src="Scenes/Vandhul.jpg">
+            
+            <img id="Piranha_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/Piranha_Transparent.png">
+            <img id="Piranha_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/Piranha_Hover.png">
+            
+            <img id="Anaconda_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/Anaconda_Transparent.png">
+            <img id="Anaconda_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/Anaconda_Hover.png">
+            
+            <img id="ElectricEel_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/ElectricEel_Transparent.png">
+            <img id="ElectricEel_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/ElectricEel_Hover.png">
+            
+            <img id="Capybara_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/Capybara_Transparent.PNG">
+            <img id="Capybara_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/Capybara_Hover.png">
+            
+            <img id="Caiman_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/Caiman_Transparent.png">
+            <img id="Caiman_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/Caiman_Hover.png">
+            
+            
+            
         </a-assets>
 
         <a-sky id="image-360" radius="10" src="#Vandhul"></a-sky>
 
         <!-- Camera + cursor. -->
+        <a-entity camera look-controls>
+            <a-cursor id="cursor"></a-cursor>
+        </a-entity>
+        
         <a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
             <a-cursor fuse="false" color="magenta"></a-cursor>
 </a-entity>
 
+        <a-image src="#Piranha_Transparent" position="1.101 -3.564 -4.435" id=piratFiskBox visible= "true"></a-image>
+        <a-image src="#Piranha_Hover" position="1.101 -3.564 -4.435" id=piratFiskBox_Hover visible= "false"></a-image>
         
-        <a-box color="darkmagenta" depth="0.5" height="0.5" width="0.5" position="4 -2 -2" id="capibaraBox"></a-box>
-       <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-3.521 0 -4.427" id="sceneChanger1" material=""><a-text font="kelsonsans" value="Skovbund" width="2" position="1.342 0.284 2.061" rotation="4.755549699585833 39.47679208451372 0"></a-text></a-box>
-    
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-3.391 -1.878 5.6" id="anacondaBox" material=""></a-box>
-		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="6.849 -1.362 -2.402" id="sortCaimanBox" material=""></a-box>
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="2.995 -3.146 4.361" id="aalBox" material=""></a-box>
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="1.101 -3.564 -4.435" id="piratFiskBox" material=""></a-box>
+        <a-image src="#Anaconda_Transparent" position="-3.391 -1.878 5.6" id=anacondaBox visible= "true"></a-image>
+        <a-image src="#Anaconda_Hover" position="-3.391 -1.878 5.6" id=anacondaBox_Hover visible= "false"></a-image>
+        
+        <a-image src="#ElectricEel_Transparent" position="2.995 -3.146 4.361" id=aalBox visible= "true"></a-image>
+        <a-image src="#ElectricEel_Hover" position="2.995 -3.146 4.361" id=aalBox_Hover visible= "false"></a-image>
+        
+        <a-image src="#Capybara_Transparent" position="4 -2 -2" id=capibaraBox visible= "true"></a-image>
+        <a-image src="#Capybara_Hover" position="4 -2 -2" id=capibaraBox_Hover visible= "false"></a-image>
+        
+        <a-image src="#Caiman_Transparent" position="6.849 -1.362 -2.402" id=sortCaimanBox visible= "true"></a-image>
+        <a-image src="#Caiman_Hover" position="6.849 -1.362 -2.402" id=sortCaimanBox_Hover visible= "false"></a-image>
 
         
+<<<<<<< HEAD
 		<a-plane class="displayer" src="Videos/Capibara,%20Caiman%20&%20Jaguars.mp4" height="10" width="10" position="2.536 0 -6.478" visible="false" id="capibaraVideo" rotation="0 -20.684 0"></a-plane>
         <a-plane class="displayer" src="Images/black_caiman.png" height="10" width="10" position="2.536 0 -6.478" visible="false" id="sortCaimanPlane" rotation="0 -20.684 0"></a-plane>
+=======
+
+       <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-3.521 0 -4.427" id="sceneChanger1" material=""><a-text font="kelsonsans" value="Skovbund" width="2" position="1.342 0.284 2.061" rotation="4.755549699585833 39.47679208451372 0"></a-text></a-box>
+ 
+        
+        <a-plane class="displayer" src="Images/sort%20Caiman.png" height="10" width="10" position="2.536 0 -6.478" visible="false" id="sortCaimanPlane" rotation="0 -20.684 0"></a-plane>
+>>>>>>> fe500cf54cf375e289c90ef6b87c68e26fc14bbc
         <a-plane class="displayer" src="Images/Anaconda.png" height="10" width="10" position="2.456 0 5.944" visible="false" id="anacondaPlane" rotation="0 -160.944 0"></a-plane>
         <a-plane class="displayer" src="Images/elektrisk%20%C3%A5l.png" height="10" width="10" position="1.726 1.972 5.323" visible="false" id="aalPlane" rotation="10.199 -162.319 0"></a-plane>
         <a-plane class="displayer" src="Images/r%C3%B8d%20piratfisk.png" height="10" width="10" position="1.614 1.217 -5.807" visible="false" id="piratFiskPlane" rotation="0 -13.579 0"></a-plane>

@@ -62,3 +62,16 @@ function createVideoDisplayer(targetElId, displayElId, controllerElId) {
 		}
 	});
 }
+
+function changeimage(targetElId, displayElId) {
+	var targetEl = document.querySelector(targetElId);
+	targetEl.addEventListener("mouseenter", function (evt) {
+		var displayEl = document.querySelector(displayElId);
+		displayEl.setAttribute("visible", true);
+	});
+    targetEl.addEventListener("mouseleave", function (evt) {
+		var displayEl = document.querySelector(displayElId);
+		displayEl.setAttribute("visible", false);
+	});
+}
+
