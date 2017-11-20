@@ -10,8 +10,8 @@
     <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>-->
-    <script src="components/aframe-master.min.js"></script>
-    <script src="components/a-frame-functions.js"></script>
+ <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script> 
+  	<script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>    <script src="components/a-frame-functions.js"></script>
     <script src="components/aframe-video-controls.min.js"></script>
     <script>
         AFRAME.registerComponent('the-jungle', {
@@ -22,7 +22,7 @@
                 createVideoDisplayer("#capibaraBox", "#capibaraVideo", "#capibaraControls")
                 createHoverColor("#capibaraBox", "blue");
                 
-                createSceneChanger("#sceneChanger1", "Index.html");
+                createSceneChanger("#sceneChanger1", "index.html");
                 createHoverColor("#sceneChanger1", "blue");
                 
 				createItemDisplayer("#sortCaimanBox", "#sortCaimanPlane");
@@ -62,10 +62,20 @@
         <a-sky id="image-360" radius="10" src="#Vandhul"></a-sky>
 
         <!-- Camera + cursor. -->
+<<<<<<< HEAD
+<<<<<<< HEAD
         <a-entity camera look-controls>
             <a-cursor id="cursor"></a-cursor>
         </a-entity>
+        
+=======
+=======
+>>>>>>> 9f9a90d9806d316b5b3490e27b17c29752f3635c
+        <a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
+            <a-cursor fuse="false" color="magenta"></a-cursor>
+</a-entity>
 
+>>>>>>> 9f9a90d9806d316b5b3490e27b17c29752f3635c
         
         <a-box color="darkmagenta" depth="0.5" height="0.5" width="0.5" position="4 -2 -2" id="capibaraBox"></a-box>
        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-3.521 0 -4.427" id="sceneChanger1" material=""><a-text font="kelsonsans" value="Skovbund" width="2" position="1.342 0.284 2.061" rotation="4.755549699585833 39.47679208451372 0"></a-text></a-box>
