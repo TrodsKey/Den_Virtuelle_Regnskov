@@ -11,18 +11,6 @@ function createHoverColor(targetElId, desiredColor) {
 	});
 }
 
-/*function createHoverTexture (targetElId, desiredTexture) {
-	var targetEl = document.querySelector(targetElId); // the thing that gets the hover event
-	var originalTexture = targetEl.getAttribute("src");
-
-	targetEl.addEventListener("mouseenter", function (evt) {
-		targetEl.setAttribute("src", desiredTexture);
-	});
-	targetEl.addEventListener("mouseleave", function (evt) {
-		targetEl.setAttribute("src", originalTexture);
-	});
-}*/
-
 //used to make an object into a link
 function createSceneChanger(targetElId, targetUrl) {
 	var targetEl = document.querySelector(targetElId);
@@ -74,3 +62,16 @@ function createVideoDisplayer(targetElId, displayElId, controllerElId) {
 		}
 	});
 }
+
+function changeimage(targetElId, displayElId) {
+	var targetEl = document.querySelector(targetElId);
+	targetEl.addEventListener("mouseenter", function (evt) {
+		var displayEl = document.querySelector(displayElId);
+		displayEl.setAttribute("visible", true);
+	});
+    targetEl.addEventListener("mouseleave", function (evt) {
+		var displayEl = document.querySelector(displayElId);
+		displayEl.setAttribute("visible", false);
+	});
+}
+
