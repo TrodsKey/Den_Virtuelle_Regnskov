@@ -23,21 +23,32 @@
                 createSceneChanger("#sceneChanger2", "Emergent Layer.html");
                 createHoverColor("#sceneChanger2", "blue");
                 createHoverColor("#sceneChanger1", "blue");
+                
+   
 
-                createHoverColor("#primatBox", "blue");
-                createItemDisplayer("#primatBox", "#primatPlane");
+        
+                createItemDisplayer("#CapuchinMonkeyBox", "#primatPlane");
+                changeimage("#CapuchinMonkeyBox", "#CapuchinMonkeyBox_Hover")
+                
 
                 createHoverColor("#bistandBox", "blue");
                 createItemDisplayer("#bistandBox", "#bistandPlane");
+                
 
-                createHoverColor("#macawBox", "blue");
-                createItemDisplayer("#macawBox", "#macawPlane");
+        
+                createItemDisplayer("#ScarletMacawBox", "#macawPlane");
+                changeimage("#ScarletMacawBox", "#ScarletMacawBox_Hover")
+                
 
-                createHoverColor("#toucanBox", "blue");
-                createItemDisplayer("#toucanBox", "#toucanPlane");
+        
+                createItemDisplayer("#ToucanBox", "#toucanPlane");
+                changeimage("#ToucanBox", "#ToucanBox_Hover")
+                
 
-                createHoverColor("#butterflyBox", "blue");
-                createItemDisplayer("#butterflyBox", "#butterflyPlane");
+            
+                createItemDisplayer("#MorphoButterflyBox", "#butterflyPlane");
+                changeimage("#MorphoButterflyBox", "#MorphoButterflyBox_Hover")
+                
 
             }
         })
@@ -51,6 +62,20 @@
 
         <a-assets>
             <img id="Canopy" crossorigin="anonymous" src="Scenes/Canopy%2029m.jpg">
+            
+             <img id="ScarletMacaw_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/ScarletMacaw_Transparent.png">
+            <img id="ScarletMacaw_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/ScarletMacaw_Hover.png">
+            
+            <img id="Toucan_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/Toucan_Transparent.png">
+            <img id="Toucan_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/Toucan_Hover.png">
+            
+            <img id="CapuchinMonkey_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/CapuchinMonkey_Transparent.png">
+            <img id="CapuchinMonkey_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/CapuchinMonkey_Hover.png">
+            
+            <img id="MorphoButterfly_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/MorphoButterfly_Transparent.PNG">
+            <img id="MorphoButterfly_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/MorphoButterfly_Hover.png">
+    
+            
         </a-assets>
 
         <a-sky id="image-360" radius="10" src="#Canopy"></a-sky>
@@ -60,6 +85,19 @@
             <a-cursor fuse="false" color="magenta"></a-cursor>
         </a-entity>
 
+        <a-image src="#ScarletMacaw_Transparent" position="-5.8 -4 3" scale="2.5 2.5 2.5" id=ScarletMacawBox visible= "true"></a-image>
+        <a-image src="#ScarletMacaw_Hover" position="-5.8 -4 3" scale="2.5 2.5 2.5" id=ScarletMacawBox_Hover visible= "false"></a-image>
+        
+        <a-image src="#Toucan_Transparent" position="3.686 -0.278 -5.573" id=ToucanBox visible= "true"></a-image>
+        <a-image src="#Toucan_Hover" position="3.686 -0.278 -5.573" id=ToucanBox_Hover visible= "false"></a-image>
+        
+        <a-image src="#CapuchinMonkey_Transparent" position="-5.5 3.9 -3.9" scale="2.5 2.5 2.5" id=CapuchinMonkeyBox visible= "true"></a-image>
+        <a-image src="#CapuchinMonkey_Hover" position="-5.5 3.9 -3.9" scale="2.5 2.5 2.5" id=CapuchinMonkeyBox_Hover visible= "false"></a-image>
+        
+        <a-image src="#MorphoButterfly_Transparent" position="-0.607 3.558 5.483" rotation="0 22.517241348641353 0" scale="1.5 1.5 1.5" id=MorphoButterflyBox visible= "true"></a-image>
+        <a-image src="#MorphoButterfly_Hover" position="-0.607 3.558 5.483" rotation="0 22.517241348641353 0" scale="1.5 1.5 1.5" id=MorphoButterflyBox_Hover visible= "false"></a-image>
+        
+
         <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.665 -5.075 -1.505" id="sceneChanger1">
             <a-text font="kelsonsans" value="Underskov" width="3" position="0.336 1.806 0.551" rotation="-51.8526804593395 59.07194867798787 0"></a-text>
         </a-box>
@@ -67,10 +105,9 @@
         <a-box color="yellow" depth="0.5" height="0.5" width="0.5" position="-0.822 3.833 -3.162" id="sceneChanger2" material="">
             <a-text font="kelsonsans" value="Kaemper" width="5" position="-0.45 0.452 0.483" rotation="52.54 0 0"></a-text>
         </a-box>
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-5.8 -4 3" id="macawBox"></a-box>
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="3.686 -0.278 -5.573" id="toucanBox"></a-box>
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-5.5 3.9 -3.9" id="primatBox"></a-box>
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-0.607 3.558 5.483" id="butterflyBox"></a-box>
+        
+        
+
         <a-box color="green" depth="0.5" height="0.5" width="0.5" position="2.121 -4.811 -1.269" id="bistandBox"></a-box>
 
         <a-plane class="displayer" src="Images/New_World_Monkeys.png" height="10" width="10" position="0 0 -6.535" visible="false" id="primatPlane"></a-plane>
