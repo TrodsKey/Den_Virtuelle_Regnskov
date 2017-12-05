@@ -3,26 +3,27 @@
 
 <head>
 
-	<meta charset="utf-8">
-	<title>360&deg; Image Gallery</title>
-	<meta name="description" content="360&deg; Image Gallery - A-Frame">
-<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script> 
-  	<script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>	<script src="components/a-frame-functions.js"></script>
-	<script>
-		AFRAME.registerComponent('the-jungle', {
-			init: function() {
+    <meta charset="utf-8">
+    <title>360&deg; Image Gallery</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+    <script src="components/a-frame-functions.js"></script>
+    <script>
+        AFRAME.registerComponent('the-jungle', {
+            init: function () {
 
                 createSceneChanger("#sceneChanger1", "index.html");
-				createSceneChanger("#sceneChanger2", "Canopy.html");
+                createSceneChanger("#sceneChanger2", "Canopy.html");
 
-				createHoverColor("#sceneChanger1", "blue");
-				createHoverColor("#sceneChanger2", "blue");
+                createHoverColor("#sceneChanger1", "blue");
+                createHoverColor("#sceneChanger2", "blue");
 
-				createHoverColor("#deforestationBox", "blue");
-				createItemDisplayer("#deforestationBox", "#deforestationPlane");
+                createHoverColor("#deforestationBox", "blue");
+                createItemDisplayer("#deforestationBox", "#deforestationPlane");
 
-				createHoverColor("#trusselBox", "blue");
-				createItemDisplayer("#trusselBox", "#trusselPlane");
+                createHoverColor("#trusselBox", "blue");
+                createItemDisplayer("#trusselBox", "#trusselPlane");
 
             }
         })
@@ -33,9 +34,9 @@
     <a-scene the-jungle>
 
         <a-assets>
-            <img id="Understory" crossorigin="anonymous" src="Scenes/Understory%2017m.jpg">
+            <img id="Understory" crossorigin="anonymous" src="Scenes/ScenesHD/UnderstoryHD.jpg">
         </a-assets>
-	    
+
         <!-- Camera + cursor. -->
         <a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
             <a-cursor fuse="false" color="magenta"></a-cursor>
@@ -44,20 +45,25 @@
         <a-sky id="image-360" radius="10" src="#Understory"></a-sky>
 
 
-        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="0.598 -4.088 -4.033" id="sceneChanger1" material=""><a-text font="kelsonsans" value="Skovbund" width="3" position="-0.548 2.034 1.555" rotation="-40.336 -4.297 2.578"></a-text></a-box>
-		<a-box color="yellow" depth="0.5" height="0.5" width="0.5" position="-2.105 4.489 -0.762" id="sceneChanger2" material=""><a-text color="black" font="kelsonsans" value="Kronelag" width="2" position="1.187 -1.887 0.536" rotation="85.886 160.027 71.391"></a-text></a-box>
-		
-		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="5.3 -0.183 -2.8" id="deforestationBox" material=""></a-box>
+        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="0.598 -4.088 -4.033" id="sceneChanger1" material="">
+            <a-text font="kelsonsans" value="Skovbund" width="3" position="-0.548 2.034 1.555" rotation="-40.336 -4.297 2.578"></a-text>
+        </a-box>
 
-		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-5.9 4.5 -0.2" id="trusselBox"></a-box>
-		
+        <a-box color="yellow" depth="0.5" height="0.5" width="0.5" position="-2.105 4.489 -0.762" id="sceneChanger2" material="">
+            <a-text color="black" font="kelsonsans" value="Kronelag" width="2" position="1.187 -1.887 0.536" rotation="85.886 160.027 71.391" text="color:#ffffff"></a-text>
+        </a-box>
 
-		<a-plane class="displayer" src="Images/deforestation.png" height="10" width="10" position="0 0 -5" visible=false id="deforestationPlane"></a-plane>
+        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="5.3 -0.183 -2.8" id="deforestationBox" material=""></a-box>
+
+        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-5.9 4.5 -0.2" id="trusselBox"></a-box>
 
 
-		<a-plane class="displayer" src="Images/Trusler%20mod%20regnskoven.png" height="10" width="10" position="0 0 -5" visible=false id="trusselPlane"></a-plane>
-        
-        <a-text font="kelsonsans" value="Underskov" width="20" position="-1.735 0.03 -9.462"></a-text>
+        <a-plane class="displayer" src="Images/deforestation.png" height="10" width="10" position="0 0 -5" visible=false id="deforestationPlane"></a-plane>
+
+
+        <a-plane class="displayer" src="Images/Trusler%20mod%20regnskoven.png" height="10" width="10" position="0 0 -5" visible=false id="trusselPlane"></a-plane>
+
+        <a-text font="kelsonsans" value="Underskov" width="21" position="-1.735 0.03 -9.462"></a-text>
 
     </a-scene>
 </body>
