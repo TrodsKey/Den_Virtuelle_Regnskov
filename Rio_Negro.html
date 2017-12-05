@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>360&deg; Image Gallery</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <!--<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+              createHoverColor("#piratFiskBox", "blue");
+                changeimage("#", "#")
+-->
+ <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script> 
+  	<script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>    <script src="components/a-frame-functions.js"></script>
+    <script src="components/aframe-video-controls.min.js"></script>
+    <script>
+        AFRAME.registerComponent('the-jungle', {
+            init: function () {
+                
+                createSceneChanger("#sceneChanger1", "vandhul.html");
+                createHoverColor("#sceneChanger1", "blue");
+                
+				createItemDisplayer("#sortCaimanBox", "#sortCaimanPlane");
+                changeimage("#sortCaimanBox", "#sortCaimanBox_Hover")
+                
+                createItemDisplayer("#anacondaBox", "#anacondaPlane");
+                changeimage("#anacondaBox", "#anacondaBox_Hover")
+     
+				createItemDisplayer("#aalBox", "#aalPlane");
+                changeimage("#aalBox", "#aalBox_Hover")
+            }
+        })
+    </script>
+
+</head>
+
+<body>
+    <a-scene the-jungle>
+
+        <a-assets>
+            
+            <img id="Vandhul" crossorigin="anonymous" src="Scenes/Rio_Negro.jpg">
+            
+            <img id="Anaconda_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/Anaconda_Transparent.png">
+            <img id="Anaconda_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/Anaconda_Hover.png">
+            
+            <img id="ElectricEel_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/ElectricEel_Transparent.png">
+            <img id="ElectricEel_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/ElectricEel_Hover.png">
+            
+            <img id="Capybara_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/Capybara_Transparent.PNG">
+            <img id="Capybara_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/Capybara_Hover.png">
+            
+            <img id="Caiman_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/Caiman_Transparent.png">
+            <img id="Caiman_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/Caiman_Hover.png">
+            
+            
+            
+        </a-assets>
+
+        <a-sky id="image-360" radius="10" src="#Vandhul"></a-sky>
+
+        <!-- Camera + cursor. -->
+        <a-entity camera look-controls>
+            <a-cursor id="cursor"></a-cursor>
+        </a-entity>
+        
+        <a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
+            <a-cursor fuse="false" color="magenta"></a-cursor>
+</a-entity>
+        
+        <a-image src="#Anaconda_Transparent" position="-3.391 -1.878 5.6" id=anacondaBox visible= "true"></a-image>
+        <a-image src="#Anaconda_Hover" position="-3.391 -1.878 5.6" id=anacondaBox_Hover visible= "false"></a-image>
+        
+        <a-image src="#ElectricEel_Transparent" position="2.629 -7.203 -5.601" id=aalBox visible= "true"></a-image>
+        <a-image src="#ElectricEel_Hover" position="2.629 -7.203 -5.601" id=aalBox_Hover visible= "false"></a-image>
+        
+        <a-image src="#Capybara_Transparent" position="4 -2 6.561" rotation="0 22.517241348641353 0" scale="1.5 1.5 1.5" id=capibaraBox visible= "true"></a-image>
+        <a-image src="#Capybara_Hover" position="4 -2 6.561" rotation="0 22.517241348641353 0" scale="1.5 1.5 1.5" id=capibaraBox_Hover visible= "false"></a-image>
+        
+        <a-image src="#Caiman_Transparent" position="8.574 -3.606 -2.806" rotation="0 -45 0" scale="1.5 1.5 1.5" id=sortCaimanBox visible= "true"></a-image>
+        <a-image src="#Caiman_Hover" position="8.574 -3.606 -2.806" rotation="0 -45 0" scale="1.5 1.5 1.5" id=sortCaimanBox_Hover visible= "false"></a-image>
+
+	    
+       <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-3.521 0 -4.427" id="sceneChanger1" material=""><a-text font="kelsonsans" value="Skovbund" width="2" position="1.342 0.284 2.061" rotation="4.755549699585833 39.47679208451372 0"></a-text></a-box>
+
+        <a-plane class="displayer" src="Images/Amazon_river.png" height="10" width="10" position="2.536 0 -6.478" visible="false" id="sortCaimanPlane" rotation="0 -20.684 0"></a-plane>
+        <a-plane class="displayer" src="Images/amazon_climate.png" height="10" width="10" position="2.456 0 5.944" visible="false" id="anacondaPlane" rotation="0 -160.944 0"></a-plane>
+        <a-plane class="displayer" src="Images/rainforest_tribe_facts.png" height="10" width="10" position="1.726 1.972 5.323" visible="false" id="aalPlane" rotation="10.199 -162.319 0"></a-plane>
+        
+        <a-text font="kelsonsans" value="Rio Negro" width="20" position="-1.735 0.03 -9.462"></a-text>
+        
+    </a-scene>
+
+</body>
+
+</html>
