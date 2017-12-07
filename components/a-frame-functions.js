@@ -75,3 +75,32 @@ function changeimage(targetElId, displayElId) {
 	});
 }
 
+function audioControle() { //SOUND STATUS
+  var sound = document.querySelector('#audio');
+  if (isPlaying == true) {
+    // Do pause.
+    sound.components.sound.pauseSound(); 
+    isPlaying = false;
+  } else if (isPlaying == false){
+    // Do play.
+    sound.components.sound.playSound(); 
+    isPlaying = true;
+  }
+}
+
+function createHoverSound(targetElId) {
+	var sound = document.querySelector(targetElId); // the thing that gets the hover event
+	sound.addEventListener("mouseenter", function (evt) {
+		sound.components.sound.playSound(); 
+	});
+	sound.addEventListener("mouseleave", function (evt) {
+		sound.components.sound.pauseSound();
+	});
+}
+
+function createClickSound(targetElId) {
+     var sound = document.querySelector(targetElId);
+        sound.addEventListener('click', function () {
+         sound.components.sound.playSound(); 
+         });
+}
