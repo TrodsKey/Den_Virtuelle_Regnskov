@@ -61,11 +61,10 @@
 
         <a-sky id="image-360" radius="10" src="#Vandhul"></a-sky>
 
-        <!-- Camera + cursor. -->
-        <a-entity camera look-controls>
-            <a-cursor id="cursor"></a-cursor>
-        </a-entity>
-
+       <!-- Camera + cursor. -->
+        <a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
+            <a-cursor fuse="false" color="magenta"></a-cursor>
+</a-entity>
         
         <a-box color="darkmagenta" depth="0.5" height="0.5" width="0.5" position="4 -2 -2" id="capibaraBox"></a-box>
        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-3.521 0 -4.427" id="sceneChanger1" material=""><a-text font="kelsonsans" value="Skovbund" width="2" position="1.342 0.284 2.061" rotation="4.755549699585833 39.47679208451372 0"></a-text></a-box>
