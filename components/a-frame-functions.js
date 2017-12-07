@@ -63,18 +63,19 @@ function createVideoDisplayer(targetElId, displayElId, controllerElId) {
 	});
 }
 
+//used to change status of the image of the element when hovered/not hovered
 function changeimage(targetElId, displayElId) {
-	var targetEl = document.querySelector(targetElId);
-	targetEl.addEventListener("mouseenter", function (evt) {
+	var targetEl = document.querySelector(targetElId); //the element that we're looking for
+	targetEl.addEventListener("mouseenter", function (evt) { //when mouse enters the element
 		var displayEl = document.querySelector(displayElId);
-		displayEl.setAttribute("visible", true);
+		displayEl.setAttribute("visible", true);    //make it visible
 	});
-    targetEl.addEventListener("mouseleave", function (evt) {
+    targetEl.addEventListener("mouseleave", function (evt) { //when mouse leaves the element
 		var displayEl = document.querySelector(displayElId);
-		displayEl.setAttribute("visible", false);
+		displayEl.setAttribute("visible", false);   //hide it again
 	});
 }
-
+//adding ambient sound
 function audioControle() { //SOUND STATUS
   var sound = document.querySelector('#audio');
   if (isPlaying == true) {
@@ -88,19 +89,21 @@ function audioControle() { //SOUND STATUS
   }
 }
 
+
+//used to add sound when the mouse enters the element
 function createHoverSound(targetElId) {
-	var sound = document.querySelector(targetElId); // the thing that gets the hover event
-	sound.addEventListener("mouseenter", function (evt) {
-		sound.components.sound.playSound(); 
+	var sound = document.querySelector(targetElId); // the element that gets the hover event
+	sound.addEventListener("mouseenter", function (evt) { //when mouse enters the element
+		sound.components.sound.playSound();  //play designated sound file
 	});
-	sound.addEventListener("mouseleave", function (evt) {
-		sound.components.sound.pauseSound();
+	sound.addEventListener("mouseleave", function (evt) { //when cursor leaves the element
+		sound.components.sound.pauseSound(); //stop the sound
 	});
 }
-
+//play sound when an element is clicked
 function createClickSound(targetElId) {
-     var sound = document.querySelector(targetElId);
-        sound.addEventListener('click', function () {
-         sound.components.sound.playSound(); 
+     var sound = document.querySelector(targetElId); //find the element that gets the click event
+        sound.addEventListener('click', function () { //when the element is clicked
+         sound.components.sound.playSound();  //play the sound file
          });
 }
