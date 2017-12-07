@@ -107,4 +107,3 @@ function createClickSound(targetElId) {
          sound.components.sound.playSound();  //play the sound file
          });
 }
-
