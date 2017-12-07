@@ -26,7 +26,9 @@
                 changeimage("#capibaraBox", "#capibaraBox_Hover")
                 
                 createSceneChanger("#sceneChanger1", "index.html");
+                createSceneChanger("#sceneChanger2", "Rio_Negro.html");
                 createHoverColor("#sceneChanger1", "blue");
+				createHoverColor("#sceneChanger2", "blue");
                 
 				createItemDisplayer("#sortCaimanBox", "#sortCaimanPlane");
                 changeimage("#sortCaimanBox", "#sortCaimanBox_Hover")
@@ -107,6 +109,9 @@
 
 	    
        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-3.521 0 -4.427" id="sceneChanger1" material=""><a-text font="kelsonsans" value="Skovbund" width="2" position="1.342 0.284 2.061" rotation="4.755549699585833 39.47679208451372 0"></a-text></a-box>
+       <a-box color="yellow" depth="0.5" height="0.5" width="0.5" position="-0.822 3.833 -3.162" id="sceneChanger2" material="">
+            <a-text font="kelsonsans" value="Rio Negro" width="5" position="-0.45 0.452 0.483" rotation="52.54 0 0"></a-text>
+       </a-box>
 
         <a-plane class="displayer" src="Images/black_caiman.png" height="10" width="10" position="2.536 0 -6.478" visible="false" id="sortCaimanPlane" rotation="0 -20.684 0"></a-plane>
         <a-plane class="displayer" src="Images/Anaconda.png" height="10" width="10" position="2.456 0 5.944" visible="false" id="anacondaPlane" rotation="0 -160.944 0"></a-plane>
