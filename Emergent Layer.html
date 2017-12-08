@@ -28,6 +28,13 @@
 
                 createHoverColor("#flightBox", "blue");
                 createVideoDisplayer("#flightBox", "#rainforestVideo", "#rainforestControls");
+
+				createHoverColor("#jungleGiantBox", "blue");
+                createItemDisplayer("#jungleGiantBox", "#jungleGiantPlane");
+				
+				createHoverColor("#layerInfoBox", "blue");
+                createItemDisplayer("#layerInfoBox", "#layerInfoPlane");
+
             }
         })
     </script>
@@ -73,10 +80,17 @@
 
         <a-box color="darkmagenta" depth="0.5" height="0.5" width="0.5" position="4 -2 -2" id="flightBox"></a-box>
         <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-6.9 2.8 -0.7" id="internationalBox"></a-box>
-
-        <a-plane class="displayer" src="#video" height="10" width="10" position="0 0 -5" visible=false id="flightPlane" class="displayer"></a-plane>
-        <a-plane class="displayer" src="Images/Internationale%20organisationer.png" height="10" width="10" position="0 0 -5" visible=false id="internationalPlane" class="displayer"></a-plane>
+		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-6.9 3.8 -0.7" id="jungleGiantBox"></a-box>
         
+        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-0.335 1.03 -9.462" id="layerInfoBox"></a-box>
+
+        <!--<a-plane class="displayer" src="#video" height="10" width="10" position="0 0 -5" visible=false id="flightPlane" class="displayer"></a-plane>-->
+
+		<a-plane class="displayer" src="Images/Internationale%20organisationer.png" height="10" width="10" position="0 0 -5" visible=false id="internationalPlane" class="displayer"></a-plane>
+
+		<a-plane class="displayer" src="Images/jungleKaempe.png" height="10" width="10" position="0 0 -5" visible=false id="jungleGiantPlane" class="displayer"></a-plane>
+
+		<a-plane class="displayer" src="Images/kaemper_info.png" height="2" width="7" position="-0.9 -2.03 -8.462" id="layerInfoPlane" visible="false"></a-plane>
         <a-text font="kelsonsans" value="Kaemper" width="20" position="-1.735 0.03 -9.462"></a-text>
 
 
