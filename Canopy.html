@@ -23,9 +23,6 @@
                 createSceneChanger("#sceneChanger2", "Emergent Layer.html");
                 createHoverColor("#sceneChanger2", "blue");
                 createHoverColor("#sceneChanger1", "blue");
-                
-   
-
         
                 createItemDisplayer("#CapuchinMonkeyBox", "#primatPlane");
                 changeimage("#CapuchinMonkeyBox", "#CapuchinMonkeyBox_Hover")
@@ -34,7 +31,8 @@
                 createHoverColor("#bistandBox", "blue");
                 createItemDisplayer("#bistandBox", "#bistandPlane");
                 
-
+                createHoverColor("#layerInfoBox", "blue");
+                createItemDisplayer("#layerInfoBox", "#layerInfoPlane");
         
                 createItemDisplayer("#ScarletMacawBox", "#macawPlane");
                 changeimage("#ScarletMacawBox", "#ScarletMacawBox_Hover")
@@ -105,9 +103,9 @@
         <a-box color="yellow" depth="0.5" height="0.5" width="0.5" position="-0.822 3.833 -3.162" id="sceneChanger2" material="">
             <a-text font="kelsonsans" value="Kaemper" width="5" position="-0.45 0.452 0.483" rotation="52.54 0 0"></a-text>
         </a-box>
-        
-        
 
+		<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-0.032 1.165 -7.2" id="layerInfoBox"></a-box>
+        
         <a-box color="green" depth="0.5" height="0.5" width="0.5" position="2.121 -4.811 -1.269" id="bistandBox"></a-box>
 
         <a-plane class="displayer" src="Images/New_World_Monkeys.png" height="10" width="10" position="0 0 -6.535" visible="false" id="primatPlane"></a-plane>
@@ -115,7 +113,10 @@
         <a-plane class="displayer" src="Images/Scarlet%20Macaw.png" height="10" width="10" position="-3.618 1.181 4.809" visible=false id="macawPlane" rotation="0 145.589 0"></a-plane>
         <a-plane class="displayer" src="Images/Toucan.png" height="10" width="10" position="-4.413 0 -4.39" visible="false" id="toucanPlane" rotation="0 45.664736271926614 0"></a-plane>
         <a-plane class="displayer" src="Images/morpho_butterfly.png" height="8" width="8" position="1 2 6" id="butterflyPlane" rotation="0 175 0" visible="false"></a-plane>
-        <a-text font="kelsonsans" value="Kronelag" width="20" position="-1.735 0.03 -9.462"></a-text>
+
+        <a-plane class="displayer" src="Images/kronelag_info.png" height="2" width="8" position="-0.999 -2.03 -8.177" id="layerInfoPlane" visible="false"></a-plane>
+
+		<a-text font="kelsonsans" value="Kronelag" width="20" position="-1.735 0.03 -9.462"></a-text>
 
     </a-scene>
 
