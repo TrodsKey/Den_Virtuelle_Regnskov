@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>360&deg; Image Gallery</title>
     <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <link rel="stylesheet" type="text/css" href="components/button.css">
     <!--<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
@@ -44,45 +45,49 @@
 
 <body>
 
-    <a-scene the-jungle>
-
-
-        <!--	<a-text font="kelsonsans" value="Understory" width="2" position="0 3.3 2.0" rotation="100 165 0"></a-text> why is this still here? xd-->
-        <a-assets>
-            <audio id="audio" src="https://api.soundcloud.com/tracks/85993823/stream?client_id=56c4f3443da0d6ce6dcb60ba341c4e8d"></audio>
-            <audio id="click" src="Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3" loop></audio>
-
-            <img id="Undergrowth" crossorigin="anonymous" src="Scenes/ScenesHD/ForestFloorHD.jpg">
-        </a-assets>
-
-        <a-sky id="image-360" radius="10" src="#Undergrowth"></a-sky>
-
-        <!-- Camera + cursor. -->
-        <a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
-            <a-cursor fuse="false" color="magenta"></a-cursor>
-        </a-entity>
-        
-
-        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.899 3.725 2.043" id="sceneChanger1" material="" rotation="0 110.8673333578143 0">
-            <a-text font="kelsonsans" value="Underskov" width="2" position="-0.016 -0.798 0.844" rotation="42.79994729627249 -32.77318588148309 -8.136000690857689"></a-text>
-        </a-box>
-
-        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="8.241 -0.697 -2.949" id="sceneChanger2" rotation="0 -67.49442826641098 0">
-            <a-text font="kelsonsans" value="Vandhul" width="2" position="-0.459 0.387 1.423" rotation="0 -5.099324376664327 0" scale="2.4 3.47 2.62" text=""></a-text>
-        </a-box>
-
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-4.01 -4.868 2.691" id="faeldningBox" material=""></a-box>
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="0.295 1.398 -4.759" id="tarantulaBox" sound="src:Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3"></a-box>
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-8.988 -1.756 -1.401" id="jaguarBox" material="" sound="src:Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3"></a-box>
-
-        <a-plane class="displayer" src="Images/regnskoven%20f%C3%A6ldes.png" height="10" width="10" position="-4.689 0 3.834" visible="false" id="faeldningPlane" rotation="0 127.025 0"></a-plane>
-        <a-plane class="displayer" src="Images/Tarantula.png" height="10" width="10" position="5.652 0 -3.724" visible="false" id="tarantulaPlane" rotation="0 -54.4309905374282 0"></a-plane>
-        <a-plane class="displayer" src="Images/Jaguar.png" height="10" width="10" position="-5.068 0 3.222" visible="false" id="jaguarPlane" rotation="0 123.873 0"></a-plane>
-
-        <a-text font="kelsonsans" value="Skovbund" width="20" position="-1.735 0.03 -9.462"></a-text>
-
-    </a-scene>
-
+   <div id="sceneContainer">
+    	 <a-scene the-jungle>
+    	
+    	
+    	    <!--	<a-text font="kelsonsans" value="Understory" width="2" position="0 3.3 2.0" rotation="100 165 0"></a-text> why is this still here? xd-->
+    	    <a-assets>
+    	        <audio id="audio" src="https://api.soundcloud.com/tracks/85993823/stream?client_id=56c4f3443da0d6ce6dcb60ba341c4e8d"></audio>
+    	        <audio id="click" src="Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3" loop></audio>
+    	
+    	        <img id="Undergrowth" crossorigin="anonymous" src="Scenes/ScenesHD/ForestFloorHD.jpg">
+    	    </a-assets>
+    	
+    	    <a-sky id="image-360" radius="10" src="#Undergrowth"></a-sky>
+    	
+    	    <!-- Camera + cursor. -->
+    	    <a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
+    	        <a-cursor fuse="false" color="magenta"></a-cursor>
+    	    </a-entity>
+    	    
+    	
+    	    <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.899 3.725 2.043" id="sceneChanger1" material="" rotation="0 110.8673333578143 0">
+    	        <a-text font="kelsonsans" value="Underskov" width="2" position="-0.016 -0.798 0.844" rotation="42.79994729627249 -32.77318588148309 -8.136000690857689"></a-text>
+    	    </a-box>
+    	
+    	    <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="8.241 -0.697 -2.949" id="sceneChanger2" rotation="0 -67.49442826641098 0">
+    	        <a-text font="kelsonsans" value="Vandhul" width="2" position="-0.459 0.387 1.423" rotation="0 -5.099324376664327 0" scale="2.4 3.47 2.62" text=""></a-text>
+    	    </a-box>
+    	
+    	    <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-4.01 -4.868 2.691" id="faeldningBox" material=""></a-box>
+    	    <a-box color="green" depth="0.5" height="0.5" width="0.5" position="0.295 1.398 -4.759" id="tarantulaBox" sound="src:Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3"></a-box>
+    	    <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-8.988 -1.756 -1.401" id="jaguarBox" material="" sound="src:Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3"></a-box>
+    	
+    	    <a-plane class="displayer" src="Images/regnskoven%20f%C3%A6ldes.png" height="10" width="10" position="-4.689 0 3.834" visible="false" id="faeldningPlane" rotation="0 127.025 0"></a-plane>
+    	    <a-plane class="displayer" src="Images/Tarantula.png" height="10" width="10" position="5.652 0 -3.724" visible="false" id="tarantulaPlane" rotation="0 -54.4309905374282 0"></a-plane>
+    	    <a-plane class="displayer" src="Images/Jaguar.png" height="10" width="10" position="-5.068 0 3.222" visible="false" id="jaguarPlane" rotation="0 123.873 0"></a-plane>
+    	
+    	    <a-text font="kelsonsans" value="Skovbund" width="20" position="-1.735 0.03 -9.462"></a-text>
+    	
+    	</a-scene>
+    </div>
+<div id="buttContainer">
+	<a href="feedback.html" id="feedbackSceneButt">Giv Feedback</a>
+</div>
 </body>
 
 </html>
