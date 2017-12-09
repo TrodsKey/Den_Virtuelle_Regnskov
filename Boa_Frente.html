@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>360&deg; Image Gallery</title>
-    <meta name="description" content="360&deg; Image Gallery - A-Frame">
-    <!--<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+	<meta charset="utf-8">
+	<title>360&deg; Image Gallery</title>
+	<meta name="description" content="360&deg; Image Gallery - A-Frame">
+	<link rel="stylesheet" type="text/css" href="components/button.css">
+	<!--<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
     <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
@@ -13,6 +14,7 @@
               createHoverColor("#piratFiskBox", "blue");
                 changeimage("#", "#")
 -->
+
  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script> 
   	<script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>    <script src="components/a-frame-functions.js"></script>
     <script src="components/aframe-video-controls.min.js"></script>
@@ -37,10 +39,11 @@
             }
         })
     </script>
-
 </head>
 
 <body>
+
+	<div id="sceneContainer">
     <a-scene the-jungle>
 
         <a-assets>
@@ -96,9 +99,12 @@
         <a-plane class="displayer" src="Images/who_are_indigenous.png" height="10" width="10" position="1.614 1.217 -5.807" visible="false" id="ZULULPlane" rotation="0 -13.579 0"></a-plane>
         
         <a-text font="kelsonsans" value="Boa Frente" width="20" position="-1.735 0.03 -9.462"></a-text>
-        
-    </a-scene>
 
+		</a-scene>
+	</div>
+	<div id="buttContainer">
+		<a href="feedback.html" id="feedbackSceneButt">Giv Feedback</a>
+	</div>
 </body>
 
 </html>
