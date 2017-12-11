@@ -3,11 +3,11 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="components/reset.css">
-	<link rel="stylesheet" type="text/css" href="components/feedback-page.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="components/feedback.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script>
-		var APIKEY = '7_ZjK4DYrDhsKLPWzkfGVsoO5-d0pnrA';
-		var myDB = 'regnskov_feedback';
+		var APIKEY = 'ue9FPUIRGEEIWzwBg_DNsLubTdAsiygg';
+		var myDB = 'regnskov';
 		var myCollection = 'feedback';
 
 		var doPost = function(theName, theFeedback) {
@@ -31,7 +31,7 @@
 
 		$(document).ready(function() {
 
-			$('#submitButton').on('click', function(evt) {
+			$('#submitButt').click(function(evt) {
 				evt.preventDefault();
 				var theName = $("#theName").val();
 				var theFeedback = $("#theFeedback").val();
@@ -40,6 +40,7 @@
 			});
 
 		});
+
 	</script>
 </head>
 
