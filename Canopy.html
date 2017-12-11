@@ -47,6 +47,21 @@
 
 				createItemDisplayer("#MorphoButterflyBox", "#butterflyPlane");
 				changeimage("#MorphoButterflyBox", "#MorphoButterflyBox_Hover")
+                
+                
+                createHoverSound("#CapuchinMonkeyBox")
+                createHoverSound("#bistandBox")
+                createHoverSound("#layerInfoBox")
+                createHoverSound("#ScarletMacawBox")
+                createHoverSound("#ToucanBox")
+                createHoverSound("#MorphoButterflyBox")
+                
+                createClickSound("#CapuchinMonkeyBox")
+                createClickSound("#bistandBox")
+                createClickSound("#layerInfoBox")
+                createClickSound("#ScarletMacawBox")
+                createClickSound("#ToucanBox")
+                createClickSound("#MorphoButterflyBox")
 
 
 			}
@@ -62,6 +77,8 @@
 
 
 			<a-assets>
+                <audio id="audio" src="Musik/Rain%20Sound%20and%20Rainforest%20Animals%20Sound%20-%20Relaxing%20Sleep.mp3"></audio>
+                
 				<img id="Canopy" crossorigin="anonymous" src="Scenes/Canopy%2029m.jpg">
 
 				<img id="ScarletMacaw_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/ScarletMacaw_Transparent.png">
@@ -86,16 +103,16 @@
 				<a-cursor fuse="false" color="magenta"></a-cursor>
 			</a-entity>
 
-			<a-image src="#ScarletMacaw_Transparent" position="-5.8 -4 3" scale="2.5 2.5 2.5" id=ScarletMacawBox visible="true"></a-image>
+			<a-image src="#ScarletMacaw_Transparent" position="-5.8 -4 3" scale="2.5 2.5 2.5" id=ScarletMacawBox visible="true"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
 			<a-image src="#ScarletMacaw_Hover" position="-5.8 -4 3" scale="2.5 2.5 2.5" id=ScarletMacawBox_Hover visible="false"></a-image>
 
-			<a-image src="#Toucan_Transparent" position="3.686 -0.278 -5.573" id=ToucanBox visible="true"></a-image>
+			<a-image src="#Toucan_Transparent" position="3.686 -0.278 -5.573" id=ToucanBox visible="true"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
 			<a-image src="#Toucan_Hover" position="3.686 -0.278 -5.573" id=ToucanBox_Hover visible="false"></a-image>
 
-			<a-image src="#CapuchinMonkey_Transparent" position="-5.5 3.9 -3.9" scale="2.5 2.5 2.5" id=CapuchinMonkeyBox visible="true"></a-image>
+			<a-image src="#CapuchinMonkey_Transparent" position="-5.5 3.9 -3.9" scale="2.5 2.5 2.5" id=CapuchinMonkeyBox visible="true"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
 			<a-image src="#CapuchinMonkey_Hover" position="-5.5 3.9 -3.9" scale="2.5 2.5 2.5" id=CapuchinMonkeyBox_Hover visible="false"></a-image>
 
-			<a-image src="#MorphoButterfly_Transparent" position="-0.607 3.558 5.483" rotation="0 22.517241348641353 0" scale="1.5 1.5 1.5" id=MorphoButterflyBox visible="true"></a-image>
+			<a-image src="#MorphoButterfly_Transparent" position="-0.607 3.558 5.483" rotation="0 22.517241348641353 0" scale="1.5 1.5 1.5" id=MorphoButterflyBox visible="true"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
 			<a-image src="#MorphoButterfly_Hover" position="-0.607 3.558 5.483" rotation="0 22.517241348641353 0" scale="1.5 1.5 1.5" id=MorphoButterflyBox_Hover visible="false"></a-image>
 
 
@@ -107,9 +124,9 @@
 				<a-text font="kelsonsans" value="Kaemper" width="5" position="-0.45 0.452 0.483" rotation="52.54 0 0"></a-text>
 			</a-box>
 
-			<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-0.032 1.165 -7.2" id="layerInfoBox"></a-box>
+			<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-0.032 1.165 -7.2" id="layerInfoBox"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-box>
 
-			<a-box color="green" depth="0.5" height="0.5" width="0.5" position="2.121 -4.811 -1.269" id="bistandBox"></a-box>
+			<a-box color="green" depth="0.5" height="0.5" width="0.5" position="2.121 -4.811 -1.269" id="bistandBox"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-box>
 
 			<a-plane class="displayer" src="Images/New_World_Monkeys.png" height="10" width="10" position="0 0 -6.535" visible="false" id="primatPlane"></a-plane>
 			<a-plane class="displayer" src="Images/Udviklingsbistand.png" height="10" width="10" position="5.863 0 -3.369" visible="false" id="bistandPlane" rotation="0 -61.536 0"></a-plane>

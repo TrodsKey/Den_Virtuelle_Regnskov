@@ -45,6 +45,16 @@
 
 				createItemDisplayer("#piratFiskBox", "#piratFiskPlane");
 				changeimage("#piratFiskBox", "#piratFiskBox_Hover")
+                
+                createHoverSound("#sortCaimanBox")
+                createHoverSound("#anacondaBox")
+                createHoverSound("#aalBox")
+                createHoverSound("#piratFiskBox")
+                
+                createClickSound("#sortCaimanBox")
+                createClickSound("#anacondaBox")
+                createClickSound("#aalBox")
+                createClickSound("#piratFiskBox")
 			}
 		})
 
@@ -61,6 +71,8 @@
 			<a-entity video-controls="src:#video" id="capibaraControls" class="displayer"></a-entity>
 
 			<a-assets>
+                <audio id="audio" src="Musik/Rain%20Sound%20and%20Rainforest%20Animals%20Sound%20-%20Relaxing%20Sleep.mp3"></audio>
+                
 				<video id="video" style="display:none" loop crossorigin="anonymous" playsinline webkit-playsinline>
     	            <!-- MP4 video source. -->
     	            <source type="video/mp4" src="Videos/Capibara,%20Caiman%20&%20Jaguars.mp4" />
@@ -98,19 +110,19 @@
 				<a-cursor fuse="false" color="magenta"></a-cursor>
 			</a-entity>
 
-			<a-image src="#Piranha_Transparent" position="-7.62 -3.564 -4.4" id=piratFiskBox visible="true"></a-image>
+			<a-image src="#Piranha_Transparent" position="-7.62 -3.564 -4.4" id=piratFiskBox visible="true"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
 			<a-image src="#Piranha_Hover" position="-7.62 -3.564 -4.4" id=piratFiskBox_Hover visible="false"></a-image>
 
-			<a-image src="#Anaconda_Transparent" position="-3.391 -1.878 5.6" id=anacondaBox visible="true"></a-image>
+			<a-image src="#Anaconda_Transparent" position="-3.391 -1.878 5.6" id=anacondaBox visible="true"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
 			<a-image src="#Anaconda_Hover" position="-3.391 -1.878 5.6" id=anacondaBox_Hover visible="false"></a-image>
 
-			<a-image src="#ElectricEel_Transparent" position="2.629 -7.203 -5.601" id=aalBox visible="true"></a-image>
+			<a-image src="#ElectricEel_Transparent" position="2.629 -7.203 -5.601" id=aalBox visible="true"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
 			<a-image src="#ElectricEel_Hover" position="2.629 -7.203 -5.601" id=aalBox_Hover visible="false"></a-image>
 
-			<a-image src="#Capybara_Transparent" position="4 -2 6.561" rotation="0 22.517241348641353 0" scale="1.5 1.5 1.5" id=capibaraBox visible="true"></a-image>
+			<a-image src="#Capybara_Transparent" position="4 -2 6.561" rotation="0 22.517241348641353 0" scale="1.5 1.5 1.5" id=capibaraBox visible="true"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
 			<a-image src="#Capybara_Hover" position="4 -2 6.561" rotation="0 22.517241348641353 0" scale="1.5 1.5 1.5" id=capibaraBox_Hover visible="false"></a-image>
 
-			<a-image src="#Caiman_Transparent" position="8.574 -3.606 -2.806" rotation="0 -45 0" scale="1.5 1.5 1.5" id=sortCaimanBox visible="true"></a-image>
+			<a-image src="#Caiman_Transparent" position="8.574 -3.606 -2.806" rotation="0 -45 0" scale="1.5 1.5 1.5" id=sortCaimanBox visible="true"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
 			<a-image src="#Caiman_Hover" position="8.574 -3.606 -2.806" rotation="0 -45 0" scale="1.5 1.5 1.5" id=sortCaimanBox_Hover visible="false"></a-image>
 
 

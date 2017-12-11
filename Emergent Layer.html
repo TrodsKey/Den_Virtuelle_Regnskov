@@ -35,6 +35,19 @@
 
 				createHoverColor("#layerInfoBox", "blue");
 				createItemDisplayer("#layerInfoBox", "#layerInfoPlane");
+                
+                
+                createHoverSound("#internationalBox")
+                createHoverSound("#flightBox")
+                createHoverSound("#jungleGiantBox")
+                createHoverSound("#layerInfoBox")
+
+                
+                createClickSound("#internationalBox")
+                createClickSound("#flightBox")
+                createClickSound("#jungleGiantBox")
+                createClickSound("#layerInfoBox")
+
 
 			}
 		})
@@ -53,6 +66,7 @@
 		
 		
 			<a-assets>
+                <audio id="audio" src="Musik/Rain%20Sound%20and%20Rainforest%20Animals%20Sound%20-%20Relaxing%20Sleep.mp3"></audio>
 		
 				<video id="video" style="display:none" loop crossorigin="anonymous" playsinline webkit-playsinline>
 		                <!-- MP4 video source. -->
@@ -83,11 +97,11 @@
 			</a-box>
 		
 		
-			<a-box color="darkmagenta" depth="0.5" height="0.5" width="0.5" position="4 -2 -2" id="flightBox"></a-box>
-			<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-6.9 2.8 -0.7" id="internationalBox"></a-box>
-			<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-6.9 3.8 -0.7" id="jungleGiantBox"></a-box>
+			<a-box color="darkmagenta" depth="0.5" height="0.5" width="0.5" position="4 -2 -2" id="flightBox"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-box>
+			<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-6.9 2.8 -0.7" id="internationalBox"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-box>
+			<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-6.9 3.8 -0.7" id="jungleGiantBox"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-box>
 		
-			<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-0.335 1.03 -9.462" id="layerInfoBox"></a-box>
+			<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-0.335 1.03 -9.462" id="layerInfoBox"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-box>
 		
 			<!--<a-plane class="displayer" src="#video" height="10" width="10" position="0 0 -5" visible=false id="flightPlane" class="displayer"></a-plane>-->
 		

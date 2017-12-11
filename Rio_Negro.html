@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -37,6 +37,14 @@
      
 				createItemDisplayer("#tribeBox", "#tribePlane");
                 changeimage("#tribeBox", "#tribeBox_Hover");
+                
+                createHoverSound("#riverBox")
+                createHoverSound("#rainforestBox")
+                createHoverSound("#tribeBox")
+                
+                createClickSound("#riverBox")
+                createClickSound("#rainforestBox")
+                createClickSound("#tribeBox")
             }
         })
     </script>
@@ -49,6 +57,7 @@
     <a-scene the-jungle>
 
         <a-assets>
+            <audio id="audio" src="Musik/Rain%20Sound%20and%20Rainforest%20Animals%20Sound%20-%20Relaxing%20Sleep.mp3"></audio>
             
             <img id="Vandhul" crossorigin="anonymous" src="Scenes/Rio_Negro.jpg">
             
@@ -76,14 +85,14 @@
             <a-cursor fuse="false" color="magenta"></a-cursor>
 </a-entity>
         
-        <a-image src="#rainforest_transparent" position="-3.391 -1.878 5.6" id="rainforestBox" visible= "true"></a-image>
+        <a-image src="#rainforest_transparent" position="-3.391 -1.878 5.6" id="rainforestBox" visible= "true"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
         <a-image src="#rainforest_hover" position="-3.391 -1.878 5.6" id="rainforestBox_hover" visible= "false"></a-image>
         
-        <a-image src="#tribe_transparent" position="-3.4 1.442 -5.601" id="tribeBox" visible= "true"></a-image>
+        <a-image src="#tribe_transparent" position="-3.4 1.442 -5.601" id="tribeBox" visible= "true"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
         <a-image src="#tribe_hover" position="-3.4 1.442 -5.6011" id="tribeBox_Hover" visible= "false"></a-image>
 
 
-        <a-image src="#river_transparent" position="8.574 0 -2.806" rotation="0 -45 0" scale="1.5 1.5 1.5" id="riverBox" visible= "true"></a-image>
+        <a-image src="#river_transparent" position="8.574 0 -2.806" rotation="0 -45 0" scale="1.5 1.5 1.5" id="riverBox" visible= "true"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
         <a-image src="#river_hover" position="8.574 0 -2.806" rotation="0 -45 0" scale="1.5 1.5 1.5" id="riverBox_Hover" visible= "false"></a-image>
 
 

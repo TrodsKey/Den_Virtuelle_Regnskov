@@ -41,9 +41,13 @@
 
 
                 
-                
+                createHoverSound("#jaguarBox")
+                createHoverSound("#faeldningBox")
                 createHoverSound("#tarantulaBox")
+                
                 createClickSound("#jaguarBox")
+                createClickSound("#faeldningBox")
+                createClickSound("#tarantulaBox")
             }
   
             
@@ -61,8 +65,7 @@
 
         <!--	<a-text font="kelsonsans" value="Understory" width="2" position="0 3.3 2.0" rotation="100 165 0"></a-text> why is this still here? xd-->
         <a-assets>
-            <audio id="audio" src="https://api.soundcloud.com/tracks/85993823/stream?client_id=56c4f3443da0d6ce6dcb60ba341c4e8d"></audio>
-            <audio id="click" src="Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3" loop></audio>
+            <audio id="audio" src="Musik/Rain%20Sound%20and%20Rainforest%20Animals%20Sound%20-%20Relaxing%20Sleep.mp3"></audio>
             
             <img id="Jaguar_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/Jaguar_Transparent.png">
             <img id="Jaguar_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/Jaguar_Hover.png">
@@ -78,8 +81,8 @@
             <a-cursor fuse="false" color="magenta"></a-cursor>
         </a-entity>
         
-        <a-image src="#Jaguar_Transparent" position="-8.988 -1.756 -1.401" scale="2.5 2.5 2.5" rotation="0 63.082653243903636 0" id=jaguarBox visible= "true" sound="src:Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3"></a-image>
-        <a-image src="#Jaguar_Hover" position="-8.988 -1.756 -1.401" scale="2.5 2.5 2.5" rotation="0 63.082653243903636 0" id=jaguarBox_Hover visible= "false" sound="src:Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3"></a-image>
+        <a-image src="#Jaguar_Transparent" position="-8.988 -1.756 -1.401" scale="2.5 2.5 2.5" rotation="0 63.082653243903636 0" id=jaguarBox visible= "true" sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
+        <a-image src="#Jaguar_Hover" position="-8.988 -1.756 -1.401" scale="2.5 2.5 2.5" rotation="0 63.082653243903636 0" id=jaguarBox_Hover visible= "false"></a-image>
         
 
         <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.899 3.725 2.043" id="sceneChanger1" material="" rotation="0 110.8673333578143 0">
@@ -93,13 +96,13 @@
         
         
         
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-1.434 -0.453 7.426" id="faeldningBox" material="">
-<a-text font="kelsonsans" value="Fældning af træ" width="2" position="1.141 0.54 -2.046" rotation="0.73 180 -0.06" scale="2 2 2" text="color:#ffffff;value:Faeldning af trae"></a-text>
+        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-1.434 -0.453 7.426" id="faeldningBox" material="" sound="src:Musik/water-drops-daniel_simon.mp3">
+            <a-text font="kelsonsans" value="Fældning af træ" width="2" position="1.141 0.54 -2.046" rotation="0.73 180 -0.06" scale="2 2 2" text="color:#ffffff;value:Faeldning af trae"></a-text>
         </a-box>
         
         
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="4.495 -3.864 -7.691" id="tarantulaBox" sound="src:Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3" material="">
-        <a-text font="kelsonsans" value="tarantula" width="3" position="-0.978 0.966 0.507" rotation="0 -5.099324376664327 0" scale="2.4 3.47 2.62" id="tarantulaBox" sound="src:Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3"></a-text>
+        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="4.495 -3.864 -7.691" id="tarantulaBox" material="" sound="src:Musik/water-drops-daniel_simon.mp3">
+        <a-text font="kelsonsans" value="tarantula" width="3" position="-0.978 0.966 0.507" rotation="0 -5.099324376664327 0" scale="2.4 3.47 2.62" id="tarantulaBox"></a-text>
         </a-box>
         
         
