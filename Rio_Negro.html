@@ -24,10 +24,10 @@
 
 				createSceneChanger("#sceneChanger1", "Sump.html");
 				createSceneChanger("#sceneChanger2", "Saraca.html");
-				createSceneChanger("#sceneChanger3", "Vandhul.html");
+
 				createHoverColor("#sceneChanger1", "blue");
 				createHoverColor("#sceneChanger2", "blue");
-				createHoverColor("#sceneChanger3", "blue");
+
                 
 				createItemDisplayer("#riverBox", "#riverPlane");
                 changeImage("#riverBox", "#riverBox_Hover");
@@ -87,21 +87,23 @@
             <a-cursor fuse="false" color="magenta"></a-cursor>
 </a-entity>
 
-        <a-image src="#rainforest_transparent" position="-3.391 -1.878 5.6" id="rainforestBox" rotation="0 151 0">
+        <a-image src="#rainforest_transparent" position="-3.391 -1.878 5.6" id="rainforestBox" rotation="0 150 0" sound="src:Musik/water-drops-daniel_simon.mp3">
             <a-text font="kelsonsans" value="Amazon Rainforest Climate" width="5" position="-1.166 1.614 3.716"></a-text>
         </a-image>
-        <a-image src="#rainforest_hover" position="-3.391 -1.878 5.6" id="rainforestBox_hover" rotation="0 151 0" visible= "false"></a-image>
+        <a-image src="#rainforest_hover" position="-3.391 -1.878 5.6" id="rainforestBox_hover" rotation="0 150 0" visible= "false"></a-image>
         
 
         <a-image src="#rainforest_transparent" position="-3.391 -1.878 5.6" id="rainforestBox" visible= "true"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
         <a-image src="#rainforest_hover" position="-3.391 -1.878 5.6" id="rainforestBox_hover" visible= "false"></a-image>
         
-        <a-image src="#tribe_transparent" position="-3.4 1.442 -5.601" id="tribeBox" visible= "true"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
-        <a-image src="#tribe_hover" position="-3.4 1.442 -5.6011" id="tribeBox_Hover" visible= "false"></a-image>
+       <a-image src="#tribe_transparent" position="-3.4 1.094 -5.601" id="tribeBox">
+            <a-text font="kelsonsans" value="Amazon Rainforest Tribes" width="5" position="0.715 -0.185 2.997" scale="0.8 0.8 0.8"></a-text></a-image>
+        <a-image src="#tribe_hover" position="-3.4 1.094 -5.601" id="tribeBox_Hover" visible= "false"></a-image>
 
 
-        <a-image src="#river_transparent" position="8.574 0 -2.806" rotation="0 -45 0" scale="1.5 1.5 1.5" id="riverBox" visible= "true"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
-
+        <a-image src="#river_transparent" position="8.574 0 -2.806" rotation="0 -45 0" scale="1.5 1.5 1.5" id="riverBox" visible= "true" sound="src:Musik/water-drops-daniel_simon.mp3">
+            <a-text font="kelsonsans" value="Amazon River" width="5" position="-1.785 0.38 2.531" rotation="0 -22.574537128154436 0"></a-text>
+            </a-image>
         <a-image src="#river_hover" position="8.574 0 -2.806" rotation="0 -45 0" scale="1.5 1.5 1.5" id="riverBox_Hover" visible= "false"></a-image>
 
 
@@ -113,9 +115,7 @@
             <a-text font="kelsonsans" value="Saraca" width="5" position="-0.45 0.452 0.483" rotation="52.54 0 0"></a-text>
        </a-box>
 
-        <a-box color="yellow" depth="0.5" height="0.5" width="0.5" position="-8.097 -0.054 -2.095" id="sceneChanger3" material="" rotation="0 -81.87566892419464 0">
-            <a-text font="kelsonsans" value="Vandhul" width="5" position="1.155 0.393 -0.675" rotation="0 153.55268909506063 0"></a-text>
-        </a-box>
+    
 
         <a-plane class="displayer" src="Images/Amazon_river.png" height="10" width="10" position="2.536 0 -6.478" visible="false" id="riverPlane" rotation="0 -20.684 0"></a-plane>
         <a-plane class="displayer" src="Images/amazon_climate.png" height="10" width="10" position="2.456 0 5.944" visible="false" id="rainforestPlane" rotation="0 -160.944 0"></a-plane>
