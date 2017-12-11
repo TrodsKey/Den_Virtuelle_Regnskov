@@ -1,50 +1,44 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<title>360&deg; Image Gallery</title>
-	<meta name="description" content="360&deg; Image Gallery - A-Frame">
-	<link rel="stylesheet" type="text/css" href="components/button.css">
-	<!--<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
-              createHoverColor("#piratFiskBox", "blue");
-                changeImage("#", "#")
--->
-
- <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script> 
-  	<script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>    <script src="components/a-frame-functions.js"></script>
+    <meta charset="utf-8">
+    <title>360&deg; Image Gallery</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <link rel="stylesheet" type="text/css" href="components/button.css">
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+    <script src="components/a-frame-functions.js"></script>
     <script src="components/aframe-video-controls.min.js"></script>
     <script>
         AFRAME.registerComponent('the-jungle', {
             init: function () {
-                
+
                 createSceneChanger("#sceneChanger1", "Sump.html");
                 createHoverColor("#sceneChanger1", "blue");
-                
-				createItemDisplayer("#girlBox", "#girlPlane");
+
+            <<<<<<<
+                HEAD
+                createItemDisplayer("#girlBox", "#girlPlane");
                 changeImage("#girlBox", "#girlBox_Hover")
 
                 createItemDisplayer("#befolkningBox", "#befolkningPlane");
                 changeImage("#befolkningBox", "#befolkningBox_Hover")
 
-				createItemDisplayer("#WTOBox", "#WTOPlane");
+                createItemDisplayer("#WTOBox", "#WTOPlane");
                 changeImage("#WTOBox", "#WTOBox_Hover")
 
-				createItemDisplayer("#ZULULBox", "#ZULULPlane");
+                createItemDisplayer("#ZULULBox", "#ZULULPlane");
 
                 changeImage("#ZULULBox", "#ZULULBox_Hover")
 
-                
-                
+
                 createHoverSound("#girlBox")
                 createHoverSound("#befolkningBox")
                 createHoverSound("#WTOBox")
                 createHoverSound("#ZULULBox")
-                
+
                 createClickSound("#girlBox")
                 createClickSound("#befolkningBox")
                 createClickSound("#WTOBox")
@@ -57,28 +51,29 @@
 
 <body>
 
-	<div id="sceneContainer">
+<div id="sceneContainer">
     <a-scene the-jungle>
 
         <a-assets>
-             <audio id="audio" src="Musik/Forest_Sound.wav" autoplay loop></audio>
-            
+            <audio id="audio" src="Musik/Forest_Sound.wav" autoplay loop></audio>
+
             <img id="Vandhul" crossorigin="anonymous" src="Scenes/Boa%20Frente.jpg">
-            
+
             <img id="ZULUL_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/ZULUL_transparent.png">
             <img id="ZULUL_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/ZULUL_Hover.png">
 
-            <img id="befolkning_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/information_transparent.png">
+            <img id="befolkning_Transparent" crossorigin="anonymous"
+                 src="Transparent_Hover_Images/information_transparent.png">
             <img id="befolkning_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/information_hover.png">
 
-            <img id="WTO_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/information_transparent.png">
+            <img id="WTO_Transparent" crossorigin="anonymous"
+                 src="Transparent_Hover_Images/information_transparent.png">
             <img id="WTO_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/information_hover.png">
 
             <img id="Girl_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/ZULULgril_transparent.png">
             <img id="Girl_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/ZULULgril_Hover.png">
-            
-            
-            
+
+
         </a-assets>
 
         <a-sky id="image-360" radius="10" src="#Vandhul"></a-sky>
@@ -87,40 +82,54 @@
         <a-entity camera look-controls>
             <a-cursor id="cursor"></a-cursor>
         </a-entity>
-        
+
         <a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
             <a-cursor fuse="false" color="magenta"></a-cursor>
-</a-entity>
+        </a-entity>
+
+        <a-image src="#ZULUL_Transparent" position="-7.62 -3.564 -4.4" id=ZULULBox visible="true"
+                 sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
+        <a-image src="#ZULUL_Hover" position="-7.62 -3.564 -4.4" id=ZULULBox_Hover visible="false"></a-image>
+
+        <a-image src="#befolkning_Transparent" position="-3.391 -1.878 5.6" id=befolkningBox rotation="0 136 0"
+                 visible="true" sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
+        <a-image src="#befolkning_Hover" position="-3.391 -1.878 5.6" id=befolkningBox_Hover rotation="0 136 0"
+                 visible="false"></a-image>
+
+        <a-image src="#WTO_Transparent" position="8.581 -1.459 2.869" id="WTOBox" rotation="-14 -124 -6.3"
+                 sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
+        <a-image src="#WTO_Hover" position="8.581 -1.459 2.869" id=WTOBox_Hover rotation="-14 -124 -6.3"
+                 visible="false"></a-image>
+
+        <a-image src="#Girl_Transparent" position="7.828 -0.752 -4.693" rotation="0 -45 0" scale="2 2 2" id="girlBox"
+                 sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
+        <a-image src="#Girl_Hover" position="7.828 -0.752 -4.693" rotation="0 -45 0" scale="2 2 2" id=girlBox_Hover
+                 visible="false"></a-image>
 
 
-        <a-image src="#ZULUL_Transparent" position="-7.62 -3.564 -4.4" id=ZULULBox visible= "true"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
-        <a-image src="#ZULUL_Hover" position="-7.62 -3.564 -4.4" id=ZULULBox_Hover visible= "false"></a-image>
+        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-9.11 -1.502 -2.36" id="sceneChanger1"
+               material="">
+            <a-text font="kelsonsans" value="Sump" width="2" position="2.984 0.876 0.877"
+                    rotation="4.7555 39.4767 0"></a-text>
+        </a-box>
 
-        <a-image src="#befolkning_Transparent" position="-3.391 -1.878 5.6" id=befolkningBox rotation="0 136 0" visible= "true" sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
-        <a-image src="#befolkning_Hover" position="-3.391 -1.878 5.6" id=befolkningBox_Hover rotation="0 136 0" visible= "false"></a-image>
+        <a-plane class="displayer" src="Images/nicaragua_girl.png" height="10" width="10" position="2.536 0 -6.478"
+                 visible="false" id="girlPlane" rotation="0 -20.684 0"></a-plane>
+        <a-plane class="displayer" src="Images/Makira_Levevis.png" height="10" width="10" position="2.456 0 5.944"
+                 visible="false" id="befolkningPlane" rotation="0 -160.944 0"></a-plane>
+        <a-plane class="displayer" src="Images/WTO.png" height="10" width="10" position="0.6 0 5.307" visible="false"
+                 id="WTOPlane" rotation="10.199 -162.319 0"></a-plane>
+        <a-plane class="displayer" src="Images/who_are_indigenous.png" height="10" width="10"
+                 position="1.614 1.217 -5.807" visible="false" id="ZULULPlane" rotation="0 -13.579 0"></a-plane>
 
-        <a-image src="#WTO_Transparent" position="8.581 -1.459 2.869" id="WTOBox" rotation="-14 -124 -6.3" sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
-        <a-image src="#WTO_Hover"  position="8.581 -1.459 2.869" id=WTOBox_Hover rotation="-14 -124 -6.3" visible= "false"></a-image>
-
-        <a-image src="#Girl_Transparent" position="7.828 -0.752 -4.693" rotation="0 -45 0" scale="2 2 2" id="girlBox" sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
-        <a-image src="#Girl_Hover" position="7.828 -0.752 -4.693" rotation="0 -45 0" scale="2 2 2" id=girlBox_Hover visible= "false"></a-image>
-
-
-        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-9.11 -1.502 -2.36" id="sceneChanger1" material="">
-            <a-text font="kelsonsans" value="Sump" width="2" position="2.984 0.876 0.877" rotation="4.7555 39.4767 0"></a-text></a-box>
-
-        <a-plane class="displayer" src="Images/nicaragua_girl.png" height="10" width="10" position="2.536 0 -6.478" visible="false" id="girlPlane" rotation="0 -20.684 0"></a-plane>
-        <a-plane class="displayer" src="Images/Makira_Levevis.png" height="10" width="10" position="2.456 0 5.944" visible="false" id="befolkningPlane" rotation="0 -160.944 0"></a-plane>
-        <a-plane class="displayer" src="Images/WTO.png" height="10" width="10" position="0.6 0 5.307" visible="false" id="WTOPlane" rotation="10.199 -162.319 0"></a-plane>
-        <a-plane class="displayer" src="Images/who_are_indigenous.png" height="10" width="10" position="1.614 1.217 -5.807" visible="false" id="ZULULPlane" rotation="0 -13.579 0"></a-plane>
-        
         <a-text font="kelsonsans" value="Boa Frente" width="20" position="-1.735 0.03 -9.462"></a-text>
 
-		</a-scene>
-	</div>
-	<div id="buttContainer">
-		<a href="feedback.html" id="feedbackSceneButt">Giv Feedback</a>
-	</div>
+    </a-scene>
+</div>
+<div id="buttContainer">
+    <a href="feedback.html" id="feedbackSceneButt">Giv Feedback</a>
+</div>
+
 </body>
 
 </html>

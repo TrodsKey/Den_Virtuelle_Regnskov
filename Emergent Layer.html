@@ -2,115 +2,139 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <title>360&deg; Image Gallery</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="components/a-frame-functions.js"></script>
+    <script src="components/aframe-video-controls.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+    <script>
+        AFRAME.registerComponent('the-jungle', {
+            init: function () {
 
-	<meta charset="utf-8">
-	<title>360&deg; Image Gallery</title>
-	<meta name="description" content="360&deg; Image Gallery - A-Frame">
-	<link rel="stylesheet" type="text/css" href="components/button.css">
-	<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-	<script src="components/a-frame-functions.js"></script>
-	<script src="components/aframe-video-controls.min.js"></script>
-	<script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
-	<script>
-		AFRAME.registerComponent('the-jungle', {
-			init: function() {
+                document.querySelector("#rainforestControls").setAttribute("visible", false);
 
-				document.querySelector("#rainforestControls").setAttribute("visible", false);
+                var videoEl = document.querySelector('#video');
+                videoEl.currentTime = 0; // Seek to 122 seconds.
+                videoEl.pause();
 
-				var videoEl = document.querySelector('#video');
-				videoEl.currentTime = 0; // Seek to 122 seconds.
-				videoEl.pause();
+                createSceneChanger("#sceneChanger1", "Canopy.html");
+                createHoverColor("#sceneChanger1", "blue");
 
-				createSceneChanger("#sceneChanger1", "Canopy.html");
-				createHoverColor("#sceneChanger1", "blue");
+                changeimage("#internationalBox", "#internationalBox_Hover");
+                createItemDisplayer("#internationalBox", "#internationalPlane");
 
-				createHoverColor("#internationalBox", "blue");
-				createItemDisplayer("#internationalBox", "#internationalPlane");
+                createHoverColor("#flightBox", "blue");
+                createVideoDisplayer("#flightBox", "#rainforestVideo", "#rainforestControls");
 
-				createHoverColor("#flightBox", "blue");
-				createVideoDisplayer("#flightBox", "#rainforestVideo", "#rainforestControls");
+                changeimage("#jungleGiantBox", "#jungleGiantBox_Hover");
+                createItemDisplayer("#jungleGiantBox", "#jungleGiantPlane");
 
-				createHoverColor("#jungleGiantBox", "blue");
-				createItemDisplayer("#jungleGiantBox", "#jungleGiantPlane");
+                createHoverColor("#layerInfoBox", "blue");
+                createItemDisplayer("#layerInfoBox", "#layerInfoPlane");
 
-				createHoverColor("#layerInfoBox", "blue");
-				createItemDisplayer("#layerInfoBox", "#layerInfoPlane");
-                
-                
+
                 createHoverSound("#internationalBox")
                 createHoverSound("#flightBox")
                 createHoverSound("#jungleGiantBox")
                 createHoverSound("#layerInfoBox")
 
-                
+
                 createClickSound("#internationalBox")
                 createClickSound("#flightBox")
                 createClickSound("#jungleGiantBox")
                 createClickSound("#layerInfoBox")
-
-
-			}
-		})
-
-	</script>
+            }
+        })
+    </script>
 </head>
 
 <body>
+<div id="sceneContainer">
 
-	<div id="sceneContainer">
-		<a-scene the-jungle>
-		
-			<a-video id="rainforestVideo" rotation="0 180 0" src="#video" height="10" width="10" position="0 0 -5" visible=false class="displayer">
-			</a-video>
-			<a-entity video-controls="src:#video" id="rainforestControls" class="displayer"></a-entity>
-		
-		
-			<a-assets>
-                 <audio id="audio" src="Musik/Forest_Sound.wav" autoplay loop></audio>
-                
-                <img id="EmergentLayer" crossorigin="anonymous" src="Scenes/Emergent%20Layer%2038m.jpg">
-		
-				<video id="video" style="display:none" loop crossorigin="anonymous" playsinline webkit-playsinline>
-		                <!-- MP4 video source. -->
-		                <source type="video/mp4" src="Videos/Rain%20Forest.mp4" />
-		            </video>
-			</a-assets>
-		
-		
-		
-		
-			<a-sky id="image-360" radius="10" src="#EmergentLayer"></a-sky>
-		
-			<!-- Camera + cursor. -->
-			<a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
-				<a-cursor fuse="false" color="magenta"></a-cursor>
-			</a-entity>
-		
-			<a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.5 -4.50 -4" id="sceneChanger1">
-				<a-text font="kelsonsans" value="Krone Lag" width="3" position="0.486 1.859 1.378" rotation="-37.3 33.919 0.516"></a-text>
-			</a-box>
-		
-		
-			<a-box color="darkmagenta" depth="0.5" height="0.5" width="0.5" position="4 -2 -2" id="flightBox"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-box>
-			<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-6.9 2.8 -0.7" id="internationalBox"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-box>
-			<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-6.9 3.8 -0.7" id="jungleGiantBox"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-box>
-		
-			<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-0.335 1.03 -9.462" id="layerInfoBox"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-box>
-		
-			<!--<a-plane class="displayer" src="#video" height="10" width="10" position="0 0 -5" visible=false id="flightPlane" class="displayer"></a-plane>-->
-		
-			<a-plane class="displayer" src="Images/Internationale%20organisationer.png" height="10" width="10" position="0 0 -5" visible=false id="internationalPlane" class="displayer"></a-plane>
-		
-			<a-plane class="displayer" src="Images/jungleKaempe.png" height="10" width="10" position="0 0 -5" visible=false id="jungleGiantPlane" class="displayer"></a-plane>
-		
-			<a-plane class="displayer" src="Images/kaemper_info.png" height="2" width="7" position="-0.9 -2.03 -8.462" id="layerInfoPlane" visible="false"></a-plane>
-			<a-text font="kelsonsans" value="Kaemper" width="20" position="-1.735 0.03 -9.462"></a-text>
-		
-		
-		</a-scene>
-	</div>
+    <a-scene the-jungle>
+
+        <a-video id="rainforestVideo" rotation="0 180 0" src="#video" height="10" width="10" position="0 0 -5"
+                 visible=false class="displayer">
+        </a-video>
+        <a-entity video-controls="src:#video" id="rainforestControls" class="displayer"></a-entity>
+
+
+        <a-assets>
+
+            <video id="video" style="display:none" loop crossorigin="anonymous" playsinline webkit-playsinline>
+                <!-- MP4 video source. -->
+                <source type="video/mp4" src="Videos/Rain%20Forest.mp4"/>
+            </video>
+        </a-assets>
+
+
+        <a-assets>
+            <img id="Emergent Layer" crossorigin="anonymous" src="Scenes/Emergent%20Layer%2038m.jpg">
+
+            <img id="Tree_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/Tree_Transparent.png">
+            <img id="Tree_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/Tree_Hover.png">
+
+            <img id="NGO_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/NGO_Transparent.png">
+            <img id="NGO_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/NGO_Hover.png">
+        </a-assets>
+
+
+        <a-assets>
+            <img id="EmergentLayer" crossorigin="anonymous" src="Scenes/Emergent%20Layer%2038m.jpg">
+        </a-assets>
+
+        <a-sky id="image-360" radius="10" src="#EmergentLayer"></a-sky>
+
+        <!-- Camera + cursor. -->
+        <a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
+            <a-cursor fuse="false" color="magenta"></a-cursor>
+        </a-entity>
+
+        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.5 -4.50 -4" id="sceneChanger1">
+            <a-text font="kelsonsans" value="Krone Lag" width="3" position="0.486 1.859 1.378"
+                    rotation="-37.3 33.919 0.516"></a-text>
+        </a-box>
+
+
+        <a-box color="darkmagenta" depth="0.5" height="0.5" width="0.5" position="4 -2 -2" id="flightBox"></a-box>
+        <!--<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-6.9 2.8 -0.7" id="internationalBox"></a-box>-->
+
+        <a-image src="#Tree_Transparent" position="4.048 -1.412 -7.715" id="jungleGiantBox"
+                 rotation="-7.276563998161455 -28.934368654106574 -0.4583662361046586" scale="2.23 5.02 1"></a-image>
+        <a-image src="#Tree_Hover" position="4.048 -1.412 -7.715" id="jungleGiantBox_Hover"
+                 rotation="-7.276563998161455 -28.934368654106574 -0.4583662361046586" scale="2.23 5.02 1"
+                 visible="false"></a-image>
+
+        <a-image src="#NGO_Transparent" position="-4.848 1.926 1.197" id="internationalBox"
+                 rotation="22.345354010102106 104.73668494991449 0.057295779513082325"></a-image>
+        <a-image src="#NGO_Hover" position="-4.848 1.926 1.197" id="internationalBox_Hover"
+                 rotation="22.345354010102106 104.73668494991449 0.057295779513082325" visible="false"></a-image>
+        <!-- <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-6.9 3.8 -0.7" id="jungleGiantBox"></a-box> -->
+
+        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-0.335 1.03 -9.462"
+               id="layerInfoBox"></a-box>
+
+        <!--<a-plane class="displayer" src="#video" height="10" width="10" position="0 0 -5" visible=false id="flightPlane" class="displayer"></a-plane>-->
+
+        <a-plane class="displayer" src="Images/Internationale%20organisationer.png" height="10" width="10"
+                 position="-5.44 0 -3.879" id="internationalPlane" rotation="0 53.34237072667965 0"
+                 visible="false"></a-plane>
+
+        <a-plane class="displayer" src="Images/jungleKaempe.png" height="10" width="10" position="-5.44 0 -3.879"
+                 visible="false" id="jungleGiantPlane" rotation="0 53.34237072667965 0"></a-plane>
+
+        <a-plane class="displayer" src="Images/kaemper_info.png" height="2" width="7" position="-0.9 -2.03 -8.462"
+                 id="layerInfoPlane" visible="false"></a-plane>
+        <a-text font="kelsonsans" value="Kaemper" width="20" position="-1.735 0.03 -9.462"></a-text>
+
+
+    </a-scene>
+
+</div>
 <div id="buttContainer">
-	<a href="feedback.html" id="feedbackSceneButt">Giv Feedback</a>
+    <a href="feedback.html" id="feedbackSceneButt">Giv Feedback</a>
 </div>
 </body>
 

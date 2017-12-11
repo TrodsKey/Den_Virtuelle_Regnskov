@@ -64,7 +64,11 @@ function createVideoDisplayer(targetElId, displayElId, controllerElId) {
 }
 
 //used to change status of the image of the element when hovered/not hovered
+<<<<<<< HEAD
 function changeImage(targetElId, displayElId) {
+=======
+function changeimage(targetElId, displayElId) {
+>>>>>>> tempKristian
 	var targetEl = document.querySelector(targetElId); //the element that we're looking for
 	targetEl.addEventListener("mouseenter", function (evt) { //when mouse enters the element
 		var displayEl = document.querySelector(displayElId);
