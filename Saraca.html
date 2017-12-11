@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -35,7 +35,19 @@
 				changeImage("#conservationBox", "#conservationBox_Hover")
 
 				createItemDisplayer("#beliefBox", "#beliefPlane");
+
 				changeImage("#beliefBox", "#beliefBox_Hover")
+
+                createHoverSound("#restaurantBox")
+                createHoverSound("#kulturBox")
+                createHoverSound("#conservationBox")
+                createHoverSound("#beliefBox")
+                
+                createClickSound("#restaurantBox")
+                createClickSound("#kulturBox")
+                createClickSound("#conservationBox")
+                createClickSound("#beliefBox")
+
 			}
 		})
 
@@ -48,6 +60,7 @@
 		<a-scene the-jungle>
 
 			<a-assets>
+               <audio id="audio" src="Musik/Forest_Sound.wav" autoplay loop></audio>
 
 				<img id="Vandhul" crossorigin="anonymous" src="Scenes/Saraca_community.jpg">
 
@@ -81,16 +94,16 @@
 				<a-cursor fuse="false" color="magenta"></a-cursor>
 			</a-entity>
 
-			<a-image src="#belief_Transparent" position="-4.42 -4.675 4.37" id="beliefBox" rotation="-38.61735539181749 153.78187221311296 -30.309467362420552"></a-image>
+			<a-image src="#belief_Transparent" position="-4.42 -4.675 4.37" id="beliefBox" rotation="-38.61735539181749 153.78187221311296 -30.309467362420552"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
 			<a-image src="#belief_Hover" position="-4.42 -4.675 4.37" id=beliefBox_Hover visible="false" rotation="-38.61735539181749 153.78187221311296 -30.309467362420552"></a-image>
 
-			<a-image src="#kultur_Transparent" position="4.314 0.022 -8.431" id="kulturBox" rotation="0 136.7650256977275 0" scale="1.5 1.5 1.5"></a-image>
+			<a-image src="#kultur_Transparent" position="4.314 0.022 -8.431" id="kulturBox" rotation="0 136.7650256977275 0" scale="1.5 1.5 1.5"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
 			<a-image src="#kultur_Hover" position="4.314 0.022 -8.431" id=kulturBox_Hover rotation="0 136.7650256977275 0" scale="1.5 1.5 1.5" visible="false"></a-image>
 
-			<a-image src="#conservation_Transparent" id="conservationBox" position="9.103 -0.279 -2.5" rotation="0 -45.664736271926614 0" scale="1.3 1.3 1.3"></a-image>
+			<a-image src="#conservation_Transparent" id="conservationBox" position="9.103 -0.279 -2.5" rotation="0 -45.664736271926614 0" scale="1.3 1.3 1.3"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
 			<a-image src="#conservation_Hover" position="9.103 -0.279 -2.5" rotation="0 -45.664736271926614 0" scale="1.3 1.3 1.3" id=conservationBox_Hover visible="false"></a-image>
 
-			<a-image src="#restaurant_Transparent" position="1.475 -0.757 -5.753" rotation="0 -1.4896902673401404 0" id="restaurantBox"></a-image>
+			<a-image src="#restaurant_Transparent" position="1.475 -0.757 -5.753" rotation="0 -1.4896902673401404 0" id="restaurantBox"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
 			<a-image src="#restaurant_Hover" position="1.475 -0.757 -5.753" rotation="0 -1.4896902673401404 0" id=restaurantBox_Hover visible="false"></a-image>
 
 
