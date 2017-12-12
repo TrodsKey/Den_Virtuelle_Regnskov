@@ -54,7 +54,8 @@
 <div id="sceneContainer">
 
     <a-scene the-jungle>
-
+        
+        <!-- Video og controls -->
         <a-video id="rainforestVideo" rotation="0 180 0" src="#video" height="10" width="10" position="0 0 -5"
                  visible=false class="displayer">
         </a-video>
@@ -67,10 +68,8 @@
                 <!-- MP4 video source. -->
                 <source type="video/mp4" src="Videos/Rain%20Forest.mp4"/>
             </video>
-        </a-assets>
-
-
-        <a-assets>
+            
+            <!-- Billeder i Scenen -->
             <img id="Emergent Layer" crossorigin="anonymous" src="Scenes/Emergent%20Layer%2038m.jpg">
 
             <img id="Tree_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/Tree_Transparent.png">
@@ -78,44 +77,47 @@
 
             <img id="NGO_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/NGO_Transparent.png">
             <img id="NGO_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/NGO_Hover.png">
-        </a-assets>
-
-
-        <a-assets>
+            
             <img id="EmergentLayer" crossorigin="anonymous" src="Scenes/Emergent%20Layer%2038m.jpg">
         </a-assets>
 
-        <a-sky id="image-360" radius="10" src="#EmergentLayer"></a-sky>
+
+        <!-- 360 billedet -->
+        <a-sky id="image-360" radius="10" src="#EmergentLayer" sound="src: url(Musik/Forest_Sound.wav); autoplay: true; volume: 0.3 loop: true;"></a-sky>
 
         <!-- Camera + cursor. -->
         <a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
             <a-cursor fuse="false" color="magenta"></a-cursor>
         </a-entity>
 
-        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.5 -4.50 -4" id="sceneChanger1">
-            <a-text font="kelsonsans" value="Krone Lag" width="3" position="0.486 1.859 1.378"
-                    rotation="-37.3 33.919 0.516"></a-text>
-        </a-box>
 
 
-        <a-box color="darkmagenta" depth="0.5" height="0.5" width="0.5" position="4 -2 -2" id="flightBox"></a-box>
+        <!-- knapper -->
+        <a-box color="darkmagenta" depth="0.5" height="0.5" width="0.5" position="4 -2 -2" id="flightBox" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-box>
         <!--<a-box color="green" depth="0.5" height="0.5" width="0.5" position="-6.9 2.8 -0.7" id="internationalBox"></a-box>-->
 
         <a-image src="#Tree_Transparent" position="4.048 -1.412 -7.715" id="jungleGiantBox"
-                 rotation="-7.276563998161455 -28.934368654106574 -0.4583662361046586" scale="2.23 5.02 1"></a-image>
+                 rotation="-7.276563998161455 -28.934368654106574 -0.4583662361046586" scale="2.23 5.02 1" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
         <a-image src="#Tree_Hover" position="4.048 -1.412 -7.715" id="jungleGiantBox_Hover"
                  rotation="-7.276563998161455 -28.934368654106574 -0.4583662361046586" scale="2.23 5.02 1"
                  visible="false"></a-image>
 
         <a-image src="#NGO_Transparent" position="-4.848 1.926 1.197" id="internationalBox"
-                 rotation="22.345354010102106 104.73668494991449 0.057295779513082325"></a-image>
+                 rotation="22.345354010102106 104.73668494991449 0.057295779513082325" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
         <a-image src="#NGO_Hover" position="-4.848 1.926 1.197" id="internationalBox_Hover"
                  rotation="22.345354010102106 104.73668494991449 0.057295779513082325" visible="false"></a-image>
         <!-- <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-6.9 3.8 -0.7" id="jungleGiantBox"></a-box> -->
 
         <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-0.335 1.03 -9.462"
-               id="layerInfoBox"></a-box>
+               id="layerInfoBox" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-box>
+        
+        <!-- Scene skift knapper -->
+        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.5 -4.50 -4" id="sceneChanger1">
+            <a-text font="kelsonsans" value="Krone Lag" width="3" position="0.486 1.859 1.378"
+                    rotation="-37.3 33.919 0.516"></a-text>
+        </a-box>
 
+        <!-- planes -->
         <!--<a-plane class="displayer" src="#video" height="10" width="10" position="0 0 -5" visible=false id="flightPlane" class="displayer"></a-plane>-->
 
         <a-plane class="displayer" src="Images/Internationale%20organisationer.png" height="10" width="10"

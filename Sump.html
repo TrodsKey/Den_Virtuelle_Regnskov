@@ -55,8 +55,7 @@
     <a-scene the-jungle>
 
         <a-assets>
-            <audio id="audio" src="Musik/Forest_Sound.wav" autoplay loop></audio>
-
+            <!-- Billeder i Scenen -->
             <img id="Vandhul" crossorigin="anonymous" src="Scenes/sump.jpg">
 
             <img id="PenanFolk_Transparent" crossorigin="anonymous"
@@ -77,41 +76,37 @@
 
 
         </a-assets>
-
-        <a-sky id="image-360" radius="10" src="#Vandhul"></a-sky>
+        <!-- 360 billedet -->
+        <a-sky id="image-360" radius="10" src="#Vandhul" sound="src: url(Musik/Forest_Sound.wav); autoplay: true; volume: 0.3 loop: true;"></a-sky>
 
         <!-- Camera + cursor. -->
-        <a-entity camera look-controls>
-            <a-cursor id="cursor"></a-cursor>
-        </a-entity>
-
         <a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
             <a-cursor fuse="false" color="magenta"></a-cursor>
         </a-entity>
-
+        
+        <!-- knapper -->
         <a-image src="#PenanFolk_Transparent" position="-7.62 -3.564 -4.4" id="penanFolkBox"
-                 rotation="0 58.78546978042247 0" geometry="width:3;height:3"
-                 sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
+                 rotation="0 58.78546978042247 0" geometry="width:3;height:3" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
         <a-image src="#PenanFolk_Hover" position="-7.62 -3.564 -4.4" id=penanFolkBox_Hover visible="false"
                  rotation="0 58.78546978042247 0" geometry="width:3;height:3"></a-image>
 
         <a-image src="#Evolution_Transparent" position="1.745 -3.452 6.16" id="EvolutionBox"
                  rotation="0 -37.52873558106892 0" geometry="width:0.5;height:0.5"
-                 sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
+                  sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
         <a-image src="#Evolution_Hover" position="1.745 -3.452 6.16" id=EvolutionBox_Hover
                  rotation="0 -37.52873558106892 0" visible="false" geometry="width:0.5;height:0.5"></a-image>
 
         <a-image src="#Penan_Transparent" position="-7.6 -1.884 1.757" id="penanBox" rotation="0 118.71685515110657 0"
-                 geometry="height:2;width:2" sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
+                 geometry="height:2;width:2" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
         <a-image src="#Penan_Hover" position="-7.6 -1.884 1.757" id=penanBox_Hover rotation="0 118.71685515110657 0"
                  visible="false" geometry="height:2;width:2"></a-image>
 
         <a-image src="#Extinction_Transparent" position="6.483 -3.2 -0.346" rotation="0 -45 0" scale="1.5 1.5 1.5"
-                 id="extinctionBox" sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
+                 id="extinctionBox" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
         <a-image src="#Extinction_Hover" position="6.483 -3.2 -0.346" rotation="0 -45 0" scale="1.5 1.5 1.5"
                  id=extinctionBox_Hover visible="false"></a-image>
 
-
+        <!-- Scene skift knapper -->
         <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-3.521 0 -4.427" id="sceneChanger1"
                material="">
             <a-text font="kelsonsans" value="Rio Negro" width="2" position="1.342 0.284 2.061"
@@ -123,6 +118,7 @@
                     rotation="14.438536437296746 -54.832060994019784 -1.604281826366305"></a-text>
         </a-box>
 
+        <!-- planes -->
         <a-plane class="displayer" src="Images/Dyr%20og%20Planter%20udryddes.png" height="10" width="10"
                  position="2.536 0 -6.478" visible="false" id="extinctionPlane" rotation="0 -20.684 0"></a-plane>
         <a-plane class="displayer" src="Images/Evolution_historie.png" height="10" width="10"
@@ -135,6 +131,7 @@
                  id="penanFolkPlane" rotation="18.67842412126484 56.95200483600383 -1.2032113697747289"
                  geometry="height:8;width:8" visible="false"></a-plane>
 
+        <!-- område navn tekst -->
         <a-text font="kelsonsans" value="Sump" width="20" position="-1.735 0.03 -9.462"></a-text>
 
     </a-scene>
