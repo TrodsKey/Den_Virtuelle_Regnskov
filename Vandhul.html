@@ -18,7 +18,7 @@
                 document.querySelector("#capibaraControls").setAttribute("visible", false);
 
                 createVideoDisplayer("#capibaraBox", "#capibaraVideo", "#capibaraControls")
-                changeimage("#capibaraBox", "#capibaraBox_Hover")
+                changeImage("#capibaraBox", "#capibaraBox_Hover")
 
                 createSceneChanger("#sceneChanger1", "index.html");
                 createSceneChanger("#sceneChanger2", "Rio_Negro.html");
@@ -72,7 +72,8 @@
                 <!-- MP4 video source. -->
                 <source type="video/mp4" src="Videos/Capibara,%20Caiman%20&%20Jaguars.mp4"/>
             </video>
-
+            
+             <!-- Billeder i Scenen -->
             <img id="Vandhul" crossorigin="anonymous" src="Scenes/ScenesHD/Vandhul.v2.jpg">
 
             <img id="Piranha_Transparent" crossorigin="anonymous"
@@ -96,43 +97,40 @@
 
 
         </a-assets>
+        
+        <!-- 360 billedet -->
+        <a-sky id="image-360" radius="10" src="#Vandhul"  sound="src: url(Musik/River_Sound.wav); autoplay: true; volume: 0.3; loop: true;"></a-sky>
 
-        <a-sky id="image-360" radius="10" src="#Vandhul"></a-sky>
-
-        <!-- Camera + cursor. -->
-        <a-entity camera look-controls>
-            <a-cursor id="cursor"></a-cursor>
-        </a-entity>
-
+        <!-- Camera + cursor-->
         <a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
             <a-cursor fuse="false" color="magenta"></a-cursor>
         </a-entity>
 
         <!-- knapper -->
         <a-image src="#Piranha_Transparent" position="-7.62 -3.564 -4.4" id="piratFiskBox"
-                 rotation="-18.621128341751756 61.59296297656349 0"></a-image>
+                 rotation="-18.621128341751756 61.59296297656349 0"  sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
         <a-image src="#Piranha_Hover" position="-7.62 -3.564 -4.4" id=piratFiskBox_Hover
                  rotation="-18.621128341751756 61.59296297656349 0" visible="false"></a-image>
 
         <a-image src="#Anaconda_Transparent" position="-1.24 -1.412 4.904" id="anacondaBox"
-                 rotation="16.78766339733312 -13.865578642165922 1.3750987083139758"></a-image>
+                 rotation="16.78766339733312 -13.865578642165922 1.3750987083139758" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
         <a-image src="#Anaconda_Hover" position="-1.24 -1.412 4.904" id=anacondaBox_Hover
                  rotation="16.78766339733312 -13.865578642165922 1.3750987083139758" visible="false"></a-image>
 
         <a-image src="#ElectricEel_Transparent" position="1.414 -3.071 -2.326" id="aalBox"
-                 rotation="-49.79 -20.34 -2.521"></a-image>
+                 rotation="-49.79 -20.34 -2.521" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
         <a-image src="#ElectricEel_Hover" position="1.414 -3.071 -2.326" id=aalBox_Hover rotation="-49.79 -20.34 -2.521"
                  visible="false"></a-image>
 
         <a-image src="#Capybara_Transparent" position="3.962 -1.343 -3.277" rotation="3.896 132.754 -1.261"
-                 scale="1.5 1.5 1.5" id="capibaraBox"></a-image>
+                 scale="1.5 1.5 1.5" id="capibaraBox" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
         <a-image src="#Capybara_Hover" position="3.962 -1.343 -3.277"
                  rotation="3.8961130068895984 132.75432113181176 -1.260507149287811" scale="1.5 1.5 1.5"
                  id=capibaraBox_Hover visible="false"></a-image>
 
         <a-image src="#Caiman_Transparent" position="3.353 -2 6.958"
                  rotation="10.657014989433312 25.43932610380855 -1.1459155902616465" scale="1.5 1.5 1.5"
-                 id="sortCaimanBox"></a-image>
+                 id="sortCaimanBox" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
         <a-image src="#Caiman_Hover" position="3.353 -2 6.958"
                  rotation="10.657014989433312 25.43932610380855 -1.1459155902616465" scale="1.5 1.5 1.5"
                  id=sortCaimanBox_Hover visible="false"></a-image>

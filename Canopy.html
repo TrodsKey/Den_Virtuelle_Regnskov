@@ -39,14 +39,14 @@
                 changeImage("#MorphoButterflyBox", "#MorphoButterflyBox_Hover")
 
                 createHoverSound("#CapuchinMonkeyBox")
-                createHoverSound("#bistandBox")
+                createHoverSound("#BistandBox")
                 createHoverSound("#layerInfoBox")
                 createHoverSound("#ScarletMacawBox")
                 createHoverSound("#ToucanBox")
                 createHoverSound("#MorphoButterflyBox")
 
                 createClickSound("#CapuchinMonkeyBox")
-                createClickSound("#bistandBox")
+                createClickSound("#BistandBox")
                 createClickSound("#layerInfoBox")
                 createClickSound("#ScarletMacawBox")
                 createClickSound("#ToucanBox")
@@ -65,6 +65,7 @@
 
 
         <a-assets>
+            <!-- Billeder i Scenen -->
             <img id="Canopy" crossorigin="anonymous" src="Scenes/Canopy%2029m.jpg">
 
             <img id="ScarletMacaw_Transparent" crossorigin="anonymous"
@@ -89,8 +90,9 @@
             <img id="Bistand_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/Lumbermill_Hover.png">
 
         </a-assets>
-
-        <a-sky id="image-360" radius="10" src="#Canopy"></a-sky>
+        
+        <!-- 360 billedet -->
+        <a-sky id="image-360" radius="10" src="#Canopy" sound="src: url(Musik/Forest_Sound.wav); autoplay: true; volume: 0.3 loop: true;"></a-sky>
 
         <!-- Camera + cursor. -->
         <a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
@@ -99,28 +101,28 @@
 
         <!-- Knapper -->
         <a-image src="#ScarletMacaw_Transparent" position="-5.8 -4 3" scale="2.5 2.5 2.5" id="ScarletMacawBox"
-                 rotation="30.710537819012128 -62.337808110233574 0"></a-image>
+                 rotation="30.710537819012128 -62.337808110233574 0" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
         <a-image src="#ScarletMacaw_Hover" position="-5.8 -4 3" scale="2.5 2.5 2.5" id=ScarletMacawBox_Hover
                  rotation="30.710537819012128 -62.337808110233574 0" visible="false"></a-image>
 
         <a-image src="#Toucan_Transparent" position="2.441 0.225 -5.249" id="ToucanBox"
-                 rotation="0 -23.835 0"></a-image>
+                 rotation="0 -23.835 0" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
         <a-image src="#Toucan_Hover" position="2.441 0.225 -5.249" id=ToucanBox_Hover rotation="0 -23.835 0"
                  visible="false"></a-image>
 
         <a-image src="#CapuchinMonkey_Transparent" position="-3.784 3.623 -2.651" scale="2.5 2.5 2.5"
-                 id="CapuchinMonkeyBox" rotation="36.26822843178111 53.85803274229738 1.3178029288008934"></a-image>
+                 id="CapuchinMonkeyBox" rotation="36.26822843178111 53.85803274229738 1.3178029288008934" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
         <a-image src="#CapuchinMonkey_Hover" position="-3.784 3.623 -2.651" scale="2.5 2.5 2.5"
                  id=CapuchinMonkeyBox_Hover rotation="36.26822843178111 53.85803274229738 1.3178029288008934"
                  visible="false"></a-image>
 
         <a-image src="#MorphoButterfly_Transparent" position="1.287 3.691 4.698" rotation="-42.399 15.069 -1.604"
-                 scale="1.5 1.5 1.5" id="MorphoButterflyBox"></a-image>
+                 scale="1.5 1.5 1.5" id="MorphoButterflyBox" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
         <a-image src="#MorphoButterfly_Hover" position="1.287 3.691 4.698" rotation="-42.399 15.069 -1.604"
                  scale="1.5 1.5 1.5" id=MorphoButterflyBox_Hover visible="false"></a-image>
 
         <a-image src="#Bistand_Transparent" position="2.083 -4.097 -0.535" rotation="60.218 105.94 0" id="BistandBox"
-                 scale="3 3 1"></a-image>
+                 scale="3 3 1" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
         <a-image src="#Bistand_Hover" position="2.083 -4.097 -0.535" rotation="60.218 105.94 0" id=BistandBox_Hover
                  scale="3 3 1" visible="false"></a-image>
 
@@ -161,6 +163,7 @@
         <a-plane class="displayer" src="Images/kronelag_info.png" height="2" width="8" position="-0.999 -2.03 -8.177"
                  id="layerInfoPlane" visible="false"></a-plane>
 
+        <!-- område navn tekst -->
         <a-text font="kelsonsans" value="Kronelag" width="20" position="-1.735 0.03 -9.462"></a-text>
 
     </a-scene>
