@@ -1,50 +1,45 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<title>360&deg; Image Gallery</title>
-	<meta name="description" content="360&deg; Image Gallery - A-Frame">
-	<link rel="stylesheet" type="text/css" href="components/button.css">
-	<!--<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
-              createHoverColor("#piratFiskBox", "blue");
-                changeimage("#", "#")
--->
-	<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-	<script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
-	<script src="components/a-frame-functions.js"></script>
-	<script src="components/aframe-video-controls.min.js"></script>
-	<script>
-		AFRAME.registerComponent('the-jungle', {
-			init: function() {
+    <meta charset="utf-8">
+    <title>360&deg; Image Gallery</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <link rel="stylesheet" type="text/css" href="components/button.css">
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+    <script src="components/a-frame-functions.js"></script>
+    <script src="components/aframe-video-controls.min.js"></script>
+    <script>
+        AFRAME.registerComponent('the-jungle', {
+            init: function () {
 
-				createSceneChanger("#sceneChanger1", "Sump.html");
-				createSceneChanger("#sceneChanger2", "Saraca.html");
-				createSceneChanger("#sceneChanger3", "Vandhul.html");
-				createHoverColor("#sceneChanger1", "blue");
-				createHoverColor("#sceneChanger2", "blue");
-				createHoverColor("#sceneChanger3", "blue");
-                
-				createItemDisplayer("#riverBox", "#riverPlane");
-                changeimage("#riverBox", "#riverBox_Hover");
-                
+                createSceneChanger("#sceneChanger1", "Sump.html");
+                createSceneChanger("#sceneChanger2", "Saraca.html");
+
+                createHoverColor("#sceneChanger1", "blue");
+                createHoverColor("#sceneChanger2", "blue");
+
+
+                createItemDisplayer("#riverBox", "#riverPlane");
+                changeImage("#riverBox", "#riverBox_Hover");
+
                 createItemDisplayer("#rainforestBox", "#rainforestPlane");
-                changeimage("#rainforestBox", "#rainforestBox_hover");
-     
-				createItemDisplayer("#tribeBox", "#tribePlane");
-                changeimage("#tribeBox", "#tribeBox_Hover");
-                
+                changeImage("#rainforestBox", "#rainforestBox_hover");
+
+                createItemDisplayer("#tribeBox", "#tribePlane");
+
+                changeImage("#tribeBox", "#tribeBox_Hover");
+
                 createHoverSound("#riverBox")
                 createHoverSound("#rainforestBox")
                 createHoverSound("#tribeBox")
-                
+
                 createClickSound("#riverBox")
                 createClickSound("#rainforestBox")
                 createClickSound("#tribeBox")
+
             }
         })
     </script>
@@ -52,26 +47,28 @@
 </head>
 
 <body>
-	<div id="sceneContainer">
-		
+
+<div id="sceneContainer">
+
     <a-scene the-jungle>
 
         <a-assets>
-           <audio id="audio" src="Musik/River_Sound.wav" autoplay loop></audio>
-            
+            <audio id="audio" src="Musik/River_Sound.wav" autoplay loop></audio>
+
             <img id="Vandhul" crossorigin="anonymous" src="Scenes/Rio_Negro.jpg">
-            
-            <img id="rainforest_transparent" crossorigin="anonymous" src="Transparent_Hover_Images/information_transparent.png">
+
+            <img id="rainforest_transparent" crossorigin="anonymous"
+                 src="Transparent_Hover_Images/information_transparent.png">
             <img id="rainforest_hover" crossorigin="anonymous" src="Transparent_Hover_Images/information_hover.png">
-            
-            <img id="tribe_transparent" crossorigin="anonymous" src="Transparent_Hover_Images/information_transparent.png">
+
+            <img id="tribe_transparent" crossorigin="anonymous"
+                 src="Transparent_Hover_Images/information_transparent.png">
             <img id="tribe_hover" crossorigin="anonymous" src="Transparent_Hover_Images/information_hover.png">
 
-            <img id="river_transparent" crossorigin="anonymous" src="Transparent_Hover_Images/information_transparent.png">
+            <img id="river_transparent" crossorigin="anonymous"
+                 src="Transparent_Hover_Images/information_transparent.png">
             <img id="river_hover" crossorigin="anonymous" src="Transparent_Hover_Images/information_hover.png">
-            
-            
-            
+
         </a-assets>
 
         <a-sky id="image-360" radius="10" src="#Vandhul"></a-sky>
@@ -80,44 +77,68 @@
         <a-entity camera look-controls>
             <a-cursor id="cursor"></a-cursor>
         </a-entity>
-        
+
         <a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
             <a-cursor fuse="false" color="magenta"></a-cursor>
-</a-entity>
-        
-        <a-image src="#rainforest_transparent" position="-3.391 -1.878 5.6" id="rainforestBox" visible= "true"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
-        <a-image src="#rainforest_hover" position="-3.391 -1.878 5.6" id="rainforestBox_hover" visible= "false"></a-image>
-        
-        <a-image src="#tribe_transparent" position="-3.4 1.442 -5.601" id="tribeBox" visible= "true"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
-        <a-image src="#tribe_hover" position="-3.4 1.442 -5.6011" id="tribeBox_Hover" visible= "false"></a-image>
+        </a-entity>
+
+        <a-image src="#rainforest_transparent" position="-3.391 -1.878 5.6" id="rainforestBox" rotation="0 150 0"
+                 sound="src:Musik/water-drops-daniel_simon.mp3">
+            <a-text font="kelsonsans" value="Amazon Rainforest Climate" width="5"
+                    position="-1.166 1.614 3.716"></a-text>
+        </a-image>
+        <a-image src="#rainforest_hover" position="-3.391 -1.878 5.6" id="rainforestBox_hover" rotation="0 150 0"
+                 visible="false"></a-image>
 
 
-        <a-image src="#river_transparent" position="8.574 0 -2.806" rotation="0 -45 0" scale="1.5 1.5 1.5" id="riverBox" visible= "true"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
-        <a-image src="#river_hover" position="8.574 0 -2.806" rotation="0 -45 0" scale="1.5 1.5 1.5" id="riverBox_Hover" visible= "false"></a-image>
+        <a-image src="#rainforest_transparent" position="-3.391 -1.878 5.6" id="rainforestBox" visible="true"
+                 sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
+        <a-image src="#rainforest_hover" position="-3.391 -1.878 5.6" id="rainforestBox_hover"
+                 visible="false"></a-image>
+
+        <a-image src="#tribe_transparent" position="-3.4 1.094 -5.601" id="tribeBox">
+            <a-text font="kelsonsans" value="Amazon Rainforest Tribes" width="5" position="0.715 -0.185 2.997"
+                    scale="0.8 0.8 0.8"></a-text>
+        </a-image>
+        <a-image src="#tribe_hover" position="-3.4 1.094 -5.601" id="tribeBox_Hover" visible="false"></a-image>
 
 
-        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-5.863 0 -4.427" id="sceneChanger1" material="">
-            <a-text font="kelsonsans" value="Sump" width="2" position="2.167 0.284 2.061" rotation="4.75 39.47 0"></a-text>
+        <a-image src="#river_transparent" position="8.574 0 -2.806" rotation="0 -45 0" scale="1.5 1.5 1.5" id="riverBox"
+                 visible="true" sound="src:Musik/water-drops-daniel_simon.mp3">
+            <a-text font="kelsonsans" value="Amazon River" width="5" position="-1.785 0.38 2.531"
+                    rotation="0 -22.574537128154436 0"></a-text>
+        </a-image>
+        <a-image src="#river_hover" position="8.574 0 -2.806" rotation="0 -45 0" scale="1.5 1.5 1.5" id="riverBox_Hover"
+                 visible="false"></a-image>
+
+
+        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="6.847 0.381 6.507" id="sceneChanger1"
+               material="" rotation="0 115.39 0">
+            <a-text font="kelsonsans" value="Sump" width="2" position="5.833 -0.066 -2.147"
+                    rotation="4.75 129.14 0"></a-text>
         </a-box>
 
-        <a-box color="yellow" depth="0.5" height="0.5" width="0.5" position="-0.822 3.833 -3.162" id="sceneChanger2" material="">
-            <a-text font="kelsonsans" value="Saraca" width="5" position="-0.45 0.452 0.483" rotation="52.54 0 0"></a-text>
-       </a-box>
+        <a-box color="yellow" depth="0.5" height="0.5" width="0.5" position="-0.822 3.833 -3.162" id="sceneChanger2"
+               material="">
+            <a-text font="kelsonsans" value="Saraca" width="5" position="-0.45 0.452 0.483"
+                    rotation="52.54 0 0"></a-text>
+        </a-box>
 
-               <a-box color="yellow" depth="0.5" height="0.5" width="0.5" position="1 -2 3" id="sceneChanger3" material="">
-            <a-text font="kelsonsans" value="Vandhul" width="5" position="0.45 0.652 -0.483" rotation="0 180 0"></a-text>
-                </a-box>
 
-        <a-plane class="displayer" src="Images/Amazon_river.png" height="10" width="10" position="2.536 0 -6.478" visible="false" id="riverPlane" rotation="0 -20.684 0"></a-plane>
-        <a-plane class="displayer" src="Images/amazon_climate.png" height="10" width="10" position="2.456 0 5.944" visible="false" id="rainforestPlane" rotation="0 -160.944 0"></a-plane>
-        <a-plane class="displayer" src="Images/rainforest_tribe_facts.png" height="10" width="10" position="3.241 1.972 -5.789" id="tribePlane" rotation="8.65 -28.30 0.86"></a-plane>
+        <a-plane class="displayer" src="Images/Amazon_river.png" height="10" width="10" position="2.536 0 -6.478"
+                 visible="false" id="riverPlane" rotation="0 -20.684 0"></a-plane>
+        <a-plane class="displayer" src="Images/amazon_climate.png" height="10" width="10" position="2.456 0 5.944"
+                 visible="false" id="rainforestPlane" rotation="0 -160.944 0"></a-plane>
+        <a-plane class="displayer" src="Images/rainforest_tribe_facts.png" height="10" width="10"
+                 position="3.241 1.972 -5.789" visible="false" id="tribePlane" rotation="8.65 -28.30 0.86"></a-plane>
         <a-text font="kelsonsans" value="Rio Negro" width="20" position="-1.735 0.03 -9.462"></a-text>
-        
+
     </a-scene>
-	</div>
-	<div id="buttContainer">
-		<a href="feedback.html" id="feedbackSceneButt">Giv Feedback</a>
-	</div>
+</div>
+<div id="buttContainer">
+    <a href="feedback.html" id="feedbackSceneButt">Giv Feedback</a>
+</div>
+
 </body>
 
 </html>

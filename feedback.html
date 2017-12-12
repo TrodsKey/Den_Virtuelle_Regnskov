@@ -2,58 +2,60 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="components/reset.css">
-	<link rel="stylesheet" type="text/css" href="components/feedback-page.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script>
-		var APIKEY = '7_ZjK4DYrDhsKLPWzkfGVsoO5-d0pnrA';
-		var myDB = 'regnskov_feedback';
-		var myCollection = 'feedback';
+    <link rel="stylesheet" type="text/css" href="components/reset.css">
+    <link rel="stylesheet" type="text/css" href="components/feedback.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+        var APIKEY = 'ue9FPUIRGEEIWzwBg_DNsLubTdAsiygg';
+        var myDB = 'regnskov';
+        var myCollection = 'feedback';
 
-		var doPost = function(theName, theFeedback) {
-			console.log(theName, theFeedback);
+        var doPost = function (theName, theFeedback) {
+            console.log(theName, theFeedback);
 
-			$.ajax({
-					url: 'https://api.mlab.com/api/1/databases/' + myDB +
-						'/collections/' + myCollection + '?apiKey=' + APIKEY,
-					data: JSON.stringify({
-						Name: theName,
-						Feedback: theFeedback
-					}),
-					type: "POST",
-					contentType: "application/json"
-				})
-				.done(function(msg) {
-					console.log("Data Saved: ", msg);
-				});
-		}
+            $.ajax({
+                url: 'https://api.mlab.com/api/1/databases/' + myDB +
+                '/collections/' + myCollection + '?apiKey=' + APIKEY,
+                data: JSON.stringify({
+                    Name: theName,
+                    Feedback: theFeedback
+                }),
+                type: "POST",
+                contentType: "application/json"
+            })
+                .done(function (msg) {
+                    console.log("Data Saved: ", msg);
+                });
+        }
 
 
-		$(document).ready(function() {
+        $(document).ready(function () {
 
-			$('#submitButton').on('click', function(evt) {
-				evt.preventDefault();
-				var theName = $("#theName").val();
-				var theFeedback = $("#theFeedback").val();
-				doPost(theName, theFeedback);
-				$('#theForm').empty();
-			});
+            $('#submitButt').click(function (evt) {
+                evt.preventDefault();
+                var theName = $("#theName").val();
+                var theFeedback = $("#theFeedback").val();
+                doPost(theName, theFeedback);
+                $('#theForm').empty();
+            });
 
-		});
-	</script>
+        });
+
+    </script>
 </head>
 
 <body>
-	<div id="content">
-		<form id="theForm">
-			<h1>Submit your feedback</h1>
-			<label for="theName">Name</label>
-			<input id="theName" name="name" type="text">
-			<label for="theFeedback">Your feedback</label>
-			<textArea id="theFeedback" name="feedback"></textArea>
-			<button id="submitButt" type="submit">Submit your feedback</button>
-		</form>
-	</div>
+<div id="content">
+    <form id="theForm">
+        <h1>Submit your feedback</h1>
+        <label for="theName">Name</label>
+        <input id="theName" name="name" type="text">
+        <label for="theFeedback">Your feedback</label>
+        <textArea id="theFeedback" name="feedback"></textArea>
+        <button id="submitButt" type="submit">Submit your feedback</button>
+    </form>
+</div>
 
 </body>
 

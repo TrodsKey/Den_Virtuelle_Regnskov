@@ -2,125 +2,139 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<title>360&deg; Image Gallery</title>
-	<meta name="description" content="360&deg; Image Gallery - A-Frame">
-	<link rel="stylesheet" type="text/css" href="components/button.css">
-	<!--<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
-              createHoverColor("#beliefBox", "blue");
-                changeimage("#", "#")
--->
-	<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-	<script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
-	<script src="components/a-frame-functions.js"></script>
-	<script src="components/aframe-video-controls.min.js"></script>
-	<script>
-		AFRAME.registerComponent('the-jungle', {
-			init: function() {
+    <meta charset="utf-8">
+    <title>360&deg; Image Gallery</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <link rel="stylesheet" type="text/css" href="components/button.css">
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+    <script src="components/a-frame-functions.js"></script>
+    <script src="components/aframe-video-controls.min.js"></script>
+    <script>
+        AFRAME.registerComponent('the-jungle', {
+            init: function () {
 
-				createSceneChanger("#sceneChanger1", "Rio_Negro.html");
-				createHoverColor("#sceneChanger1", "blue");
+                createSceneChanger("#sceneChanger1", "Rio_Negro.html");
+                createHoverColor("#sceneChanger1", "blue");
 
-				createItemDisplayer("#restaurantBox", "#restaurantPlane");
-				changeimage("#restaurantBox", "#restaurantBox_Hover")
+                createItemDisplayer("#restaurantBox", "#restaurantPlane");
+                changeImage("#restaurantBox", "#restaurantBox_Hover")
 
-				createItemDisplayer("#kulturBox", "#kulturPlane");
-				changeimage("#kulturBox", "#kulturBox_Hover")
+                createItemDisplayer("#kulturBox", "#kulturPlane");
+                changeImage("#kulturBox", "#kulturBox_Hover")
 
-				createItemDisplayer("#conservationBox", "#conservationPlane");
-				changeimage("#conservationBox", "#conservationBox_Hover")
+                createItemDisplayer("#conservationBox", "#conservationPlane");
+                changeImage("#conservationBox", "#conservationBox_Hover")
 
-				createItemDisplayer("#beliefBox", "#beliefPlane");
-				changeimage("#beliefBox", "#beliefBox_Hover")
-                
+                createItemDisplayer("#beliefBox", "#beliefPlane");
+
+                changeImage("#beliefBox", "#beliefBox_Hover")
+
                 createHoverSound("#restaurantBox")
                 createHoverSound("#kulturBox")
                 createHoverSound("#conservationBox")
                 createHoverSound("#beliefBox")
-                
+
                 createClickSound("#restaurantBox")
                 createClickSound("#kulturBox")
                 createClickSound("#conservationBox")
                 createClickSound("#beliefBox")
-			}
-		})
 
-	</script>
+            }
+        })
 
+    </script>
 </head>
 
 <body>
-	<div id="sceneContainer">
-		<a-scene the-jungle>
+<div id="sceneContainer">
+    <a-scene the-jungle>
 
-			<a-assets>
-               <audio id="audio" src="Musik/Forest_Sound.wav" autoplay loop></audio>
+        <a-assets>
+            <audio id="audio" src="Musik/Forest_Sound.wav" autoplay loop></audio>
 
-				<img id="Vandhul" crossorigin="anonymous" src="Scenes/Saraca_community.jpg">
+            <img id="Vandhul" crossorigin="anonymous" src="Scenes/Saraca_community.jpg">
 
-				<img id="belief_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/beliefs_transparent.png">
-				<img id="belief_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/beliefs_Hover.png">
+            <img id="belief_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/beliefs_transparent.png">
+            <img id="belief_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/beliefs_Hover.png">
 
-				<img id="kultur_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/Kultur_Transparent.png">
-				<img id="kultur_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/Kultur_Hover.png">
+            <img id="kultur_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/Kultur_Transparent.png">
+            <img id="kultur_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/Kultur_Hover.png">
 
-				<img id="conservation_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/conservation_Transparent.png">
-				<img id="conservation_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/conservation_Hover.png">
+            <img id="conservation_Transparent" crossorigin="anonymous"
+                 src="Transparent_Hover_Images/conservation_Transparent.png">
+            <img id="conservation_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/conservation_Hover.png">
 
-				<img id="Capybara_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/Capybara_Transparent.PNG">
-				<img id="Capybara_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/Capybara_Hover.png">
+            <img id="Capybara_Transparent" crossorigin="anonymous"
+                 src="Transparent_Hover_Images/Capybara_Transparent.PNG">
+            <img id="Capybara_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/Capybara_Hover.png">
 
-				<img id="restaurant_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/restaurant_Transparent.png">
-				<img id="restaurant_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/restaurant_Hover.png">
-
-
-
-			</a-assets>
-
-			<a-sky id="image-360" radius="10" src="#Vandhul"></a-sky>
-
-			<!-- Camera + cursor. -->
-			<a-entity camera look-controls>
-				<a-cursor id="cursor"></a-cursor>
-			</a-entity>
-
-			<a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
-				<a-cursor fuse="false" color="magenta"></a-cursor>
-			</a-entity>
-
-			<a-image src="#belief_Transparent" position="-4.42 -4.675 4.37" id="beliefBox" rotation="-38.61735539181749 153.78187221311296 -30.309467362420552"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
-			<a-image src="#belief_Hover" position="-4.42 -4.675 4.37" id=beliefBox_Hover visible="false" rotation="-38.61735539181749 153.78187221311296 -30.309467362420552"></a-image>
-
-			<a-image src="#kultur_Transparent" position="4.314 0.022 -8.431" id="kulturBox" rotation="0 136.7650256977275 0" scale="1.5 1.5 1.5"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
-			<a-image src="#kultur_Hover" position="4.314 0.022 -8.431" id=kulturBox_Hover rotation="0 136.7650256977275 0" scale="1.5 1.5 1.5" visible="false"></a-image>
-
-			<a-image src="#conservation_Transparent" id="conservationBox" position="9.103 -0.279 -2.5" rotation="0 -45.664736271926614 0" scale="1.3 1.3 1.3"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
-			<a-image src="#conservation_Hover" position="9.103 -0.279 -2.5" rotation="0 -45.664736271926614 0" scale="1.3 1.3 1.3" id=conservationBox_Hover visible="false"></a-image>
-
-			<a-image src="#restaurant_Transparent" position="1.475 -0.757 -5.753" rotation="0 -1.4896902673401404 0" id="restaurantBox"  sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
-			<a-image src="#restaurant_Hover" position="1.475 -0.757 -5.753" rotation="0 -1.4896902673401404 0" id=restaurantBox_Hover visible="false"></a-image>
+            <img id="restaurant_Transparent" crossorigin="anonymous"
+                 src="Transparent_Hover_Images/restaurant_Transparent.png">
+            <img id="restaurant_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/restaurant_Hover.png">
 
 
-			<a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-6.326 0 2.057" id="sceneChanger1" material="">
-				<a-text font="kelsonsans" value="Rio Negro" width="2" position="1.159 0.453 -0.212" rotation="4.755549699585833 115.0499252622693 0"></a-text>
-			</a-box>
+        </a-assets>
 
-			<a-plane class="displayer" src="Images/saraca_restaurant.png" height="8" width="8" position="-2.131 -1.01 -5.873" id="restaurantPlane" rotation="0 18.44924100321251 0" visible="false"></a-plane>
-			<a-plane class="displayer" src="Images/Kulturer_forsvinder.png" height="6" width="6" position="-2.69 0 -6.363" visible="false" id="kulturPlane" rotation="0 25.43932610380855 0"></a-plane>
-			<a-plane class="displayer" src="Images/indigenous_conservation.png" height="10" width="10" position="4.172 -0.43 4.321" id="conservationPlane" rotation="-0.8594366926962348 -142.9529698851404 -1.088619810748564" visible="false"></a-plane>
-			<a-plane class="displayer" src="Images/beliefs_lifestyles.png" height="8" width="8" position="1.614 1.217 4.17" id="beliefPlane" rotation="0 179.8514518915654 0" visible="false"></a-plane>
+        <a-sky id="image-360" radius="10" src="#Vandhul"></a-sky>
 
-			<a-text font="kelsonsans" value="Saraca Landsby" width="20" position="-1.735 0.03 -9.462"></a-text>
+        <!-- Camera + cursor. -->
+        <a-entity camera look-controls>
+            <a-cursor id="cursor"></a-cursor>
+        </a-entity>
 
-		</a-scene>
-	</div>
-	<div id="buttContainer">
-		<a href="feedback.html" id="feedbackSceneButt">Giv Feedback</a>
-	</div>
+        <a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
+            <a-cursor fuse="false" color="magenta"></a-cursor>
+        </a-entity>
+
+        <a-image src="#belief_Transparent" position="-4.42 -4.675 4.37" id="beliefBox"
+                 rotation="-38.61735539181749 153.78187221311296 -30.309467362420552"
+                 sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
+        <a-image src="#belief_Hover" position="-4.42 -4.675 4.37" id=beliefBox_Hover visible="false"
+                 rotation="-38.61735539181749 153.78187221311296 -30.309467362420552"></a-image>
+
+        <a-image src="#kultur_Transparent" position="4.314 0.022 -8.431" id="kulturBox" rotation="0 136.7650256977275 0"
+                 scale="1.5 1.5 1.5" sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
+        <a-image src="#kultur_Hover" position="4.314 0.022 -8.431" id=kulturBox_Hover rotation="0 136.7650256977275 0"
+                 scale="1.5 1.5 1.5" visible="false"></a-image>
+
+        <a-image src="#conservation_Transparent" id="conservationBox" position="9.103 -0.279 -2.5"
+                 rotation="0 -45.664736271926614 0" scale="1.3 1.3 1.3"
+                 sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
+        <a-image src="#conservation_Hover" position="9.103 -0.279 -2.5" rotation="0 -45.664736271926614 0"
+                 scale="1.3 1.3 1.3" id=conservationBox_Hover visible="false"></a-image>
+
+        <a-image src="#restaurant_Transparent" position="1.475 -0.757 -5.753" rotation="0 -1.4896902673401404 0"
+                 id="restaurantBox" sound="src:Musik/water-drops-daniel_simon.mp3"></a-image>
+        <a-image src="#restaurant_Hover" position="1.475 -0.757 -5.753" rotation="0 -1.4896902673401404 0"
+                 id=restaurantBox_Hover visible="false"></a-image>
+
+
+        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-6.326 0 2.057" id="sceneChanger1"
+               material="">
+            <a-text font="kelsonsans" value="Rio Negro" width="2" position="1.159 0.453 -0.212"
+                    rotation="4.75 115.04 0"></a-text>
+        </a-box>
+
+        <a-plane class="displayer" src="Images/saraca_restaurant.png" height="8" width="8"
+                 position="-2.131 -1.01 -5.873" id="restaurantPlane" rotation="0 18.44924100321251 0"
+                 visible="false"></a-plane>
+        <a-plane class="displayer" src="Images/Kulturer_forsvinder.png" height="6" width="6" position="-2.69 0 -6.363"
+                 visible="false" id="kulturPlane" rotation="0 25.43932610380855 0"></a-plane>
+        <a-plane class="displayer" src="Images/indigenous_conservation.png" height="10" width="10"
+                 position="4.172 -0.43 4.321" id="conservationPlane"
+                 rotation="-0.8594366926962348 -142.9529698851404 -1.088619810748564" visible="false"></a-plane>
+        <a-plane class="displayer" src="Images/beliefs_lifestyles.png" height="8" width="8" position="1.614 1.217 4.17"
+                 id="beliefPlane" rotation="0 179.8514518915654 0" visible="false"></a-plane>
+
+        <a-text font="kelsonsans" value="Saraca Landsby" width="20" position="-1.735 0.03 -9.462"></a-text>
+
+    </a-scene>
+</div>
+<div id="buttContainer">
+    <a href="feedback.html" id="feedbackSceneButt">Giv Feedback</a>
+</div>
+
 </body>
 
 </html>
