@@ -30,3 +30,11 @@
 	bottom: 5%;
 	width: auto;
 }
+
+@media only screen and (max-width: 640px){
+    #buttContainer{
+      visibility: hidden;
+      display: none;
+      pointer-events: none;
+    }
+}
