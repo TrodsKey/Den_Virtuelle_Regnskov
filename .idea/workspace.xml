@@ -2,170 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c635c78-0e31-4c90-afaf-f8a4ca70186c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Regnskovs-Project.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Boa_Frente.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Canopy.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Emergent Layer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/Amazon_river.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/Anaconda.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/Dyr og Planter udryddes.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/Evolution_historie.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/Harpy.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/Internationale organisationer.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/Jaguar.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/Kulturer_forsvinder.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/Makira_Levevis.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/Morpho butterflies.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/New_World_Monkeys.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/Penan_folk.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/Penarnes_verden.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/Scarlet Macaw.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/Tarantula.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/Toucan.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/Trusler mod regnskoven.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/Udforsk_RioNegro.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/Udforsk_Skovbund.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/Udviklingsbistand.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/WTO.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/amazon_climate.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/beliefs_lifestyles.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/black_caiman.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/deforestation.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/elektrisk ål.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/harpy_eagle.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/indigenous_conservation.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/jungleKaempe.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/kaemper_info.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/kronelag_info.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/morpho_butterfly.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/new world monkeys.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/nicaragua_girl.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/primater.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/rainforest_tribe_facts.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/regnskoven fældes.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/rød piratfisk.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/saraca_restaurant.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/skovbund_info.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/sort Caiman.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/underskov_info.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Images/who_are_indigenous.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Musik/Site.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Rio_Negro.html" afterPath="$PROJECT_DIR$/Rio_Negro.html" />
-      <change beforePath="$PROJECT_DIR$/Saraca.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/Boa Frente.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/Canopy 29m.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/Emergent Layer 38m.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/Feedback_Background.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/Rio_Negro.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/Saraca_community.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/123.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Abelha.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Amazon Rainforest with Dragonflies.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Boa Frente.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Bottom of Amazon Forest zip Line.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Crossing Water in the forest.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Dense Amazon Forest.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Flooded Forest of the rio negro.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Flooded Tree along the rio negro.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Forest Trail.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/ForestFloorHD.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Health Clinic in Tumbira Community.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Manioc Flour production at capintuba community.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Rio Aripuana.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Rio MariePaua Near Rio Madeira.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Rio Mariepaua.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Rio Negro - Boat.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Rio Negro - Boats.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Rio Negro.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Santa Helena Community.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Saraca community.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/State School in tumbira sommunity.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Trail Entrance to Amazon Rainforest.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Tumbira Community.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/UnderstoryHD.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/Vandhul.v2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/VandhulHD.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/ScenesHD/santa maria.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/Undergrowth 5m.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/Understory 17m.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/Vandhul.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/santa_maria.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Scenes/sump.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Skovbund.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Sump.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Anaconda_Hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Anaconda_Transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Caiman_Hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Caiman_Hover2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Caiman_Transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Caiman_Transparent2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/CapuchinMonkey_Hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/CapuchinMonkey_Transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Capybara_Hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Capybara_Transparent.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Conservation_Hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Conservation_Transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Eagle_Hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Eagle_Transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/ElectricEel_Hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/ElectricEel_Transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Jaguar_Hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Jaguar_Transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Kultur_Hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Kultur_Transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/MorphoButterfly_Hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/MorphoButterfly_Transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Penan_woman_hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Penan_woman_transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Piranha_Hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Piranha_Transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Restaurant_Hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Restaurant_Transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/ScarletMacaw_Hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/ScarletMacaw_Transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/SpiderMonkey_Hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/SpiderMonkey_Transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Squirrel_Monkey_Hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Squirrel_Monkey_Transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Toucan_Hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/Toucan_Transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/ZULUL_Hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/ZULUL_transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/ZULULgril_Hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/ZULULgril_transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/amoeba_hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/amoeba_transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/beliefs_Hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/beliefs_transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/information_hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/information_transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/orkide_hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/orkide_transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/penan_jaeger_hover.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/penan_jaeger_transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Transparent_Hover_Images/squirrel monkey.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Understory.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Vandhul.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Videos/Capibara, Caiman &amp; Jaguars.mp4" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Videos/Flight.mp4" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Videos/Rain Forest.mp4" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Videos/SpiderMonkeys.mp4" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/components/.eslintrc.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/components/Set-image.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/components/a-frame-functions.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/components/aframe-master.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/components/aframe-video-controls.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/components/build.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/components/button.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/components/feedback-page.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/components/reset.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/feedback.html" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -178,7 +15,33 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="Skovbund.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Skovbund.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Understory.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Understory.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="64" column="8" lean-forward="true" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>faeldning</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -187,6 +50,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Rio_Negro.html" />
+        <option value="$PROJECT_DIR$/Skovbund.html" />
+        <option value="$PROJECT_DIR$/Understory.html" />
       </list>
     </option>
   </component>
@@ -217,8 +82,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -242,6 +107,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.standard" value="" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -271,20 +142,22 @@
       <workItem from="1512990875882" duration="2731000" />
       <workItem from="1512995908167" duration="3156000" />
       <workItem from="1513153781954" duration="990000" />
-      <workItem from="1513155929385" duration="2228000" />
+      <workItem from="1513155929385" duration="2450000" />
+      <workItem from="1513161098500" duration="3083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9105000" />
+    <option name="totallyTimeSpent" value="12410000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1796875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1796875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -330,6 +203,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Boa_Frente.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -338,19 +219,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/feedback-page.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1806">
-          <caret line="86" column="1" lean-forward="false" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/components/feedback-page.css" />
     <entry file="file://$PROJECT_DIR$/Rio_Negro.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -358,7 +231,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -398,7 +270,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="798">
           <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -410,19 +281,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/feedback-page.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1806">
-          <caret line="86" column="1" lean-forward="false" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/components/feedback-page.css" />
     <entry file="file://$PROJECT_DIR$/Rio_Negro.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -430,7 +293,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -474,45 +336,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/feedback-page.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1806">
-          <caret line="86" column="1" lean-forward="true" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/components/feedback-page.css" />
     <entry file="file://$PROJECT_DIR$/Rio_Negro.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1512">
           <caret line="72" column="19" lean-forward="true" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Understory.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/feedback-page.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="86" column="1" lean-forward="false" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/components/feedback-page.css" />
     <entry file="file://$PROJECT_DIR$/components/aframe-master.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -535,13 +367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/.eslintrc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/button.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -554,15 +379,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Skovbund.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="70" column="63" lean-forward="false" selection-start-line="70" selection-start-column="63" selection-end-line="70" selection-end-column="92" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -570,15 +386,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="577">
           <caret line="123" column="39" lean-forward="false" selection-start-line="123" selection-start-column="39" selection-end-line="123" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Boa_Frente.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="80" column="150" lean-forward="false" selection-start-line="80" selection-start-column="150" selection-end-line="80" selection-end-column="150" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -586,6 +393,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
           <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Skovbund.html~HEAD" />
+    <entry file="file://$PROJECT_DIR$/Boa_Frente.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="80" column="19" lean-forward="false" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/.eslintrc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Skovbund.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Understory.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="64" column="8" lean-forward="true" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
           <folding />
         </state>
       </provider>

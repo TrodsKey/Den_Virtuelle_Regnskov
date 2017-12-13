@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>360&deg; Image Gallery</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <link rel="stylesheet" type="text/css" href="components/button.css">
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+    <script src="components/a-frame-functions.js"></script>
+    <script>
+        AFRAME.registerComponent('the-jungle', {
+            init: function () {
+
+                createSceneChanger("#sceneChanger1", "Skovbund.html");
+                createSceneChanger("#sceneChanger2", "Canopy.html");
+
+                createHoverColor("#sceneChanger1", "blue");
+                createHoverColor("#sceneChanger2", "blue");
+
+                createItemDisplayer("#deforestationBox", "#deforestationPlane");
+                changeImage("#deforestationBox", "#deforestationBox_Hover");
+
+                createItemDisplayer("#trusselBox", "#trusselPlane");
+                changeImage("#trusselBox", "#trusselBox_Hover");
+
+                createHoverColor("#layerInfoBox", "blue");
+                createItemDisplayer("#layerInfoBox", "#layerInfoPlane");
+
+                createHoverSound("#deforestationBox")
+                createHoverSound("#trusselBox")
+                createHoverSound("#layerInfoBox")
+
+                createClickSound("#deforestationBox")
+                createClickSound("#trusselBox")
+                createClickSound("#layerInfoBox")
+
+
+            }
+        })
+    </script>
+</head>
+
+<body>
+<div id="sceneContainer">
+    <a-scene the-jungle>
+
+        <a-assets>
+            <!-- Billeder i Scenen -->
+            <img id="Understory" crossorigin="anonymous" src="Scenes/ScenesHD/UnderstoryHD.jpg">
+
+            <img id="deforestation_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/information_transparent.png">
+            <img id="deforestation_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/information_hover.png">
+
+            <img id="trussel_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/information_transparent.png">
+            <img id="trussel_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/information_hover.png">
+
+        </a-assets>
+
+        <!-- Camera + cursor. -->
+        <a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
+            <a-cursor fuse="false" color="magenta"></a-cursor>
+        </a-entity>
+        
+        <!-- 360 billedet -->
+        <a-sky id="image-360" radius="10" src="#Understory" sound="src: url(Musik/Forest_Sound.wav); autoplay: true; volume: 0.3 loop: true;"></a-sky>
+
+        <!-- knapper -->
+        <a-image src="#deforestation_Transparent" position="3.416 -0.183 -4.713" id="deforestationBox" sound="loop:true;src:Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3;volume:20">
+            <a-text color="black" font="kelsonsans" value="deforestation" width="2" position="0.087 0.8 -0.719" rotation="0 -43.5 0" text="color:#ffffff" scale="4 4 4"></a-text>
+        </a-image>
+        <a-image src="#deforestation_Hover" position="3.416 -0.183 -4.713" id="deforestationBox_Hover" visible="false"></a-image>
+
+        <a-image src="#trussel_Transparent" position="-5.661 2.564 -0.2" id="trusselBox" material="" sound="loop:true;src:Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3;volume:20" rotation="0 80.15 0" >
+            <a-text color="black" font="kelsonsans" value="trussel" width="2" position="-0.468 -1.097 0.642" rotation="0 16.2 0" text="color:#bf0005" scale="3 3 3"></a-text>
+        </a-image>
+        <a-image src="#trussel_Hover" position="-5.661 2.564 -0.2" rotation="0 80.15 0" id="trusselBox_Hover" visible="false"></a-image>
+
+        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-0.335 1.03 -9.462" id="layerInfoBox"
+                sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-box>
+        
+        <!-- Scene skift knapper -->
+        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="0.598 -4.088 -4.033" id="sceneChanger1"
+               material="">
+            <a-text font="kelsonsans" value="Skovbund" width="3" position="-0.548 2.034 1.555"
+                    rotation="-40.336 -4.297 2.578"></a-text>
+        </a-box>
+        <a-box color="yellow" depth="0.5" height="0.5" width="0.5" position="-2.105 4.489 -0.762" id="sceneChanger2"
+               material="">
+            <a-text color="black" font="kelsonsans" value="Kronelag" width="2" position="1.187 -1.887 0.536"
+                    rotation="85.886 160.027 71.391" text="color:#ffffff"></a-text>
+        </a-box>
+        
+         <!-- planes -->
+        <a-plane class="displayer" src="Images/deforestation.png" height="10" width="10" position="6.524 0.08 -0.733"
+                 visible="false" id="deforestationPlane" rotation="0 270 0"></a-plane>
+        <a-plane class="displayer" src="Images/Trusler%20mod%20regnskoven.png" height="10" width="10"
+                 position="-6.46 -2.051 -0.056" id="trusselPlane" visible="false"
+                 rotation="-16.157409822689214 90.01166961505233 0"></a-plane>
+        <a-plane class="displayer" src="Images/underskov_info.png" height="2" width="7" position="-0.9 -2.03 -8.462"
+                 id="layerInfoPlane" visible="false"></a-plane>
+        
+        <!-- område navn tekst -->
+        <a-text font="kelsonsans" value="Underskov" width="21" position="-1.735 0.03 -9.462"></a-text>
+
+    </a-scene>
+</div>
+<div id="buttContainer">
+    <a href="feedback.html" id="feedbackSceneButt">Giv Feedback</a>
+</div>
+</body>
+
+</html>

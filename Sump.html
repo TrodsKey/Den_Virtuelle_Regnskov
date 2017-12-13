@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>360&deg; Image Gallery</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <link rel="stylesheet" type="text/css" href="components/button.css">
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+    <script src="components/a-frame-functions.js"></script>
+    <script src="components/aframe-video-controls.min.js"></script>
+    <script>
+        AFRAME.registerComponent('the-jungle', {
+            init: function () {
+
+                createSceneChanger("#sceneChanger1", "Rio_Negro.html");
+                createSceneChanger("#sceneChanger2", "Boa_Frente.html");
+                createHoverColor("#sceneChanger1", "blue");
+                createHoverColor("#sceneChanger2", "blue");
+
+                createItemDisplayer("#extinctionBox", "#extinctionPlane");
+                changeImage("#extinctionBox", "#extinctionBox_Hover")
+
+                createItemDisplayer("#EvolutionBox", "#evolutionPlane");
+                changeImage("#EvolutionBox", "#EvolutionBox_Hover")
+
+                createItemDisplayer("#penanBox", "#penanPlane");
+                changeImage("#penanBox", "#penanBox_Hover")
+
+                createItemDisplayer("#penanFolkBox", "#penanFolkPlane");
+
+                changeImage("#penanFolkBox", "#penanFolkBox_Hover")
+
+                createHoverSound("#extinctionBox")
+                createHoverSound("#EvolutionBox")
+                createHoverSound("#penanBox")
+                createHoverSound("#penanFolkBox")
+
+                createClickSound("#extinctionBox")
+                createClickSound("#EvolutionBox")
+                createClickSound("#penanBox")
+                createClickSound("#penanFolkBox")
+
+            }
+        })
+
+    </script>
+
+</head>
+
+<body>
+
+<div id="sceneContainer">
+    <a-scene the-jungle>
+
+        <a-assets>
+            <!-- Billeder i Scenen -->
+            <img id="Vandhul" crossorigin="anonymous" src="Scenes/sump.jpg">
+
+            <img id="PenanFolk_Transparent" crossorigin="anonymous"
+                 src="Transparent_Hover_Images/Penan_woman_transparent.png">
+            <img id="PenanFolk_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/Penan_woman_hover.png">
+
+            <img id="Evolution_Transparent" crossorigin="anonymous"
+                 src="Transparent_Hover_Images/amoeba_transparent.png">
+            <img id="Evolution_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/amoeba_hover.png">
+
+            <img id="Penan_Transparent" crossorigin="anonymous"
+                 src="Transparent_Hover_Images/penan_jaeger_transparent.png">
+            <img id="Penan_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/penan_jaeger_hover.png">
+
+            <img id="Extinction_Transparent" crossorigin="anonymous"
+                 src="Transparent_Hover_Images/orkide_transparent.png">
+            <img id="Extinction_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/orkide_hover.png">
+
+
+        </a-assets>
+        <!-- 360 billedet -->
+        <a-sky id="image-360" radius="10" src="#Vandhul" sound="src: url(Musik/Forest_Sound.wav); autoplay: true; volume: 0.3 loop: true;"></a-sky>
+
+        <!-- Camera + cursor. -->
+        <a-entity camera keyboard-controls="enabled: false" look-controls mouse-cursor>
+            <a-cursor fuse="false" color="magenta"></a-cursor>
+        </a-entity>
+        
+        <!-- knapper -->
+        <a-image src="#PenanFolk_Transparent" position="-7.62 -3.564 -4.4" id="penanFolkBox"
+                 rotation="0 58.78546978042247 0" geometry="width:3;height:3" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
+        <a-image src="#PenanFolk_Hover" position="-7.62 -3.564 -4.4" id=penanFolkBox_Hover visible="false"
+                 rotation="0 58.78546978042247 0" geometry="width:3;height:3"></a-image>
+
+        <a-image src="#Evolution_Transparent" position="1.745 -3.452 6.16" id="EvolutionBox"
+                 rotation="0 -37.52873558106892 0" geometry="width:0.5;height:0.5"
+                  sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
+        <a-image src="#Evolution_Hover" position="1.745 -3.452 6.16" id=EvolutionBox_Hover
+                 rotation="0 -37.52873558106892 0" visible="false" geometry="width:0.5;height:0.5"></a-image>
+
+        <a-image src="#Penan_Transparent" position="-7.6 -1.884 1.757" id="penanBox" rotation="0 118.71685515110657 0"
+                 geometry="height:2;width:2" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
+        <a-image src="#Penan_Hover" position="-7.6 -1.884 1.757" id=penanBox_Hover rotation="0 118.71685515110657 0"
+                 visible="false" geometry="height:2;width:2"></a-image>
+
+        <a-image src="#Extinction_Transparent" position="6.483 -3.2 -0.346" rotation="0 -45 0" scale="1.5 1.5 1.5"
+                 id="extinctionBox" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-image>
+        <a-image src="#Extinction_Hover" position="6.483 -3.2 -0.346" rotation="0 -45 0" scale="1.5 1.5 1.5"
+                 id=extinctionBox_Hover visible="false"></a-image>
+
+        <!-- Scene skift knapper -->
+        <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-3.521 0 -4.427" id="sceneChanger1"
+               material="">
+            <a-text font="kelsonsans" value="Rio Negro" width="2" position="1.342 0.284 2.061"
+                    rotation="4.755549699585833 39.47679208451372 0"></a-text>
+        </a-box>
+        <a-box color="yellow" depth="0.5" height="0.5" width="0.5" position="5.22 0.757 -3.052" id="sceneChanger2"
+               material="">
+            <a-text font="kelsonsans" value="Boa Frente" width="5" position="-0.45 0.452 -0.162"
+                    rotation="14.438536437296746 -54.832060994019784 -1.604281826366305"></a-text>
+        </a-box>
+
+        <!-- planes -->
+        <a-plane class="displayer" src="Images/Dyr%20og%20Planter%20udryddes.png" height="10" width="10"
+                 position="2.536 0 -6.478" visible="false" id="extinctionPlane" rotation="0 -20.684 0"></a-plane>
+        <a-plane class="displayer" src="Images/Evolution_historie.png" height="10" width="10"
+                 position="1.726 1.972 5.323" visible="false" id="evolutionPlane"
+                 rotation="10.199 -162.319 0"></a-plane>
+        <a-plane class="displayer" src="Images/Penarnes_verden.png" height="10" width="10" position="-1.822 0.158 4.093"
+                 visible="false" id="penanPlane" rotation="4.469070802020421 143.18215300319272 1.0313240312354817"
+                 geometry="height:8;width:8"></a-plane>
+        <a-plane class="displayer" src="Images/Penan_folk.png" height="10" width="10" position="-5.538 2.202 -2.168"
+                 id="penanFolkPlane" rotation="18.67842412126484 56.95200483600383 -1.2032113697747289"
+                 geometry="height:8;width:8" visible="false"></a-plane>
+
+        <!-- område navn tekst -->
+        <a-text font="kelsonsans" value="Sump" width="20" position="-1.735 0.03 -9.462"></a-text>
+
+    </a-scene>
+</div>
+<div id="buttContainer">
+    <a href="feedback.html" id="feedbackSceneButt">Giv Feedback</a>
+</div>
+</body>
+
+</html>
