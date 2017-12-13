@@ -19,11 +19,12 @@
                 createHoverColor("#sceneChanger1", "blue");
                 createHoverColor("#sceneChanger2", "blue");
 
-                createHoverColor("#deforestationBox", "blue");
-                createItemDisplayer("#deforestationBox", "#deforestationPlane");
 
-                createHoverColor("#trusselBox", "blue");
+                createItemDisplayer("#deforestationBox", "#deforestationPlane");
+                changeImage("#deforestationBox", "#deforestationBox_Hover");
+
                 createItemDisplayer("#trusselBox", "#trusselPlane");
+                changeImage("#trusselBox", "#trusselBox_Hover");
 
                 createHoverColor("#layerInfoBox", "blue");
                 createItemDisplayer("#layerInfoBox", "#layerInfoPlane");
@@ -49,6 +50,13 @@
         <a-assets>
             <!-- Billeder i Scenen -->
             <img id="Understory" crossorigin="anonymous" src="Scenes/ScenesHD/UnderstoryHD.jpg">
+
+            <img id="deforestation_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/information_transparent.png">
+            <img id="deforestation_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/information_hover.png">
+
+            <img id="trussel_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/information_transparent.png">
+            <img id="trussel_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/information_hover.png">
+
         </a-assets>
 
         <!-- Camera + cursor. -->
@@ -60,17 +68,16 @@
         <a-sky id="image-360" radius="10" src="#Understory" sound="src: url(Musik/Forest_Sound.wav); autoplay: true; volume: 0.3 loop: true;"></a-sky>
 
         <!-- knapper -->
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="5.894 -0.183 -5.964" id="deforestationBox"
-               material="" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;">
-            <a-text color="black" font="kelsonsans" value="deforestation" width="2" position="0.087 0.477 -0.719"
-                    rotation="180 150 180" text="color:#3241fc" scale="4 4 4"></a-text>
-        </a-box>
 
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-5.661 2.564 -0.2" id="trusselBox"
-               material="" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;">
-            <a-text color="black" font="kelsonsans" value="trussel" width="2" position="0.326 0.389 0.504"
-                    rotation="0 90 0" text="color:#3241fc" scale="3 3 3"></a-text>
-        </a-box>
+        <a-image src="#deforestation_Transparent" position="3.416 -0.183 -4.713" id="deforestationBox" sound="loop:true;src:Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3;volume:20">
+            <a-text color="black" font="kelsonsans" value="deforestation" width="2" position="0.087 0.8 -0.719" rotation="0 -43.5 0" text="color:#ffffff" scale="4 4 4"></a-text>
+        </a-image>
+        <a-image src="#deforestation_Hover" position="3.416 -0.183 -4.713" id="deforestationBox_Hover" visible="false"></a-image>
+
+        <a-image src="#trussel_Transparent" position="-5.661 2.564 -0.2" id="trusselBox" material="" sound="loop:true;src:Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3;volume:20" rotation="0 80.15 0" >
+            <a-text color="black" font="kelsonsans" value="trussel" width="2" position="-0.468 -1.097 0.642" rotation="0 16.2 0" text="color:#bf0005" scale="3 3 3"></a-text>
+        </a-image>
+        <a-image src="#trussel_Hover" position="-5.661 2.564 -0.2" rotation="0 80.15 0" id="trusselBox_Hover" visible="false"></a-image>
 
         <a-box color="green" depth="0.5" height="0.5" width="0.5" position="-0.335 1.03 -9.462" id="layerInfoBox"
                 sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;"></a-box>
