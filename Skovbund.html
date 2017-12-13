@@ -27,8 +27,8 @@
                 createItemDisplayer("#faeldningBox", "#faeldningPlane");
                 changeImage("#faeldningBox", "#faeldningBox_Hover");
 
-                createHoverColor("#tarantulaBox", "blue");
-                createItemDisplayer("#tarantulaBox", "#tarantulaPlane");
+                createHoverColor("#tarantulaBox", "#tarantulaPlane");
+                createItemDisplayer("#tarantulaBox", "#tarantulaBox_Hover");
 
                 createHoverSound("#jaguarBox")
                 createHoverSound("#faeldningBox")
@@ -61,6 +61,9 @@
 
             <img id="faeldning_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/information_transparent.png">
             <img id="faeldning_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/information_hover.png">
+            
+            <img id="tarantula_Transparent" crossorigin="anonymous" src="Transparent_Hover_Images/Tarantula_Transparent.png">
+            <img id="tarantula_Hover" crossorigin="anonymous" src="Transparent_Hover_Images/Tarantula_Hover.png">
 
         </a-assets>
         
@@ -84,10 +87,10 @@
             <a-text font="kelsonsans" value="Fældning af træ" width="2" position="0.002 0.54 2.914" scale="2 2 2" text="color:#ffffff;value:Faeldning af trae"></a-text></a-image>
             <a-image src="#faeldning_Hover" position="-1.434 -0.453 7.426" rotation="0 157.5 0" id="faeldningBox_Hover" visible="false"></a-image>
 
-        <a-box color="green" depth="0.5" height="0.5" width="0.5" position="4.495 -3.864 -7.691" id="tarantulaBox" material="" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;">
-            <a-text font="kelsonsans" value="tarantula" width="3" position="-0.978 0.966 0.507"
-                    rotation="0 -5.099324376664327 0" scale="2.4 3.47 2.62" id="tarantulaBox"></a-text>
-        </a-box>
+        <a-image src="tarantula_Transparent" position="4.495 -3.864 -7.691" id="tarantulaBox" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;">
+            <a-text font="kelsonsans" value="tarantula" width="3" position="-0.978 0.966 0.507"></text></a-image>
+         <a-image src="tarantula_Hover" position="4.495 -3.864 -7.691" id="tarantulaBox" visible="false" sound="src: url(Musik/Fast_Heel_Walk-Kyanna_Johnson-1646343608.mp3); volume: 20; loop: true;">
+                    </a-image>
 
         <!-- Scene skift knapper -->
         <a-box color="tomato" depth="0.5" height="0.5" width="0.5" position="-2.899 3.725 2.043" id="sceneChanger1"
