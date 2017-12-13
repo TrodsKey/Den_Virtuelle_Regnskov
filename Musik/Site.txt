@@ -1,3 +1,0 @@
-http://soundbible.com/tags-click.html
-
-https://github.com/aframevr/aframe/blob/master/docs/components/sound.md
