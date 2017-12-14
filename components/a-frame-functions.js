@@ -76,6 +76,20 @@ function changeImage(targetElId, displayElId) {
     });
 }
 
+//adding ambient sound
+function audioControle() { //SOUND STATUS
+    var sound = document.querySelector('#audio');
+    if (isPlaying == true) {
+        // Do pause.
+        sound.components.sound.pauseSound();
+        isPlaying = false;
+    } else if (isPlaying == false) {
+        // Do play.
+        sound.components.sound.playSound();
+        isPlaying = true;
+    }
+}
+
 
 //used to add sound when the mouse enters the element
 function createHoverSound(targetElId) {
